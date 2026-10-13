@@ -86,7 +86,7 @@ public class GameUI : MonoBehaviour
     {
         int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (nextLevel <= SceneManager.sceneCount)
+        if (nextLevel > SceneManager.sceneCount)
         {
             SceneManager.LoadScene(nextLevel); 
         }
