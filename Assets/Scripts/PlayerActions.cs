@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerActions : MonoBehaviour
 {
@@ -17,12 +16,8 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private int maxJumps = 2;
     private int jumpsRemaining;
 
-
     [Header("Start")]
     [SerializeField] private GameObject startPoint;
-
-    [Header("Finish")]
-    [SerializeField] private GameObject endPoint;
 
     [Header("Speed")]
     [SerializeField] private int speed = 10;
@@ -34,6 +29,9 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float dashCooldown = 2.0f;
     [SerializeField] private LayerMask dashObstacleLayer; // Capa de los obstáculos que bloquean el Dash
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
+    [SerializeField] private bool canDestroyObstacles = false;
+    private Coroutine dashCoroutine;
+    private float defaultGravity;
     private bool canDash = true;
     private float dashTimer = 0f;
     private bool isDashing = false;
@@ -90,6 +88,7 @@ public class PlayerActions : MonoBehaviour
         transform.position = startPoint.transform.position;
 
         rb = GetComponent<Rigidbody2D>();
+        defaultGravity = rb.gravityScale;
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponentInChildren<Animator>();
 
@@ -122,8 +121,8 @@ public class PlayerActions : MonoBehaviour
             if (playerDied)
             {
                 OnPlayerDied();
-
             }
+
             transform.Translate(new Vector3(1 * currentSpeed * Time.deltaTime, 0, 0));
 
             if (Input.GetKeyUp(crouchKey) && isCrouching)
@@ -143,6 +142,8 @@ public class PlayerActions : MonoBehaviour
                 if (Input.GetKeyDown(crouchKey) && isGrounded)
                 {
                     Slide();
+
+                    PlayerEvents.current.OnPlayerSlideTriggerClose(this);
                 }
 
                 // --- SALTO (No se permite si está agachado) --
@@ -157,14 +158,18 @@ public class PlayerActions : MonoBehaviour
                     if (animator != null)
                     {
                         animator.SetBool("isGrounded", isGrounded);
-
                     }
+
+                    PlayerEvents.current.OnPlayerJumpTriggerClose(this);
                 }
 
                 // --- DASH (No se permite si está agachado) ---
                 if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
                 {
-                    StartCoroutine(DashRoutine());
+                    dashCoroutine = StartCoroutine(DashRoutine());
+
+                    PlayerEvents.current.OnPlayerDashTriggerClose(this);
+
                 }
                 if (!canDash)
                 {
@@ -322,34 +327,24 @@ public class PlayerActions : MonoBehaviour
             if (efectiveDistance < 0) efectiveDistance = 0;
         }
 
-        Vector2 finalPosition = (Vector2)transform.position + new Vector2(directionX * efectiveDistance, 0f);
-        Debug.Log(finalPosition.x);
-
-
-        float originalGravity = rb.gravityScale;
-        bool hitCollision = false;
+        float startX = transform.position.x;
+        float elapsed = 0f;
+        float maxTime = (efectiveDistance / dashSpeed) + 0.5f;
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
 
-        while (Vector2.SqrMagnitude((Vector2)transform.position - finalPosition) > 0.02f)
+        while (Mathf.Abs(transform.position.x - startX) < efectiveDistance
+               && currentSpeed > 0
+               && elapsed < maxTime)
         {
-            if (currentSpeed <= 0)
-            {
-                Debug.Log("entro al bucle");
-                hitCollision = true;
-                break;
-            }
-            transform.position = Vector2.MoveTowards(transform.position, finalPosition, dashSpeed * Time.deltaTime);
+            transform.position += new Vector3(directionX * dashSpeed * Time.deltaTime, 0f, 0f);
+            elapsed += Time.deltaTime;
             yield return null;
         }
 
-        Debug.Log("finalizando corrutina");
-
-        if (!hitCollision)
-            transform.position = finalPosition;
-
-        rb.gravityScale = originalGravity;
+        rb.gravityScale = defaultGravity;
         isDashing = false;
+        dashCoroutine = null;
         if (animator != null) animator.SetBool("isDashing", false);
         canDash = false;
         dashTimer = dashCooldown;
@@ -374,16 +369,22 @@ public class PlayerActions : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (isDashing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
         {
             Vector2 contactPoint = collision.GetContact(0).point;
             Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
-            
+
             if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
             {
                 currentSpeed *= obstacleBounce;
             }
         }
+
         if (collision.gameObject.CompareTag("Finish"))
         {
             playerWin = true;
@@ -435,13 +436,25 @@ public class PlayerActions : MonoBehaviour
 
     private void OnPlayerDied()
     {
+        if (dashCoroutine != null)
+        {
+            StopCoroutine(dashCoroutine);
+            dashCoroutine = null;
+        }
+        isDashing = false;
+        rb.gravityScale = defaultGravity;
+        rb.linearVelocity = Vector2.zero;
+        currentSpeed = speed;
         transform.position = startPoint.transform.position;
         playerDied = false;
         if (animator != null)
         {
             animator.SetBool("isDashing", false);
             animator.SetBool("isSliding", false);
+
         }
+
+        PlayerEvents.current.OnPlayerDeath(this);
     }
 
     private void PlayerReset()
