@@ -36,8 +36,6 @@ public class PlayerActions : MonoBehaviour
     private float dashTimer = 0f;
     private bool isDashing = false;
 
-    public bool isPaused = false;
-
     [Header("Slide")]
     [SerializeField] private float heightColliderMultiplier = 0.5f;
     [SerializeField] private LayerMask roofLayer;
@@ -68,8 +66,11 @@ public class PlayerActions : MonoBehaviour
 
     private bool isCrouching = false;
     private bool wantsToStandUp = false;
+
+    private bool isPaused = false;
     private bool playerDied = false;
     private bool playerWin = false;
+
     private BoxCollider2D boxCollider;
     private Vector2 colliderOriginalSize;
     private Vector2 colliderOriginalOffset;
@@ -411,8 +412,6 @@ public class PlayerActions : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
-
     private void OnDrawGizmosSelected()
     {
         if (boxCollider == null) return;
@@ -432,7 +431,6 @@ public class PlayerActions : MonoBehaviour
         Vector2 dashOrigin = (Vector2)transform.position + boxCollider.offset;
         Gizmos.DrawRay(dashOrigin, new Vector2(direction * dashDistance, 0f));
     }
-#endif
 
     private void OnPlayerDied()
     {
@@ -441,20 +439,26 @@ public class PlayerActions : MonoBehaviour
             StopCoroutine(dashCoroutine);
             dashCoroutine = null;
         }
+
         isDashing = false;
-        rb.gravityScale = defaultGravity;
-        rb.linearVelocity = Vector2.zero;
-        currentSpeed = speed;
-        transform.position = startPoint.transform.position;
-        playerDied = false;
-        if (animator != null)
+
+        if (!playerDied)
         {
-            animator.SetBool("isDashing", false);
-            animator.SetBool("isSliding", false);
+            rb.gravityScale = defaultGravity;
+            rb.linearVelocity = Vector2.zero;
 
+            currentSpeed = speed;
+
+            transform.position = startPoint.transform.position;
+
+            if (animator != null)
+            {
+                animator.SetBool("isDashing", false);
+                animator.SetBool("isSliding", false);
+            }
+
+            PlayerEvents.current.OnPlayerDeath(this); 
         }
-
-        PlayerEvents.current.OnPlayerDeath(this);
     }
 
     private void PlayerReset()
@@ -487,9 +491,23 @@ public class PlayerActions : MonoBehaviour
         currentSpeed = speed;
     }
 
+    public bool GetPlayerPause()
+    {
+        return isPaused;
+    }
+
+    public bool SetPlayerPause(bool pause)
+    {
+        return isPaused;
+    }
+
     public bool GetPlayerDied()
     {
         return playerDied;
+    }
+    public void SetPlayerDied(bool died)
+    {
+        playerDied = died;
     }
 
     public void SetPlayerWin(bool win)
@@ -500,11 +518,6 @@ public class PlayerActions : MonoBehaviour
     public bool GetPlayerWin()
     {
         return playerWin;
-    }
-
-    public void SetPlayerDied(bool died)
-    {
-        playerDied = died;
     }
 
     public float GetDashCooldownTimer()

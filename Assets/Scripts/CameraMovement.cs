@@ -19,7 +19,7 @@ public class CameraMovement : MonoBehaviour
         if (player.GetPlayerDied())
         {
             transform.position = new Vector3(initialPosX, transform.position.y, transform.position.z);
-            player.SetPlayerDied(false);
+            //player.SetPlayerDied(false);
         }
         transform.position = new Vector3(player.transform.position.x + offsetX, transform.position.y, transform.position.z);
     }

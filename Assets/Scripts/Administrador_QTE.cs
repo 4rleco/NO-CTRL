@@ -61,7 +61,7 @@ public class Administrador_QTE : MonoBehaviour
 
     void NormalModeHandler()
     {
-        if(!player.isPaused)
+        if(!player.GetPlayerPause())
         delayTimer -= Time.deltaTime;
 
         if (delayTimer <= 0)
