@@ -104,6 +104,11 @@ public class GameUI : MonoBehaviour
         player.SetPlayerWin(false);
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void ResetGame()
     {
         Time.timeScale = 1.0f;
