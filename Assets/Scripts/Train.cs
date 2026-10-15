@@ -9,6 +9,9 @@ public class Train : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
     private Vector3 inittialPos;
 
+   
+    private bool subscribedToDeath = false;
+
     private void Awake()
     {
         activator.OnActivateTrain += OnActivateTrain;
@@ -21,6 +24,18 @@ public class Train : MonoBehaviour
     private void OnActivateTrain(bool obj)
     {
         enabled = obj;
+
+        
+        if (!subscribedToDeath && PlayerEvents.current != null)
+        {
+            PlayerEvents.current.onPlayerDeath += OnPlayerDeath;
+            subscribedToDeath = true;
+        }
+    }
+
+    private void OnPlayerDeath(PlayerActions player)
+    {
+        ResetTrain();
     }
 
     private void Update()
@@ -30,6 +45,15 @@ public class Train : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
+        if (collision.gameObject.CompareTag("Floor")) return;
+
+        ResetTrain();
+    }
+
+  
+    private void ResetTrain()
+    {
         transform.position = inittialPos;
 
         enabled = false;
@@ -38,5 +62,11 @@ public class Train : MonoBehaviour
     private void OnDestroy()
     {
         activator.OnActivateTrain -= OnActivateTrain;
+
+      
+        if (subscribedToDeath && PlayerEvents.current != null)
+        {
+            PlayerEvents.current.onPlayerDeath -= OnPlayerDeath;
+        }
     }
 }
