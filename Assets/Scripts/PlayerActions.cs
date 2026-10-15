@@ -509,9 +509,9 @@ public class PlayerActions : MonoBehaviour
         return isPaused;
     }
 
-    public bool SetPlayerPause(bool pause)
+    public void SetPlayerPause(bool pause)
     {
-        return isPaused;
+        isPaused = pause;
     }
 
     public bool GetPlayerDied()
