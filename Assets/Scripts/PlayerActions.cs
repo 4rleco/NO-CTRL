@@ -36,6 +36,7 @@ public class PlayerActions : MonoBehaviour
     private float dashTimer = 0f;
     private bool isDashing = false;
 
+
     [Header("Slide")]
     [SerializeField] private float heightColliderMultiplier = 0.5f;
     [SerializeField] private LayerMask roofLayer;
@@ -70,6 +71,9 @@ public class PlayerActions : MonoBehaviour
     private bool isPaused = false;
     private bool playerDied = false;
     private bool playerWin = false;
+
+    
+    private bool standingOnObstacle = false;
 
     private BoxCollider2D boxCollider;
     private Vector2 colliderOriginalSize;
@@ -232,7 +236,7 @@ public class PlayerActions : MonoBehaviour
 
     private void SetRandKey()
     {
-       
+
         if (!jumpKeyCanChange && !dashKeyCanChange && !crouchKeyCanChange) return;
 
         int randNum;
@@ -241,7 +245,7 @@ public class PlayerActions : MonoBehaviour
             randNum = UnityEngine.Random.Range(0, 3);
         }
         while ((randNum == 0 && !jumpKeyCanChange) || (randNum == 1 && !dashKeyCanChange) || (randNum == 2 && !crouchKeyCanChange));
-        
+
 
         switch (randNum)
         {
@@ -251,7 +255,7 @@ public class PlayerActions : MonoBehaviour
                 {
                     jumpKey = GetRandKeyFromRow(upperLine);
                 }
-                // Evitamos que se repita la misma tecla de salto anterior
+               
                 while (jumpKey == prevJump);
                 break;
 
@@ -366,6 +370,8 @@ public class PlayerActions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
         if (collision.gameObject.CompareTag("MortalObstacle"))
         {
             playerDied = true;
@@ -390,12 +396,22 @@ public class PlayerActions : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
         {
-            Vector2 contactPoint = collision.GetContact(0).point;
-            Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
-
-            if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
+           
+            if (IsLandingOnTop(collision))
             {
-                currentSpeed *= obstacleBounce;
+                isGrounded = true;
+                standingOnObstacle = true;
+                jumpsRemaining = maxJumps;
+            }
+            else
+            {
+                Vector2 contactPoint = collision.GetContact(0).point;
+                Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
+
+                if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
+                {
+                    currentSpeed *= obstacleBounce;
+                }
             }
         }
 
@@ -405,11 +421,26 @@ public class PlayerActions : MonoBehaviour
         }
     }
 
+    private bool IsLandingOnTop(Collision2D collision)
+    {
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            if (collision.GetContact(i).normal.y > 0.5f) return true;
+        }
+        return false;
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+       
+        bool leftFloor = collision.gameObject.CompareTag("Floor");
+        bool leftObstacleTop = standingOnObstacle &&
+            (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"));
+
+        if (leftFloor || leftObstacleTop)
         {
             isGrounded = false;
+            standingOnObstacle = false;
 
             if (isCrouching && !IsThereRoofAbove())
             {
@@ -533,7 +564,7 @@ public class PlayerActions : MonoBehaviour
         return playerWin;
     }
 
-    
+
     public void LockAllKeyChanges()
     {
         jumpKeyCanChange = false;
@@ -544,7 +575,7 @@ public class PlayerActions : MonoBehaviour
     public void UnlockJumpKey() { jumpKeyCanChange = true; }
     public void UnlockDashKey() { dashKeyCanChange = true; }
     public void UnlockSlideKey() { crouchKeyCanChange = true; }
-  
+
     public float GetDashCooldownTimer()
     {
         if (canDash) return 0f;
