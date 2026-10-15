@@ -80,6 +80,10 @@ public class PlayerActions : MonoBehaviour
     private KeyCode dashKey = KeyCode.D;
     private KeyCode crouchKey = KeyCode.Z;
 
+    private bool jumpKeyCanChange = true;
+    private bool dashKeyCanChange = true;
+    private bool crouchKeyCanChange = true;
+
     private float currentKeyTimer = 0.0f;
 
     Vector3 screenRelativePosition;
@@ -228,7 +232,16 @@ public class PlayerActions : MonoBehaviour
 
     private void SetRandKey()
     {
-        int randNum = UnityEngine.Random.Range(0, 3);
+       
+        if (!jumpKeyCanChange && !dashKeyCanChange && !crouchKeyCanChange) return;
+
+        int randNum;
+        do
+        {
+            randNum = UnityEngine.Random.Range(0, 3);
+        }
+        while ((randNum == 0 && !jumpKeyCanChange) || (randNum == 1 && !dashKeyCanChange) || (randNum == 2 && !crouchKeyCanChange));
+        
 
         switch (randNum)
         {
@@ -457,7 +470,7 @@ public class PlayerActions : MonoBehaviour
                 animator.SetBool("isSliding", false);
             }
 
-            PlayerEvents.current.OnPlayerDeath(this); 
+            PlayerEvents.current.OnPlayerDeath(this);
         }
     }
 
@@ -520,6 +533,18 @@ public class PlayerActions : MonoBehaviour
         return playerWin;
     }
 
+    
+    public void LockAllKeyChanges()
+    {
+        jumpKeyCanChange = false;
+        dashKeyCanChange = false;
+        crouchKeyCanChange = false;
+    }
+
+    public void UnlockJumpKey() { jumpKeyCanChange = true; }
+    public void UnlockDashKey() { dashKeyCanChange = true; }
+    public void UnlockSlideKey() { crouchKeyCanChange = true; }
+  
     public float GetDashCooldownTimer()
     {
         if (canDash) return 0f;

@@ -21,6 +21,8 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
+        owner.LockAllKeyChanges(); 
+
         PlayerEvents.current.onJumpTutorialTriggerEnter += OnJumpOpen;
 
         PlayerEvents.current.onDashTutorialTriggerEnter += OnDashOpen;
@@ -49,6 +51,8 @@ public class Tutorial : MonoBehaviour
     {
         if (player != owner) return;
 
+        if (JumpCanva.gameObject.activeSelf) owner.UnlockJumpKey();
+
         JumpCanva.gameObject.SetActive(false);
     }
 
@@ -64,11 +68,13 @@ public class Tutorial : MonoBehaviour
     {
         if (player != owner) return;
 
+        if (DashCanva.gameObject.activeSelf) owner.UnlockDashKey(); 
+
         DashCanva.gameObject.SetActive(false);
     }
 
     private void OnSlideOpen(PlayerActions player)
-    {      
+    {
         Debug.Log("abre");
 
         if (player != owner) return;
@@ -80,6 +86,8 @@ public class Tutorial : MonoBehaviour
     {
         Debug.Log("cierra");
         if (player != owner) return;
+
+        if (SlideCanva.gameObject.activeSelf) owner.UnlockSlideKey();
 
         SlideCanva.gameObject.SetActive(false);
     }
@@ -108,6 +116,6 @@ public class Tutorial : MonoBehaviour
 
         PlayerEvents.current.onSlideTutorialTriggerEnter -= OnSlideClose;
 
-        PlayerEvents.current.onPlayerDeath-=OnPlayerDeath;
+        PlayerEvents.current.onPlayerDeath -= OnPlayerDeath;
     }
 }
