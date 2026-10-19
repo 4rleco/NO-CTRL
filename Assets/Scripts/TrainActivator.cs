@@ -7,6 +7,9 @@ public class TrainActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnActivateTrain?.Invoke(true);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            OnActivateTrain?.Invoke(true); 
+        }
     }         
 }
