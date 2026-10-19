@@ -36,7 +36,6 @@ public class PlayerActions : MonoBehaviour
     private float dashTimer = 0f;
     private bool isDashing = false;
 
-    public bool isPaused = false;
 
     [Header("Slide")]
     [SerializeField] private float heightColliderMultiplier = 0.5f;
@@ -68,8 +67,14 @@ public class PlayerActions : MonoBehaviour
 
     private bool isCrouching = false;
     private bool wantsToStandUp = false;
+
+    private bool isPaused = false;
     private bool playerDied = false;
     private bool playerWin = false;
+
+    
+    private bool standingOnObstacle = false;
+
     private BoxCollider2D boxCollider;
     private Vector2 colliderOriginalSize;
     private Vector2 colliderOriginalOffset;
@@ -78,6 +83,10 @@ public class PlayerActions : MonoBehaviour
     private KeyCode jumpKey = KeyCode.W;
     private KeyCode dashKey = KeyCode.D;
     private KeyCode crouchKey = KeyCode.Z;
+
+    private bool jumpKeyCanChange = true;
+    private bool dashKeyCanChange = true;
+    private bool crouchKeyCanChange = true;
 
     private float currentKeyTimer = 0.0f;
 
@@ -216,6 +225,112 @@ public class PlayerActions : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1.0f;
         }
+    }   
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MortalObstacle"))
+        {
+            playerDied = true;
+            rb.linearVelocity = Vector2.zero;
+            OnPlayerDied();
+        }
+        else if (collision.gameObject.CompareTag("Floor"))
+        {
+            Vector2 contactPoint = collision.GetContact(0).point;
+            Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
+            if (contactPoint.y < colliderCenter.y)
+            {
+                isGrounded = true;
+                jumpsRemaining = maxJumps;
+            }
+        }
+
+        if (isDashing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
+        {
+           
+            if (IsLandingOnTop(collision))
+            {
+                isGrounded = true;
+                standingOnObstacle = true;
+                jumpsRemaining = maxJumps;
+            }
+            else
+            {
+                Vector2 contactPoint = collision.GetContact(0).point;
+                Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
+
+                if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
+                {
+                    currentSpeed *= obstacleBounce;
+                }
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            playerWin = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+       
+        bool leftFloor = collision.gameObject.CompareTag("Floor");
+        bool leftObstacleTop = standingOnObstacle &&
+            (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"));
+
+        if (leftFloor || leftObstacleTop)
+        {
+            isGrounded = false;
+            standingOnObstacle = false;
+
+            if (isCrouching && !IsThereRoofAbove())
+            {
+                isCrouching = false;
+                wantsToStandUp = false;
+
+                if (boxCollider != null)
+                {
+                    boxCollider.size = colliderOriginalSize;
+                    boxCollider.offset = colliderOriginalOffset;
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (boxCollider == null) return;
+
+        // Visualización del techo
+        Vector2 footCenter = (Vector2)transform.position + colliderOriginalOffset;
+        float direction = Application.isPlaying ? Mathf.Sign(currentSpeed) : 1f;
+
+        footCenter.x -= (direction * nextOffset / 2f);
+        Vector2 footSize = new Vector2(colliderOriginalSize.x + nextOffset + widthOffset, colliderOriginalSize.y);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(footCenter, footSize);
+
+        // Visualización del Dash Raycast
+        Gizmos.color = Color.cyan;
+        Vector2 dashOrigin = (Vector2)transform.position + boxCollider.offset;
+        Gizmos.DrawRay(dashOrigin, new Vector2(direction * dashDistance, 0f));
+    }
+
+    private bool IsLandingOnTop(Collision2D collision)
+    {
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            if (collision.GetContact(i).normal.y > 0.5f) return true;
+        }
+        return false;
     }
 
     // Método modificado para elegir una tecla aleatoria de un array específico
@@ -227,7 +342,16 @@ public class PlayerActions : MonoBehaviour
 
     private void SetRandKey()
     {
-        int randNum = UnityEngine.Random.Range(0, 3);
+
+        if (!jumpKeyCanChange && !dashKeyCanChange && !crouchKeyCanChange) return;
+
+        int randNum;
+        do
+        {
+            randNum = UnityEngine.Random.Range(0, 3);
+        }
+        while ((randNum == 0 && !jumpKeyCanChange) || (randNum == 1 && !dashKeyCanChange) || (randNum == 2 && !crouchKeyCanChange));
+
 
         switch (randNum)
         {
@@ -237,7 +361,7 @@ public class PlayerActions : MonoBehaviour
                 {
                     jumpKey = GetRandKeyFromRow(upperLine);
                 }
-                // Evitamos que se repita la misma tecla de salto anterior
+
                 while (jumpKey == prevJump);
                 break;
 
@@ -350,90 +474,6 @@ public class PlayerActions : MonoBehaviour
         dashTimer = dashCooldown;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("MortalObstacle"))
-        {
-            playerDied = true;
-            rb.linearVelocity = Vector2.zero;
-            OnPlayerDied();
-        }
-        else if (collision.gameObject.CompareTag("Floor"))
-        {
-            Vector2 contactPoint = collision.GetContact(0).point;
-            Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
-            if (contactPoint.y < colliderCenter.y)
-            {
-                isGrounded = true;
-                jumpsRemaining = maxJumps;
-            }
-        }
-
-        if (isDashing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
-        {
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
-        {
-            Vector2 contactPoint = collision.GetContact(0).point;
-            Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
-
-            if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
-            {
-                currentSpeed *= obstacleBounce;
-            }
-        }
-
-        if (collision.gameObject.CompareTag("Finish"))
-        {
-            playerWin = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isGrounded = false;
-
-            if (isCrouching && !IsThereRoofAbove())
-            {
-                isCrouching = false;
-                wantsToStandUp = false;
-
-                if (boxCollider != null)
-                {
-                    boxCollider.size = colliderOriginalSize;
-                    boxCollider.offset = colliderOriginalOffset;
-                }
-            }
-        }
-    }
-
-#if UNITY_EDITOR
-
-    private void OnDrawGizmosSelected()
-    {
-        if (boxCollider == null) return;
-
-        // Visualización del techo
-        Vector2 footCenter = (Vector2)transform.position + colliderOriginalOffset;
-        float direction = Application.isPlaying ? Mathf.Sign(currentSpeed) : 1f;
-
-        footCenter.x -= (direction * nextOffset / 2f);
-        Vector2 footSize = new Vector2(colliderOriginalSize.x + nextOffset + widthOffset, colliderOriginalSize.y);
-
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(footCenter, footSize);
-
-        // Visualización del Dash Raycast
-        Gizmos.color = Color.cyan;
-        Vector2 dashOrigin = (Vector2)transform.position + boxCollider.offset;
-        Gizmos.DrawRay(dashOrigin, new Vector2(direction * dashDistance, 0f));
-    }
-#endif
-
     private void OnPlayerDied()
     {
         if (dashCoroutine != null)
@@ -441,20 +481,26 @@ public class PlayerActions : MonoBehaviour
             StopCoroutine(dashCoroutine);
             dashCoroutine = null;
         }
+
         isDashing = false;
-        rb.gravityScale = defaultGravity;
-        rb.linearVelocity = Vector2.zero;
-        currentSpeed = speed;
-        transform.position = startPoint.transform.position;
-        playerDied = false;
-        if (animator != null)
+
+        if (!playerDied)
         {
-            animator.SetBool("isDashing", false);
-            animator.SetBool("isSliding", false);
+            rb.gravityScale = defaultGravity;
+            rb.linearVelocity = Vector2.zero;
 
+            currentSpeed = speed;
+
+            transform.position = startPoint.transform.position;
+
+            if (animator != null)
+            {
+                animator.SetBool("isDashing", false);
+                animator.SetBool("isSliding", false);
+            }
+
+            PlayerEvents.current.OnPlayerDeath(this);
         }
-
-        PlayerEvents.current.OnPlayerDeath(this);
     }
 
     private void PlayerReset()
@@ -487,9 +533,23 @@ public class PlayerActions : MonoBehaviour
         currentSpeed = speed;
     }
 
+    public bool GetPlayerPause()
+    {
+        return isPaused;
+    }
+
+    public void SetPlayerPause(bool pause)
+    {
+        isPaused = pause;
+    }
+
     public bool GetPlayerDied()
     {
         return playerDied;
+    }
+    public void SetPlayerDied(bool died)
+    {
+        playerDied = died;
     }
 
     public void SetPlayerWin(bool win)
@@ -502,10 +562,17 @@ public class PlayerActions : MonoBehaviour
         return playerWin;
     }
 
-    public void SetPlayerDied(bool died)
+
+    public void LockAllKeyChanges()
     {
-        playerDied = died;
+        jumpKeyCanChange = false;
+        dashKeyCanChange = false;
+        crouchKeyCanChange = false;
     }
+
+    public void UnlockJumpKey() { jumpKeyCanChange = true; }
+    public void UnlockDashKey() { dashKeyCanChange = true; }
+    public void UnlockSlideKey() { crouchKeyCanChange = true; }
 
     public float GetDashCooldownTimer()
     {

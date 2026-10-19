@@ -40,7 +40,9 @@ public class GameUI : MonoBehaviour
 
         crouchKey.text = "Crouch Key: " + player.GetCrouchKey();
 
-        pauseMenu.SetActive(player.isPaused);
+        pauseMenu.SetActive(player.GetPlayerPause());
+
+        loseMenu.SetActive(player.GetPlayerDied());
 
         float cooldownRestante = player.GetDashCooldownTimer();
 
@@ -66,6 +68,12 @@ public class GameUI : MonoBehaviour
 
         lastCrouch = player.GetCrouchKey();
 
+        if (loseMenu.activeSelf || pauseMenu.activeSelf)
+            Time.timeScale = 0.0f;
+        else
+            Time.timeScale = 1.0f;
+
+
         if (player.GetPlayerWin())
         {
             Time.timeScale = 0.0f;
@@ -88,12 +96,17 @@ public class GameUI : MonoBehaviour
 
         if (nextLevel > SceneManager.sceneCount)
         {
-            SceneManager.LoadScene(nextLevel); 
+            SceneManager.LoadScene(nextLevel);
         }
 
         Time.timeScale = 1.0f;
 
         player.SetPlayerWin(false);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ResetGame()
@@ -102,13 +115,18 @@ public class GameUI : MonoBehaviour
 
         int curretnScene = SceneManager.GetActiveScene().buildIndex;
 
+        player.SetPlayerDied(false);
+
+        pauseMenu.SetActive(false);
+        loseMenu.SetActive(false);
+
         SceneManager.LoadScene(curretnScene);
     }
 
     public void Resume()
     {
-        player.isPaused = false;
+        pauseMenu.SetActive(false);
 
-        Time.timeScale = 1.0f;
+        player.SetPlayerPause(false);
     }
 }

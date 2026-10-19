@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4578268789773722691}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,9 +125,8 @@ MonoBehaviour:
   qte: {fileID: 0}
   jumpForce: 10
   obstacleBounce: -1.2
-  maxJumps: 1
+  maxJumps: 2
   startPoint: {fileID: 0}
-  endPoint: {fileID: 0}
   speed: 10
   dashDistance: 10
   dashSpeed: 8
@@ -136,7 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   wallOffset: 1
-  isPaused: 0
+  canDestroyObstacles: 0
   heightColliderMultiplier: 0.25
   roofLayer:
     serializedVersion: 2
