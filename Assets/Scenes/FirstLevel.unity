@@ -1700,6 +1700,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1085279500}
     - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
+      propertyPath: maxJumps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 699640787}
