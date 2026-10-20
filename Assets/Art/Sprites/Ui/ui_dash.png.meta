@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: a827ae1e524abf14db0abf3b8100efc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6274168698073719419
+    second: ui_dash_0
+  - first:
+      213: -4199226523819587846
+    second: ui_dash_1
+  - first:
+      213: -1428984365547319313
+    second: ui_dash_2
+  - first:
+      213: 6606116694323029480
+    second: ui_dash_3
+  - first:
+      213: -4113565050464651585
+    second: ui_dash_4
+  - first:
+      213: -477885411614645402
+    second: ui_dash_5
+  - first:
+      213: -3086569718316416230
+    second: ui_dash_6
+  - first:
+      213: -1532459356679792056
+    second: ui_dash_7
+  - first:
+      213: -1195686184463466693
+    second: ui_dash_8
+  - first:
+      213: -1339831942839564827
+    second: ui_dash_9
+  - first:
+      213: -3914972182353640828
+    second: ui_dash_10
+  - first:
+      213: 505791806948601646
+    second: ui_dash_11
+  - first:
+      213: -2697034099897010611
+    second: ui_dash_12
+  - first:
+      213: -4979176418016964973
+    second: ui_dash_13
+  - first:
+      213: 3125572402744606999
+    second: ui_dash_14
+  - first:
+      213: 5773927006575279697
+    second: ui_dash_15
+  - first:
+      213: 4428189733279375430
+    second: ui_dash_16
+  - first:
+      213: 297387493490142888
+    second: ui_dash_17
+  - first:
+      213: 7827809759368613738
+    second: ui_dash_18
+  - first:
+      213: -2319167076267843315
+    second: ui_dash_19
+  - first:
+      213: -7041694090650600432
+    second: ui_dash_20
+  - first:
+      213: 5958528676693750590
+    second: ui_dash_21
+  - first:
+      213: -3361246749405172299
+    second: ui_dash_22
+  - first:
+      213: -259416161235810404
+    second: ui_dash_23
+  - first:
+      213: -7849268210738001441
+    second: ui_dash_24
+  - first:
+      213: -2437163477576666368
+    second: ui_dash_25
+  - first:
+      213: -103297174239271738
+    second: ui_dash_26
+  - first:
+      213: -5041293077095231883
+    second: ui_dash_27
+  - first:
+      213: 2837057764106284534
+    second: ui_dash_28
+  - first:
+      213: 1846480087955837962
+    second: ui_dash_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_dash_0
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 414
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dd072afccade8a0800000000000000
+      internalID: -6274168698073719419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_1
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6c55c99b959b5c0800000000000000
+      internalID: -4199226523819587846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_2
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef07f56a4a3b2ce0800000000000000
+      internalID: -1428984365547319313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_3
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 410
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5e6edf124adab50800000000000000
+      internalID: 6606116694323029480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_4
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6b796916ea9e6c0800000000000000
+      internalID: -4113565050464651585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_5
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6632e5500c53e59f0800000000000000
+      internalID: -477885411614645402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_6
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13c54dc13d4a25d0800000000000000
+      internalID: -3086569718316416230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_7
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a906c955c9bbae0800000000000000
+      internalID: -1532459356679792056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_8
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f763010c1186fe0800000000000000
+      internalID: -1195686184463466693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_9
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5835c52f5f76de0800000000000000
+      internalID: -1339831942839564827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_10
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4828645ea893ba9c0800000000000000
+      internalID: -3914972182353640828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_11
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f6977f7fee40700800000000000000
+      internalID: 505791806948601646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_12
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46f58096c5329ad0800000000000000
+      internalID: -2697034099897010611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_13
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ec81abd6966eab0800000000000000
+      internalID: -4979176418016964973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_14
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7114b515a83406b20800000000000000
+      internalID: 3125572402744606999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_15
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 412
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e34f9550c112050800000000000000
+      internalID: 5773927006575279697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_16
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6402622d917147d30800000000000000
+      internalID: 4428189733279375430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_17
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 412
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeaf168958802400800000000000000
+      internalID: 297387493490142888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_18
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f808ca087f1ac60800000000000000
+      internalID: 7827809759368613738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_19
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d012644e4d9a0dfd0800000000000000
+      internalID: -2319167076267843315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_20
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cbdc57880e64e90800000000000000
+      internalID: -7041694090650600432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_21
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e333f460342f0b250800000000000000
+      internalID: 5958528676693750590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_22
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bda44bd3e37a51d0800000000000000
+      internalID: -3361246749405172299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_23
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 413
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c974b84306e566cf0800000000000000
+      internalID: -259416161235810404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_24
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 423
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd90238462cc11390800000000000000
+      internalID: -7849268210738001441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_25
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003bc73dab47d2ed0800000000000000
+      internalID: -2437163477576666368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_26
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 412
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4aa2f64c3019ef0800000000000000
+      internalID: -103297174239271738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_27
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e4a1308aab90ab0800000000000000
+      internalID: -5041293077095231883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_28
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 413
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fda1dc41014f5720800000000000000
+      internalID: 2837057764106284534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_dash_29
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 413
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04907f5bd300a910800000000000000
+      internalID: 1846480087955837962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_dash_0: -6274168698073719419
+      ui_dash_1: -4199226523819587846
+      ui_dash_10: -3914972182353640828
+      ui_dash_11: 505791806948601646
+      ui_dash_12: -2697034099897010611
+      ui_dash_13: -4979176418016964973
+      ui_dash_14: 3125572402744606999
+      ui_dash_15: 5773927006575279697
+      ui_dash_16: 4428189733279375430
+      ui_dash_17: 297387493490142888
+      ui_dash_18: 7827809759368613738
+      ui_dash_19: -2319167076267843315
+      ui_dash_2: -1428984365547319313
+      ui_dash_20: -7041694090650600432
+      ui_dash_21: 5958528676693750590
+      ui_dash_22: -3361246749405172299
+      ui_dash_23: -259416161235810404
+      ui_dash_24: -7849268210738001441
+      ui_dash_25: -2437163477576666368
+      ui_dash_26: -103297174239271738
+      ui_dash_27: -5041293077095231883
+      ui_dash_28: 2837057764106284534
+      ui_dash_29: 1846480087955837962
+      ui_dash_3: 6606116694323029480
+      ui_dash_4: -4113565050464651585
+      ui_dash_5: -477885411614645402
+      ui_dash_6: -3086569718316416230
+      ui_dash_7: -1532459356679792056
+      ui_dash_8: -1195686184463466693
+      ui_dash_9: -1339831942839564827
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

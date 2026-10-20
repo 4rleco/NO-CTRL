@@ -1,0 +1,1391 @@
+fileFormatVersion: 2
+guid: 880566144c4c2c14aa9b1d7954c12456
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9055412698654104917
+    second: ui_finding_0
+  - first:
+      213: 2685657684920835541
+    second: ui_finding_1
+  - first:
+      213: 6927503176060755535
+    second: ui_finding_2
+  - first:
+      213: -3025257377376290997
+    second: ui_finding_3
+  - first:
+      213: 5464232372916971120
+    second: ui_finding_4
+  - first:
+      213: 7796820054260735454
+    second: ui_finding_5
+  - first:
+      213: -4901986030163088883
+    second: ui_finding_6
+  - first:
+      213: 2295357341314315698
+    second: ui_finding_7
+  - first:
+      213: -2021633711787605377
+    second: ui_finding_8
+  - first:
+      213: 1279938007446670499
+    second: ui_finding_9
+  - first:
+      213: 3664288043956726062
+    second: ui_finding_10
+  - first:
+      213: -5992995971653835426
+    second: ui_finding_11
+  - first:
+      213: 4564045615681967062
+    second: ui_finding_12
+  - first:
+      213: 4502548383151196164
+    second: ui_finding_13
+  - first:
+      213: 2495774904590703039
+    second: ui_finding_14
+  - first:
+      213: 1075327694201410376
+    second: ui_finding_15
+  - first:
+      213: 3712887022143041732
+    second: ui_finding_16
+  - first:
+      213: 553229493129272671
+    second: ui_finding_17
+  - first:
+      213: -8339855349176275457
+    second: ui_finding_18
+  - first:
+      213: -785627919234982425
+    second: ui_finding_19
+  - first:
+      213: 4724790300592963785
+    second: ui_finding_20
+  - first:
+      213: -4961554269916436463
+    second: ui_finding_21
+  - first:
+      213: -1852592346949915305
+    second: ui_finding_22
+  - first:
+      213: -8390235271192681792
+    second: ui_finding_23
+  - first:
+      213: 3177794700910245154
+    second: ui_finding_24
+  - first:
+      213: 6151080436382726141
+    second: ui_finding_25
+  - first:
+      213: 2221400844857251018
+    second: ui_finding_26
+  - first:
+      213: 7748060113925911535
+    second: ui_finding_27
+  - first:
+      213: 348026343894655617
+    second: ui_finding_28
+  - first:
+      213: 5591619661655040224
+    second: ui_finding_29
+  - first:
+      213: -8119284290954030356
+    second: ui_finding_30
+  - first:
+      213: -5180784344545235282
+    second: ui_finding_31
+  - first:
+      213: -8768441993365234624
+    second: ui_finding_32
+  - first:
+      213: -8237973379419424798
+    second: ui_finding_33
+  - first:
+      213: 7171905076325385481
+    second: ui_finding_34
+  - first:
+      213: 9028235512175290256
+    second: ui_finding_35
+  - first:
+      213: -2220471644968428732
+    second: ui_finding_36
+  - first:
+      213: -2321791322167511339
+    second: ui_finding_37
+  - first:
+      213: -5478865522539479771
+    second: ui_finding_38
+  - first:
+      213: -2372125104428080559
+    second: ui_finding_39
+  - first:
+      213: 1138625845191129632
+    second: ui_finding_40
+  - first:
+      213: -1747218918472442751
+    second: ui_finding_41
+  - first:
+      213: -5453613303649643890
+    second: ui_finding_42
+  - first:
+      213: 5751939501175721457
+    second: ui_finding_43
+  - first:
+      213: -2989888543304427614
+    second: ui_finding_44
+  - first:
+      213: -4623902507085416117
+    second: ui_finding_45
+  - first:
+      213: 539437506274482608
+    second: ui_finding_46
+  - first:
+      213: -1986310070264208349
+    second: ui_finding_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_finding_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 631
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba22922d026b45280800000000000000
+      internalID: -9055412698654104917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd110a6f6f554520800000000000000
+      internalID: 2685657684920835541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4edd756f6f632060800000000000000
+      internalID: 6927503176060755535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b473b5b91702406d0800000000000000
+      internalID: -3025257377376290997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076e7e5746ad4db40800000000000000
+      internalID: 5464232372916971120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd5adfa78ed33c60800000000000000
+      internalID: 7796820054260735454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_6
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0aa33a6da5a8fbb0800000000000000
+      internalID: -4901986030163088883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5ff91375fbadf10800000000000000
+      internalID: 2295357341314315698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7202f6a9d6b1f3e0800000000000000
+      internalID: -2021633711787605377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac416c16d043c110800000000000000
+      internalID: 1279938007446670499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_10
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 626
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2960cecf8a2ad230800000000000000
+      internalID: 3664288043956726062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_11
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55e9318ae994dca0800000000000000
+      internalID: -5992995971653835426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_12
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3176d5e4fb65f30800000000000000
+      internalID: 4564045615681967062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4088cb126e34c7e30800000000000000
+      internalID: 4502548383151196164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_14
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb996737d06c2a220800000000000000
+      internalID: 2495774904590703039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_15
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843d30e27d45cee00800000000000000
+      internalID: 1075327694201410376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c07efd2313d68330800000000000000
+      internalID: 3712887022143041732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_17
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 590
+        width: 49
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d5d39fa477da700800000000000000
+      internalID: 553229493129272671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_18
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffde4321fb1e24c80800000000000000
+      internalID: -8339855349176275457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_19
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed9e54e193e815f0800000000000000
+      internalID: -785627919234982425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_20
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c00e01deb3d19140800000000000000
+      internalID: 4724790300592963785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_21
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118eecfcda4052bb0800000000000000
+      internalID: -4961554269916436463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_22
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d617e63154a46e0800000000000000
+      internalID: -1852592346949915305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_23
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 629
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c26b966975ef8b80800000000000000
+      internalID: -8390235271192681792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_24
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225bfdc917bc91c20800000000000000
+      internalID: 3177794700910245154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_25
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7727b21170d5550800000000000000
+      internalID: 6151080436382726141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_26
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac418758c4004de10800000000000000
+      internalID: 2221400844857251018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_27
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 629
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe33de46f93a68b60800000000000000
+      internalID: 7748060113925911535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_28
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182a158ad1074d400800000000000000
+      internalID: 348026343894655617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_29
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0e904e47c699d40800000000000000
+      internalID: 5591619661655040224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_30
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 629
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2964784f1825f80800000000000000
+      internalID: -8119284290954030356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_31
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaee97d66182a18b0800000000000000
+      internalID: -5180784344545235282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cd8d7d67c305680800000000000000
+      internalID: -8768441993365234624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_33
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e7b49aabd6dcad80800000000000000
+      internalID: -8237973379419424798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_34
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90502352ba9b78360800000000000000
+      internalID: 7171905076325385481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_35
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09766cb5d5cba4d70800000000000000
+      internalID: 9028235512175290256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_36
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b54dfadcc4f21e0800000000000000
+      internalID: -2220471644968428732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6fe97081757cfd0800000000000000
+      internalID: -2321791322167511339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_38
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d36e4e5d827f3b0800000000000000
+      internalID: -5478865522539479771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_39
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15227cb19c4841fd0800000000000000
+      internalID: -2372125104428080559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_40
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a32ba6c263dcf00800000000000000
+      internalID: 1138625845191129632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_41
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c9b9b96a1a0c7e0800000000000000
+      internalID: -1747218918472442751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_42
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e825e95489fd054b0800000000000000
+      internalID: -5453613303649643890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_43
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdcd11508ef2df40800000000000000
+      internalID: 5751939501175721457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_44
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a754520638c186d0800000000000000
+      internalID: -2989888543304427614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_45
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 590
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49b2251b2994dfb0800000000000000
+      internalID: -4623902507085416117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_46
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9530ccd877c7700800000000000000
+      internalID: 539437506274482608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_finding_47
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 590
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324ee18d3853f64e0800000000000000
+      internalID: -1986310070264208349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_finding_0: -9055412698654104917
+      ui_finding_1: 2685657684920835541
+      ui_finding_10: 3664288043956726062
+      ui_finding_11: -5992995971653835426
+      ui_finding_12: 4564045615681967062
+      ui_finding_13: 4502548383151196164
+      ui_finding_14: 2495774904590703039
+      ui_finding_15: 1075327694201410376
+      ui_finding_16: 3712887022143041732
+      ui_finding_17: 553229493129272671
+      ui_finding_18: -8339855349176275457
+      ui_finding_19: -785627919234982425
+      ui_finding_2: 6927503176060755535
+      ui_finding_20: 4724790300592963785
+      ui_finding_21: -4961554269916436463
+      ui_finding_22: -1852592346949915305
+      ui_finding_23: -8390235271192681792
+      ui_finding_24: 3177794700910245154
+      ui_finding_25: 6151080436382726141
+      ui_finding_26: 2221400844857251018
+      ui_finding_27: 7748060113925911535
+      ui_finding_28: 348026343894655617
+      ui_finding_29: 5591619661655040224
+      ui_finding_3: -3025257377376290997
+      ui_finding_30: -8119284290954030356
+      ui_finding_31: -5180784344545235282
+      ui_finding_32: -8768441993365234624
+      ui_finding_33: -8237973379419424798
+      ui_finding_34: 7171905076325385481
+      ui_finding_35: 9028235512175290256
+      ui_finding_36: -2220471644968428732
+      ui_finding_37: -2321791322167511339
+      ui_finding_38: -5478865522539479771
+      ui_finding_39: -2372125104428080559
+      ui_finding_4: 5464232372916971120
+      ui_finding_40: 1138625845191129632
+      ui_finding_41: -1747218918472442751
+      ui_finding_42: -5453613303649643890
+      ui_finding_43: 5751939501175721457
+      ui_finding_44: -2989888543304427614
+      ui_finding_45: -4623902507085416117
+      ui_finding_46: 539437506274482608
+      ui_finding_47: -1986310070264208349
+      ui_finding_5: 7796820054260735454
+      ui_finding_6: -4901986030163088883
+      ui_finding_7: 2295357341314315698
+      ui_finding_8: -2021633711787605377
+      ui_finding_9: 1279938007446670499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
