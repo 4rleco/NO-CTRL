@@ -26,6 +26,7 @@ public class PlayerActions : MonoBehaviour
     [Header("Bounce")]
     [SerializeField] private float bounceDistance = 3f;
     [SerializeField] private float bounceSpeed = 8f;
+    [SerializeField] private float bounceWaitTime = 1f;
     private bool isBouncing = false;
 
 
@@ -313,12 +314,20 @@ public class PlayerActions : MonoBehaviour
         rb.gravityScale = 0f;
         rb.linearVelocity = Vector2.zero;
 
-        while (Mathf.Abs(transform.position.x - startX) < efectiveDistance
-               && currentSpeed > 0
-               && elapsed < maxTime)
+        while (Mathf.Abs(transform.position.x - startX) < efectiveDistance && currentSpeed > 0 && elapsed < maxTime)
         {
             transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
             elapsed += Time.deltaTime;
+            yield return null;
+        }
+        elapsed = 0;
+        if (animator != null) animator.SetBool("isBouncing", false);
+
+        while (elapsed < bounceWaitTime)
+        {
+            // transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
+            elapsed += Time.deltaTime;
+            Debug.Log(elapsed);
             yield return null;
         }
 
@@ -326,7 +335,6 @@ public class PlayerActions : MonoBehaviour
         isDashing = false;
         isBouncing = false;
         dashCoroutine = null;
-        if (animator != null) animator.SetBool("isBouncing", false);
     }
 
     private void OnCollisionExit2D(Collision2D collision)

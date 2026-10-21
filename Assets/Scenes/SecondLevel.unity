@@ -14248,6 +14248,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
+      propertyPath: bounceWaitTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: obstacleBounce
       value: -2.2
       objectReference: {fileID: 0}
