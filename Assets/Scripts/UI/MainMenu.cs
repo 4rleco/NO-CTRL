@@ -1,8 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI versionNumber;
+
+    private void Start()
+    {
+        versionNumber.text = GameVersion.GetVersionNumber();
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
