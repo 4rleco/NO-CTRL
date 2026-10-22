@@ -132,4 +132,13 @@ public class GameUI : MonoBehaviour
 
         player.SetPlayerPause(false);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Detiene el modo Play en Unity
+#endif
+    }
 }
