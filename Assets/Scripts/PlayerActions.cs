@@ -134,7 +134,26 @@ public class PlayerActions : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isSliding", isCrouching);
-        }        
+        }
+
+        if (currentSpeed < speed)
+            currentSpeed += 0.1f;
+        else if (currentSpeed > speed)
+            currentSpeed -= 0.1f;
+
+        if (!playerDied && !playerWin)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+            {
+                isPaused = true;
+                Time.timeScale = 0.0f;
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isPaused = false;
+                Time.timeScale = 1.0f;
+            }
+        }
 
         if (!isPaused)
         {
@@ -227,22 +246,6 @@ public class PlayerActions : MonoBehaviour
                         animator.SetBool("isGrounded", isGrounded);
                     }
                 }
-            }
-
-            if (currentSpeed < speed)
-                currentSpeed += 0.1f;
-            else if (currentSpeed > speed)
-                currentSpeed -= 0.1f;
-
-            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
-            {
-                isPaused = true;
-                Time.timeScale = 0.0f;
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                isPaused = false;
-                Time.timeScale = 1.0f;
             }
         }          
     }
