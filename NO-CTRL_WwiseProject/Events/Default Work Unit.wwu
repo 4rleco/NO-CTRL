@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{13D5937E-64C5-4CAB-A3BC-C295B38C44C6}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{13D5937E-64C5-4CAB-A3BC-C295B38C44C6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Jump" ID="{5860777D-3239-4E75-9395-8DFE4536D9C4}">
+					<ChildrenList>
+						<Action Name="" ID="{0668DC84-7445-41E7-967F-2351FE21A720}" ShortID="442157222">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="switch10" ID="{6808B505-BEEA-4892-B153-03D40481A771}" WorkUnitID="{86A73BBF-F647-444F-B08C-4B7FC25CC1AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -14,6 +14,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float obstacleBounce = -1;
     [SerializeField] private int maxJumps = 2;
+    [SerializeField] private AK.Wwise.Event jumpEvent;
     private int jumpsRemaining;
 
     [Header("Start")]
@@ -179,9 +180,9 @@ public class PlayerActions : MonoBehaviour
 
                     if (animator != null)
                     {
+                        AkUnitySoundEngine.PostEvent(jumpEvent.Id, gameObject);
                         animator.SetBool("isGrounded", isGrounded);
                     }
-
                     PlayerEvents.current.OnPlayerJumpTriggerClose(this);
                 }
 
