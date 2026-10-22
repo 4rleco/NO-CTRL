@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 835479a96349c2b409d5b552a1b695a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3161423381451332976
+    second: ui_distance_0
+  - first:
+      213: 4655667433196965630
+    second: ui_distance_1
+  - first:
+      213: -1392217790071156891
+    second: ui_distance_2
+  - first:
+      213: 6077401893605796683
+    second: ui_distance_3
+  - first:
+      213: 2573139586853323149
+    second: ui_distance_4
+  - first:
+      213: -6541463063730577310
+    second: ui_distance_5
+  - first:
+      213: -8990189191281088332
+    second: ui_distance_6
+  - first:
+      213: 1706007336738799171
+    second: ui_distance_7
+  - first:
+      213: 1488106836684519877
+    second: ui_distance_8
+  - first:
+      213: -7817610932581186352
+    second: ui_distance_9
+  - first:
+      213: -7988689185867953147
+    second: ui_distance_10
+  - first:
+      213: 2445311075494605744
+    second: ui_distance_11
+  - first:
+      213: -6968098375420414555
+    second: ui_distance_12
+  - first:
+      213: 6331119833800812672
+    second: ui_distance_13
+  - first:
+      213: 182070100150699882
+    second: ui_distance_14
+  - first:
+      213: -3278367826499946501
+    second: ui_distance_15
+  - first:
+      213: 1479115985698342651
+    second: ui_distance_16
+  - first:
+      213: -1995249684384777908
+    second: ui_distance_17
+  - first:
+      213: -6474716027260270327
+    second: ui_distance_18
+  - first:
+      213: -2808421420837047447
+    second: ui_distance_19
+  - first:
+      213: -5210767013275326895
+    second: ui_distance_20
+  - first:
+      213: -4017271020194008807
+    second: ui_distance_21
+  - first:
+      213: -4026151521839259099
+    second: ui_distance_22
+  - first:
+      213: -7998426865869551583
+    second: ui_distance_23
+  - first:
+      213: -8136326196130976354
+    second: ui_distance_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_distance_0
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 450
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d5504c0d1afdb20800000000000000
+      internalID: 3161423381451332976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_1
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe4f0c1dd04c9040800000000000000
+      internalID: 4655667433196965630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_2
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 449
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f44d4db49ddace0800000000000000
+      internalID: -1392217790071156891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_3
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4be8a1a2d4475450800000000000000
+      internalID: 6077401893605796683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_4
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8143e732d0a5b320800000000000000
+      internalID: 2573139586853323149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_5
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260200f600e0835a0800000000000000
+      internalID: -6541463063730577310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_6
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b86226009e6c3380800000000000000
+      internalID: -8990189191281088332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_7
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34eb68a42a4fca710800000000000000
+      internalID: 1706007336738799171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_8
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 449
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9396c9841d6a410800000000000000
+      internalID: 1488106836684519877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_9
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4c94bb644428390800000000000000
+      internalID: -7817610932581186352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_10
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c0657e289722190800000000000000
+      internalID: -7988689185867953147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_11
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 449
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b33f24a77d7fe120800000000000000
+      internalID: 2445311075494605744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_12
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5f61532775c4f90800000000000000
+      internalID: -6968098375420414555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_13
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088a024f1f7acd750800000000000000
+      internalID: 6331119833800812672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_14
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67c3bb9ac7d68200800000000000000
+      internalID: 182070100150699882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_15
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 446
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7b662d4d5e082d0800000000000000
+      internalID: -3278367826499946501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_16
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 446
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6c62df620e68410800000000000000
+      internalID: 1479115985698342651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_17
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49f80cbbf27f44e0800000000000000
+      internalID: -1995249684384777908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_18
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9098f95e3103526a0800000000000000
+      internalID: -6474716027260270327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_19
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 449
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963f86fe89b7609d0800000000000000
+      internalID: -2808421420837047447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_20
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 447
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156a66e5203afa7b0800000000000000
+      internalID: -5210767013275326895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_21
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9117dd2aa49cf38c0800000000000000
+      internalID: -4017271020194008807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_22
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5226fd8b58c3028c0800000000000000
+      internalID: -4026151521839259099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_23
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 449
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12887e99421eff090800000000000000
+      internalID: -7998426865869551583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_distance_24
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 449
+        width: 46
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d68e6ce66f51f80800000000000000
+      internalID: -8136326196130976354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_distance_0: 3161423381451332976
+      ui_distance_1: 4655667433196965630
+      ui_distance_10: -7988689185867953147
+      ui_distance_11: 2445311075494605744
+      ui_distance_12: -6968098375420414555
+      ui_distance_13: 6331119833800812672
+      ui_distance_14: 182070100150699882
+      ui_distance_15: -3278367826499946501
+      ui_distance_16: 1479115985698342651
+      ui_distance_17: -1995249684384777908
+      ui_distance_18: -6474716027260270327
+      ui_distance_19: -2808421420837047447
+      ui_distance_2: -1392217790071156891
+      ui_distance_20: -5210767013275326895
+      ui_distance_21: -4017271020194008807
+      ui_distance_22: -4026151521839259099
+      ui_distance_23: -7998426865869551583
+      ui_distance_24: -8136326196130976354
+      ui_distance_3: 6077401893605796683
+      ui_distance_4: 2573139586853323149
+      ui_distance_5: -6541463063730577310
+      ui_distance_6: -8990189191281088332
+      ui_distance_7: 1706007336738799171
+      ui_distance_8: 1488106836684519877
+      ui_distance_9: -7817610932581186352
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

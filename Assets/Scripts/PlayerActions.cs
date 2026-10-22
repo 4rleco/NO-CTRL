@@ -23,6 +23,13 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private int speed = 10;
     private float currentSpeed;
 
+    [Header("Bounce")]
+    [SerializeField] private float bounceDistance = 3f;
+    [SerializeField] private float bounceSpeed = 8f;
+    [SerializeField] private float bounceWaitTime = 1f;
+    private bool isBouncing = false;
+
+
     [Header("Dash")]
     [SerializeField] private float dashDistance = 3f;
     [SerializeField] private float dashSpeed = 8f;
@@ -30,7 +37,10 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private LayerMask dashObstacleLayer; // Capa de los obstáculos que bloquean el Dash
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
     [SerializeField] private bool canDestroyObstacles = false;
+
     private Coroutine dashCoroutine;
+    private Coroutine bounceCoroutine;
+
     private float defaultGravity;
     private bool canDash = true;
     private float dashTimer = 0f;
@@ -72,7 +82,7 @@ public class PlayerActions : MonoBehaviour
     private bool playerDied = false;
     private bool playerWin = false;
 
-    
+
     private bool standingOnObstacle = false;
 
     private BoxCollider2D boxCollider;
@@ -132,7 +142,10 @@ public class PlayerActions : MonoBehaviour
                 OnPlayerDied();
             }
 
-            transform.Translate(new Vector3(1 * currentSpeed * Time.deltaTime, 0, 0));
+            if (!isBouncing)
+            {
+                transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
+            }
 
             if (Input.GetKeyUp(crouchKey) && isCrouching)
             {
@@ -225,7 +238,7 @@ public class PlayerActions : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1.0f;
         }
-    }   
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -253,7 +266,7 @@ public class PlayerActions : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
         {
-           
+
             if (IsLandingOnTop(collision))
             {
                 isGrounded = true;
@@ -265,9 +278,16 @@ public class PlayerActions : MonoBehaviour
                 Vector2 contactPoint = collision.GetContact(0).point;
                 Vector2 colliderCenter = (Vector2)transform.position + boxCollider.offset;
 
-                if (contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
+                if (!isBouncing && contactPoint.y >= colliderCenter.y - (boxCollider.size.y / 2f))
                 {
-                    currentSpeed *= obstacleBounce;
+                    if (dashCoroutine != null)
+                    {
+                        StopCoroutine(dashCoroutine);
+                        dashCoroutine = null;
+                        if (animator != null) animator.SetBool("isDashing", false);
+                    }
+
+                    bounceCoroutine = StartCoroutine(BounceCorutine());
                 }
             }
         }
@@ -277,10 +297,49 @@ public class PlayerActions : MonoBehaviour
             playerWin = true;
         }
     }
+    private IEnumerator BounceCorutine()
+    {
+        isBouncing = true;
+        isDashing = true;
+
+        if (animator != null) animator.SetBool("isBouncing", true);
+        float directionX = -Mathf.Sign(currentSpeed);
+        Vector2 dasDirection = new Vector2(directionX, 0f);
+
+        float efectiveDistance = bounceDistance;
+
+        float startX = transform.position.x;
+        float elapsed = 0f;
+        float maxTime = (efectiveDistance / bounceSpeed) + 0.5f;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = Vector2.zero;
+
+        while (Mathf.Abs(transform.position.x - startX) < efectiveDistance && currentSpeed > 0 && elapsed < maxTime)
+        {
+            transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        elapsed = 0;
+        if (animator != null) animator.SetBool("isBouncing", false);
+
+        while (elapsed < bounceWaitTime)
+        {
+            // transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
+            elapsed += Time.deltaTime;
+            Debug.Log(elapsed);
+            yield return null;
+        }
+
+        rb.gravityScale = defaultGravity;
+        isDashing = false;
+        isBouncing = false;
+        dashCoroutine = null;
+    }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-       
+
         bool leftFloor = collision.gameObject.CompareTag("Floor");
         bool leftObstacleTop = standingOnObstacle &&
             (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"));
