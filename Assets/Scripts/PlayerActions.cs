@@ -134,7 +134,8 @@ public class PlayerActions : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isSliding", isCrouching);
-        }
+        }        
+
         if (!isPaused)
         {
             if (playerDied)
@@ -147,97 +148,103 @@ public class PlayerActions : MonoBehaviour
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
             }
 
-            if (Input.GetKeyUp(crouchKey) && isCrouching)
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("ThirdLevel"))
             {
-                wantsToStandUp = true;
-            }
-
-            if (wantsToStandUp && isCrouching)
-            {
-                TryToStandUp();
-            }
-
-            if (!qte.GetIsActive())
-            {
-                if (isDashing) return;
-                // --- LÓGICA DE AGACHARSE ---
-                if (Input.GetKeyDown(crouchKey) && isGrounded)
+                if (Input.GetKeyUp(crouchKey) && isCrouching)
                 {
-                    Slide();
-
-                    PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                    wantsToStandUp = true;
                 }
 
-                // --- SALTO (No se permite si está agachado) --
-                if (Input.GetKeyDown(jumpKey) && jumpsRemaining > 0)
+                if (wantsToStandUp && isCrouching)
                 {
-                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    TryToStandUp();
+                }
 
-                    jumpsRemaining--;
-                    isGrounded = false;
+                if (!qte.GetIsActive())
+                {
+                    if (isDashing) return;
+                    // --- LÓGICA DE AGACHARSE ---
+                    if (Input.GetKeyDown(crouchKey) && isGrounded)
+                    {
+                        Slide();
+
+                        PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                    }
+
+                    // --- SALTO (No se permite si está agachado) --
+                    if (Input.GetKeyDown(jumpKey) && jumpsRemaining > 0)
+                    {
+                        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+                        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+                        jumpsRemaining--;
+                        isGrounded = false;
+
+                        if (animator != null)
+                        {
+                            animator.SetBool("isGrounded", isGrounded);
+                        }
+
+                        PlayerEvents.current.OnPlayerJumpTriggerClose(this);
+                    }
+
+                    // --- DASH (No se permite si está agachado) ---
+                    if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
+                    {
+                        dashCoroutine = StartCoroutine(DashRoutine());
+
+                        PlayerEvents.current.OnPlayerDashTriggerClose(this);
+
+                    }
+                    if (!canDash)
+                    {
+                        dashTimer -= Time.deltaTime;
+                    }
+                    if (dashTimer < 0 && !canDash && isGrounded)
+                    {
+                        canDash = true;
+                    }
+
+                    if (currentKeyTimer <= 0.0f && !isCrouching)
+                    {
+                        SetRandKey();
+
+                        currentKeyTimer += keyTimer;
+                    }
+
+                   
+
+#if UNITY_EDITOR
+                    if (Input.GetKeyDown(KeyCode.F5))
+                    {
+                        PlayerReset();
+                    }
+#endif
+                    currentKeyTimer -= Time.deltaTime;
 
                     if (animator != null)
                     {
                         animator.SetBool("isGrounded", isGrounded);
                     }
-
-                    PlayerEvents.current.OnPlayerJumpTriggerClose(this);
-                }
-
-                // --- DASH (No se permite si está agachado) ---
-                if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
-                {
-                    dashCoroutine = StartCoroutine(DashRoutine());
-
-                    PlayerEvents.current.OnPlayerDashTriggerClose(this);
-
-                }
-                if (!canDash)
-                {
-                    dashTimer -= Time.deltaTime;
-                }
-                if (dashTimer < 0 && !canDash && isGrounded)
-                {
-                    canDash = true;
-                }
-
-                if (currentKeyTimer <= 0.0f && !isCrouching)
-                {
-                    SetRandKey();
-
-                    currentKeyTimer += keyTimer;
-                }
-
-                if (currentSpeed < speed)
-                    currentSpeed += 0.1f;
-                else if (currentSpeed > speed)
-                    currentSpeed -= 0.1f;
-
-#if UNITY_EDITOR
-                if (Input.GetKeyDown(KeyCode.F5))
-                {
-                    PlayerReset();
-                }
-#endif
-                currentKeyTimer -= Time.deltaTime;
-
-                if (animator != null)
-                {
-                    animator.SetBool("isGrounded", isGrounded);
                 }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
-        {
-            isPaused = true;
-            Time.timeScale = 0.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = false;
-            Time.timeScale = 1.0f;
-        }
+
+            if (currentSpeed < speed)
+                currentSpeed += 0.1f;
+            else if (currentSpeed > speed)
+                currentSpeed -= 0.1f;
+
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+            {
+                isPaused = true;
+                Time.timeScale = 0.0f;
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isPaused = false;
+                Time.timeScale = 1.0f;
+            }
+        }          
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
