@@ -10788,7 +10788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877715763817883498, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.9
+      value: 16.9
       objectReference: {fileID: 0}
     - target: {fileID: 6877715763817883498, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13193,6 +13193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1033156636658387027, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 1364993090977895106, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_Name
       value: GameUi
@@ -13276,6 +13280,10 @@ PrefabInstance:
     - target: {fileID: 4265645940052458629, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148274863532731798, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
       objectReference: {fileID: 0}
     - target: {fileID: 6453837276559775283, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_Pivot.x
