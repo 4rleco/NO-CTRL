@@ -10,6 +10,10 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Administrador_QTE qte;
 
+
+    [SerializeField] private Transform auxParticles;
+    [SerializeField] private Transform particles;
+
     [Header("Jump")]
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float obstacleBounce = -1;
@@ -101,6 +105,7 @@ public class PlayerActions : MonoBehaviour
     private float currentKeyTimer = 0.0f;
 
     Vector3 screenRelativePosition;
+    Vector3 particlesStartPositions;
 
     void Start()
     {
@@ -127,6 +132,7 @@ public class PlayerActions : MonoBehaviour
             animator.SetBool("isSliding", false);
             animator.SetBool("isDashing", false);
         }
+        particlesStartPositions= particles.transform.localPosition;
     }
 
     void Update()
@@ -188,6 +194,7 @@ public class PlayerActions : MonoBehaviour
                         Slide();
 
                         PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                        particles.transform.position=auxParticles.transform.position;
                     }
 
                     // --- SALTO (No se permite si está agachado) --
@@ -362,6 +369,7 @@ public class PlayerActions : MonoBehaviour
             if (isCrouching && !IsThereRoofAbove())
             {
                 isCrouching = false;
+                particles.transform.localPosition = particlesStartPositions;
                 wantsToStandUp = false;
 
                 if (boxCollider != null)
@@ -466,6 +474,8 @@ public class PlayerActions : MonoBehaviour
             float reduccion = colliderOriginalSize.y * (1f - heightColliderMultiplier);
             boxCollider.offset = new Vector2(colliderOriginalOffset.x, colliderOriginalOffset.y - (reduccion / 2f));
         }
+
+      
     }
 
     private void TryToStandUp()
@@ -473,6 +483,7 @@ public class PlayerActions : MonoBehaviour
         if (!IsThereRoofAbove())
         {
             isCrouching = false;
+            particles.transform.localPosition = particlesStartPositions;
             wantsToStandUp = false;
 
             if (boxCollider != null)
