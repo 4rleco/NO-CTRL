@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.6.1] - 2026-10-27
+
+### Changes
+
+- Updated Android build to 9 and iOS build to 8.
+- Modified third level background concept.
+- Adjusted last train height.
+- Updated button click method calls.
+
+## [0.6.0] - 2026-10-27
+
+### New
+
+- Third level added.
+- Particle system added to player.
+- Font added to project.
+- Bounce animation and logic added.
+- UI player actions added.
+
+### Changes
+
+- Updated Android build to 8 and iOS build to 7.
+- Updated minor issues in levels.
+- Train box collider positions adjusted.
+- Win screen activates when player wins the game.
+- Pause key disabled when player dies or wins.
+- Second level obstacles replaced with sprites.
+- Second level floor sprite updated.
+- Player sprite positions fixed.
+- Bounce animation fixed.
+- Bounce wait timer added.
+- Third level logic implemented.
+- UI modified.
+- Train size and level 2 design modified.
+
 ## [0.5.1] - 2026-10-19
 
 ### Changes
@@ -127,3 +162,4 @@
 - QTE fixed.
 - Camera keeps the player on the left side of the screen.
 - Camera moves correctly when the player fails a QTE.
+
