@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 837422c554f315641ad54dea1f324fa6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4505116501512696913
+    second: ui_activation_dash_0
+  - first:
+      213: 901231832951519645
+    second: ui_activation_dash_1
+  - first:
+      213: -3501584542816267626
+    second: ui_activation_dash_2
+  - first:
+      213: -6822925640692255050
+    second: ui_activation_dash_3
+  - first:
+      213: -9062029980368153627
+    second: ui_activation_dash_4
+  - first:
+      213: 8079082992068575276
+    second: ui_activation_dash_5
+  - first:
+      213: 6226026959273611212
+    second: ui_activation_dash_6
+  - first:
+      213: -7634351263390722243
+    second: ui_activation_dash_7
+  - first:
+      213: -1599044198654085386
+    second: ui_activation_dash_8
+  - first:
+      213: -4654497475098865868
+    second: ui_activation_dash_9
+  - first:
+      213: 5367695618009397800
+    second: ui_activation_dash_10
+  - first:
+      213: 5510720432529181837
+    second: ui_activation_dash_11
+  - first:
+      213: 8207671682000938021
+    second: ui_activation_dash_12
+  - first:
+      213: 4219827610252607597
+    second: ui_activation_dash_13
+  - first:
+      213: 5532021986929575005
+    second: ui_activation_dash_14
+  - first:
+      213: -8358647590861785547
+    second: ui_activation_dash_15
+  - first:
+      213: 4099886247943568170
+    second: ui_activation_dash_16
+  - first:
+      213: -4650178167454153143
+    second: ui_activation_dash_17
+  - first:
+      213: 1617526270784007903
+    second: ui_activation_dash_18
+  - first:
+      213: 6721510993618995693
+    second: ui_activation_dash_19
+  - first:
+      213: 3477713323235580803
+    second: ui_activation_dash_20
+  - first:
+      213: 505269419682486502
+    second: ui_activation_dash_21
+  - first:
+      213: -4978568305276501782
+    second: ui_activation_dash_22
+  - first:
+      213: 7603258214141937994
+    second: ui_activation_dash_23
+  - first:
+      213: -8352332384652736447
+    second: ui_activation_dash_24
+  - first:
+      213: -7368453620139488412
+    second: ui_activation_dash_25
+  - first:
+      213: -3594080199058023861
+    second: ui_activation_dash_26
+  - first:
+      213: 981357547058207264
+    second: ui_activation_dash_27
+  - first:
+      213: -6058043496630289220
+    second: ui_activation_dash_28
+  - first:
+      213: -7576282144012848198
+    second: ui_activation_dash_29
+  - first:
+      213: -7244907579033559175
+    second: ui_activation_dash_30
+  - first:
+      213: -2870546150592724762
+    second: ui_activation_dash_31
+  - first:
+      213: 7560175528836169158
+    second: ui_activation_dash_32
+  - first:
+      213: -761498699915169400
+    second: ui_activation_dash_33
+  - first:
+      213: 308445970201508146
+    second: ui_activation_dash_34
+  - first:
+      213: 1541392282310534362
+    second: ui_activation_dash_35
+  - first:
+      213: 977649331683596597
+    second: ui_activation_dash_36
+  - first:
+      213: 7071828802909638068
+    second: ui_activation_dash_37
+  - first:
+      213: 768807502879327457
+    second: ui_activation_dash_38
+  - first:
+      213: 541416387818065106
+    second: ui_activation_dash_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_activation_dash_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 513
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabc597396c9a71c0800000000000000
+      internalID: -4505116501512696913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99795fb391d18c00800000000000000
+      internalID: 901231832951519645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6921076196fd76fc0800000000000000
+      internalID: -3501584542816267626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b632a977491051a0800000000000000
+      internalID: -6822925640692255050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3573cdeb33d3280800000000000000
+      internalID: -9062029980368153627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20c52d2d2bae1070800000000000000
+      internalID: 8079082992068575276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf4285588a476650800000000000000
+      internalID: 6226026959273611212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d379a0779f55d0690800000000000000
+      internalID: -7634351263390722243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 511
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6f21ff5cd0fc9e0800000000000000
+      internalID: -1599044198654085386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_9
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f87ccf437e76fb0800000000000000
+      internalID: -4654497475098865868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_10
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82afedda9b2ed7a40800000000000000
+      internalID: 5367695618009397800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_11
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c836d49030a7c40800000000000000
+      internalID: 5510720432529181837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_12
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 511
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524e2be98e187e170800000000000000
+      internalID: 8207671682000938021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_13
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d600e7a9ad6df8a30800000000000000
+      internalID: 4219827610252607597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54869cefa0b5cc40800000000000000
+      internalID: 5532021986929575005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_15
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53632085d4e100c80800000000000000
+      internalID: -8358647590861785547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b7f2402d8b5e830800000000000000
+      internalID: 4099886247943568170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_17
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9464e9a289f377fb0800000000000000
+      internalID: -4650178167454153143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_18
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde61f0c29b927610800000000000000
+      internalID: 1617526270784007903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_19
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de90b88f2aa974d50800000000000000
+      internalID: 6721510993618995693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_20
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b991e77d1534030800000000000000
+      internalID: 3477713323235580803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_21
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8da043cd3130700800000000000000
+      internalID: 505269419682486502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_22
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 511
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0c9f1018298eab0800000000000000
+      internalID: -4978568305276501782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_23
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49408ddf03348960800000000000000
+      internalID: 7603258214141937994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_24
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14848ced2fd861c80800000000000000
+      internalID: -8352332384652736447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_25
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b05a3e87efdb990800000000000000
+      internalID: -7368453620139488412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_26
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 511
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a91e8e9134f1ec0800000000000000
+      internalID: -3594080199058023861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_27
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 511
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a9d065d7b7e9d00800000000000000
+      internalID: 981357547058207264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_28
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 511
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc7c7569818deba0800000000000000
+      internalID: -6058043496630289220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_29
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 508
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3baf7e783abd690800000000000000
+      internalID: -7576282144012848198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_30
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 508
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f5b2921fae47b90800000000000000
+      internalID: -7244907579033559175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_31
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 472
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e04e8e1c75c928d0800000000000000
+      internalID: -2870546150592724762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 472
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd71e386932be860800000000000000
+      internalID: 7560175528836169158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_33
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 472
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88172ae87fc9e65f0800000000000000
+      internalID: -761498699915169400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_34
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 472
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239f246c9f1d74400800000000000000
+      internalID: 308445970201508146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_35
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 472
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4e5a63d10246510800000000000000
+      internalID: 1541392282310534362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_36
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 472
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53916e923ee419d00800000000000000
+      internalID: 977649331683596597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_37
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 483
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd0ecdf3de242260800000000000000
+      internalID: 7071828802909638068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_38
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 472
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e407cdb95a5baa00800000000000000
+      internalID: 768807502879327457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_activation_dash_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 472
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc887f065f738700800000000000000
+      internalID: 541416387818065106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_activation_dash_0: -4505116501512696913
+      ui_activation_dash_1: 901231832951519645
+      ui_activation_dash_10: 5367695618009397800
+      ui_activation_dash_11: 5510720432529181837
+      ui_activation_dash_12: 8207671682000938021
+      ui_activation_dash_13: 4219827610252607597
+      ui_activation_dash_14: 5532021986929575005
+      ui_activation_dash_15: -8358647590861785547
+      ui_activation_dash_16: 4099886247943568170
+      ui_activation_dash_17: -4650178167454153143
+      ui_activation_dash_18: 1617526270784007903
+      ui_activation_dash_19: 6721510993618995693
+      ui_activation_dash_2: -3501584542816267626
+      ui_activation_dash_20: 3477713323235580803
+      ui_activation_dash_21: 505269419682486502
+      ui_activation_dash_22: -4978568305276501782
+      ui_activation_dash_23: 7603258214141937994
+      ui_activation_dash_24: -8352332384652736447
+      ui_activation_dash_25: -7368453620139488412
+      ui_activation_dash_26: -3594080199058023861
+      ui_activation_dash_27: 981357547058207264
+      ui_activation_dash_28: -6058043496630289220
+      ui_activation_dash_29: -7576282144012848198
+      ui_activation_dash_3: -6822925640692255050
+      ui_activation_dash_30: -7244907579033559175
+      ui_activation_dash_31: -2870546150592724762
+      ui_activation_dash_32: 7560175528836169158
+      ui_activation_dash_33: -761498699915169400
+      ui_activation_dash_34: 308445970201508146
+      ui_activation_dash_35: 1541392282310534362
+      ui_activation_dash_36: 977649331683596597
+      ui_activation_dash_37: 7071828802909638068
+      ui_activation_dash_38: 768807502879327457
+      ui_activation_dash_39: 541416387818065106
+      ui_activation_dash_4: -9062029980368153627
+      ui_activation_dash_5: 8079082992068575276
+      ui_activation_dash_6: 6226026959273611212
+      ui_activation_dash_7: -7634351263390722243
+      ui_activation_dash_8: -1599044198654085386
+      ui_activation_dash_9: -4654497475098865868
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

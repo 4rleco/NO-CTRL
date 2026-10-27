@@ -76,7 +76,11 @@ public class GameUI : MonoBehaviour
         if (player.GetPlayerWin())
         {
             Time.timeScale = 0.0f;
-            NextLevel();
+
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("ThirdLevel"))
+                winMenu.SetActive(true);
+            else
+                NextLevel();
         }
     }
 
@@ -127,5 +131,14 @@ public class GameUI : MonoBehaviour
         pauseMenu.SetActive(false);
 
         player.SetPlayerPause(false);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Detiene el modo Play en Unity
+#endif
     }
 }
