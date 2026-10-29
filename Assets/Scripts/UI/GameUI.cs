@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -9,7 +8,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jumpKey;
     [SerializeField] private TextMeshProUGUI dashKey;
     [SerializeField] private TextMeshProUGUI crouchKey;
-    [SerializeField] private TextMeshProUGUI versionNumber;
 
     [SerializeField] private PlayerActions player;
 
@@ -24,8 +22,6 @@ public class GameUI : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
-
-        versionNumber.text = GameVersion.GetVersionNumber();
 
         winMenu.SetActive(false);
 
@@ -77,7 +73,11 @@ public class GameUI : MonoBehaviour
         if (player.GetPlayerWin())
         {
             Time.timeScale = 0.0f;
-            NextLevel();
+
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("ThirdLevel"))
+                winMenu.SetActive(true);
+            else
+                NextLevel();
         }
     }
 

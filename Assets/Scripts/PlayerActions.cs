@@ -10,11 +10,14 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Administrador_QTE qte;
 
+
+    [SerializeField] private Transform auxParticles;
+    [SerializeField] private Transform particles;
+
     [Header("Jump")]
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float obstacleBounce = -1;
     [SerializeField] private int maxJumps = 2;
-    [SerializeField] private AK.Wwise.Event jumpEvent;
     private int jumpsRemaining;
 
     [Header("Start")]
@@ -102,6 +105,7 @@ public class PlayerActions : MonoBehaviour
     private float currentKeyTimer = 0.0f;
 
     Vector3 screenRelativePosition;
+    Vector3 particlesStartPositions;
 
     void Start()
     {
@@ -128,6 +132,7 @@ public class PlayerActions : MonoBehaviour
             animator.SetBool("isSliding", false);
             animator.SetBool("isDashing", false);
         }
+        particlesStartPositions= particles.transform.localPosition;
     }
 
     void Update()
@@ -136,6 +141,26 @@ public class PlayerActions : MonoBehaviour
         {
             animator.SetBool("isSliding", isCrouching);
         }
+
+        if (currentSpeed < speed)
+            currentSpeed += 0.1f;
+        else if (currentSpeed > speed)
+            currentSpeed -= 0.1f;
+
+        if (!playerDied && !playerWin)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+            {
+                isPaused = true;
+                Time.timeScale = 0.0f;
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isPaused = false;
+                Time.timeScale = 1.0f;
+            }
+        }
+
         if (!isPaused)
         {
             if (playerDied)
@@ -148,97 +173,88 @@ public class PlayerActions : MonoBehaviour
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
             }
 
-            if (Input.GetKeyUp(crouchKey) && isCrouching)
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("ThirdLevel"))
             {
-                wantsToStandUp = true;
-            }
-
-            if (wantsToStandUp && isCrouching)
-            {
-                TryToStandUp();
-            }
-
-            if (!qte.GetIsActive())
-            {
-                if (isDashing) return;
-                // --- LÓGICA DE AGACHARSE ---
-                if (Input.GetKeyDown(crouchKey) && isGrounded)
+                if (Input.GetKeyUp(crouchKey) && isCrouching)
                 {
-                    Slide();
-
-                    PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                    wantsToStandUp = true;
                 }
 
-                // --- SALTO (No se permite si está agachado) --
-                if (Input.GetKeyDown(jumpKey) && jumpsRemaining > 0)
+                if (wantsToStandUp && isCrouching)
                 {
-                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    TryToStandUp();
+                }
 
-                    jumpsRemaining--;
-                    isGrounded = false;
+                if (!qte.GetIsActive())
+                {
+                    if (isDashing) return;
+                    // --- LÓGICA DE AGACHARSE ---
+                    if (Input.GetKeyDown(crouchKey) && isGrounded)
+                    {
+                        Slide();
+
+                        PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                        particles.transform.position=auxParticles.transform.position;
+                    }
+
+                    // --- SALTO (No se permite si está agachado) --
+                    if (Input.GetKeyDown(jumpKey) && jumpsRemaining > 0)
+                    {
+                        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+                        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+                        jumpsRemaining--;
+                        isGrounded = false;
+
+                        if (animator != null)
+                        {
+                            animator.SetBool("isGrounded", isGrounded);
+                        }
+
+                        PlayerEvents.current.OnPlayerJumpTriggerClose(this);
+                    }
+
+                    // --- DASH (No se permite si está agachado) ---
+                    if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
+                    {
+                        dashCoroutine = StartCoroutine(DashRoutine());
+
+                        PlayerEvents.current.OnPlayerDashTriggerClose(this);
+
+                    }
+                    if (!canDash)
+                    {
+                        dashTimer -= Time.deltaTime;
+                    }
+                    if (dashTimer < 0 && !canDash && isGrounded)
+                    {
+                        canDash = true;
+                    }
+
+                    if (currentKeyTimer <= 0.0f && !isCrouching)
+                    {
+                        SetRandKey();
+
+                        currentKeyTimer += keyTimer;
+                    }
+
+                   
+
+#if UNITY_EDITOR
+                    if (Input.GetKeyDown(KeyCode.F5))
+                    {
+                        PlayerReset();
+                    }
+#endif
+                    currentKeyTimer -= Time.deltaTime;
 
                     if (animator != null)
                     {
-                        AkUnitySoundEngine.PostEvent(jumpEvent.Id, gameObject);
                         animator.SetBool("isGrounded", isGrounded);
                     }
-                    PlayerEvents.current.OnPlayerJumpTriggerClose(this);
-                }
-
-                // --- DASH (No se permite si está agachado) ---
-                if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
-                {
-                    dashCoroutine = StartCoroutine(DashRoutine());
-
-                    PlayerEvents.current.OnPlayerDashTriggerClose(this);
-
-                }
-                if (!canDash)
-                {
-                    dashTimer -= Time.deltaTime;
-                }
-                if (dashTimer < 0 && !canDash && isGrounded)
-                {
-                    canDash = true;
-                }
-
-                if (currentKeyTimer <= 0.0f && !isCrouching)
-                {
-                    SetRandKey();
-
-                    currentKeyTimer += keyTimer;
-                }
-
-                if (currentSpeed < speed)
-                    currentSpeed += 0.1f;
-                else if (currentSpeed > speed)
-                    currentSpeed -= 0.1f;
-
-#if UNITY_EDITOR
-                if (Input.GetKeyDown(KeyCode.F5))
-                {
-                    PlayerReset();
-                }
-#endif
-                currentKeyTimer -= Time.deltaTime;
-
-                if (animator != null)
-                {
-                    animator.SetBool("isGrounded", isGrounded);
                 }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
-        {
-            isPaused = true;
-            Time.timeScale = 0.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = false;
-            Time.timeScale = 1.0f;
-        }
+        }          
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -353,6 +369,7 @@ public class PlayerActions : MonoBehaviour
             if (isCrouching && !IsThereRoofAbove())
             {
                 isCrouching = false;
+                particles.transform.localPosition = particlesStartPositions;
                 wantsToStandUp = false;
 
                 if (boxCollider != null)
@@ -457,6 +474,8 @@ public class PlayerActions : MonoBehaviour
             float reduccion = colliderOriginalSize.y * (1f - heightColliderMultiplier);
             boxCollider.offset = new Vector2(colliderOriginalOffset.x, colliderOriginalOffset.y - (reduccion / 2f));
         }
+
+      
     }
 
     private void TryToStandUp()
@@ -464,6 +483,7 @@ public class PlayerActions : MonoBehaviour
         if (!IsThereRoofAbove())
         {
             isCrouching = false;
+            particles.transform.localPosition = particlesStartPositions;
             wantsToStandUp = false;
 
             if (boxCollider != null)
