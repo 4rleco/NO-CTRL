@@ -4258,31 +4258,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 534890447477446376, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Size.y
-      value: 2.73
-      objectReference: {fileID: 0}
     - target: {fileID: 1309836015432702953, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_Name
       value: 'Train '
       objectReference: {fileID: 0}
     - target: {fileID: 3464776169622566805, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Size.y
-      value: 2.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 3464776169622566805, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4196696977436167670, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Size.x
-      value: 1.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4196696977436167670, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Size.y
-      value: 2.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 4196696977436167670, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_Offset.y
       value: -0.22
       objectReference: {fileID: 0}
