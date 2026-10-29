@@ -376,6 +376,14 @@ PrefabInstance:
       propertyPath: jumpEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: f8d53edfd7b83fb46993620c0d0f49b9, type: 2}
+    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2124069402390670263, guid: 0cb3351a133a10742bdd8f19c39ef1eb, type: 3}
+    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5633092292241325573, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.85
