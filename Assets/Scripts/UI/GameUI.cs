@@ -8,7 +8,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jumpKey;
     [SerializeField] private TextMeshProUGUI dashKey;
     [SerializeField] private TextMeshProUGUI crouchKey;
-    [SerializeField] private TextMeshProUGUI versionNumber;
 
     [SerializeField] private PlayerActions player;
 
@@ -23,8 +22,6 @@ public class GameUI : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
-
-        versionNumber.text = GameVersion.GetVersionNumber();
 
         winMenu.SetActive(false);
 
