@@ -4262,10 +4262,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Train '
       objectReference: {fileID: 0}
-    - target: {fileID: 3464776169622566805, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.22
-      objectReference: {fileID: 0}
     - target: {fileID: 6877715763817883498, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 379
