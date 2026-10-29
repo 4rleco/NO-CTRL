@@ -42,6 +42,10 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
     [SerializeField] private bool canDestroyObstacles = false;
 
+    [SerializeField] private AK.Wwise.Event jumpEvent;
+
+
+
     private Coroutine dashCoroutine;
     private Coroutine bounceCoroutine;
 
@@ -139,6 +143,7 @@ public class PlayerActions : MonoBehaviour
     {
         if (animator != null)
         {
+
             animator.SetBool("isSliding", isCrouching);
         }
 
@@ -209,6 +214,7 @@ public class PlayerActions : MonoBehaviour
                         if (animator != null)
                         {
                             animator.SetBool("isGrounded", isGrounded);
+                            AkUnitySoundEngine.PostEvent(jumpEvent.Id, gameObject);
                         }
 
                         PlayerEvents.current.OnPlayerJumpTriggerClose(this);
