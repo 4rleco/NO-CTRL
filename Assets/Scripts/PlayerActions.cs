@@ -166,13 +166,8 @@ public class PlayerActions : MonoBehaviour
             }
         }
 
-        if (!isPaused)
+        if (!isPaused && !playerDied)
         {
-            if (playerDied)
-            {
-                OnPlayerDied();
-            }
-
             if (!isBouncing)
             {
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
@@ -269,7 +264,6 @@ public class PlayerActions : MonoBehaviour
         {
             playerDied = true;
             rb.linearVelocity = Vector2.zero;
-            OnPlayerDied();
         }
         else if (collision.gameObject.CompareTag("Floor"))
         {
@@ -558,35 +552,6 @@ public class PlayerActions : MonoBehaviour
         if (animator != null) animator.SetBool("isDashing", false);
         canDash = false;
         dashTimer = dashCooldown;
-    }
-
-    private void OnPlayerDied()
-    {
-        if (dashCoroutine != null)
-        {
-            StopCoroutine(dashCoroutine);
-            dashCoroutine = null;
-        }
-
-        isDashing = false;
-
-        if (!playerDied)
-        {
-            rb.gravityScale = defaultGravity;
-            rb.linearVelocity = Vector2.zero;
-
-            currentSpeed = speed;
-
-            transform.position = startPoint.transform.position;
-
-            if (animator != null)
-            {
-                animator.SetBool("isDashing", false);
-                animator.SetBool("isSliding", false);
-            }
-
-            PlayerEvents.current.OnPlayerDeath(this);
-        }
     }
 
     private void PlayerReset()
