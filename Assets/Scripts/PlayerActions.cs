@@ -255,6 +255,17 @@ public class PlayerActions : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                if (animator != null)
+                {
+                    bool qteActive = qte.GetIsActive();
+
+                    animator.SetBool("isQTE", qteActive);
+                    animator.SetBool("isWalking", !qteActive);
+                    animator.SetBool("isGrounded", isGrounded);
+                }
+            }
         }          
     }
 
