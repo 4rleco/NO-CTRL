@@ -6,7 +6,7 @@ on:
       - '*.*.*'
 
 env:
-  buildName: My-Game
+  buildName: NO-CTRL
 
 jobs:
   buildAndUploadArtifact:
