@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.7.0] - 2026-11-02
+
+### New
+
+- Wwise audio integration.
+- Animated cable obstacle.
+- Train alert image.
+- UI background.
+- Cheats to access the different levels.
+- Struggle walking and QTE animations.
+
+### Changes
+
+- Updated Android build to 11 and iOS build to 10.
+- Main menu modified to match the wireframe.
+- Player run animation updated.
+- Tutorial text moved behind other screens.
+- Train collider adjusted.
+- Reset and pause buttons reorganized in the pause screen.
+- Exit button removed from the game UI.
+- Version text removed from the game UI.
+- Game title changed.
+- Player bounce position polished.
+- Player can no longer slide or dash on the death screen.
+- Audio implementation fixed.
+- Particle position fixed while sliding.
+- Camera offset in the third level fixed.
+
+### Known Issues
+
+- A blank square appears when the train is coming.
+
 ## [0.6.1] - 2026-10-27
 
 ### Changes
