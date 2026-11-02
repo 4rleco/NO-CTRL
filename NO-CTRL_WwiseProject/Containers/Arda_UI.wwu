@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Arda_UI" ID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}" PersistMode="Standalone"/>
+	</Containers>
+</WwiseDocument>

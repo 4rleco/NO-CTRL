@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F38906D2-2732-4347-9A0D-C2F5A752A1AF}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Arda_QTE" ID="{F38906D2-2732-4347-9A0D-C2F5A752A1AF}" PersistMode="Standalone"/>
+	</Events>
+</WwiseDocument>
