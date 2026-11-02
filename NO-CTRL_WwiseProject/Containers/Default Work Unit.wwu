@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{86A73BBF-F647-444F-B08C-4B7FC25CC1AB}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{86A73BBF-F647-444F-B08C-4B7FC25CC1AB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="switch10" ID="{6808B505-BEEA-4892-B153-03D40481A771}" ShortID="471445030">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="switch10" ID="{91CC68E8-C14E-4B95-9FB0-A45F35F711EC}">
+							<Language>SFX</Language>
+							<AudioFile>switch10.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="621897761"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="switch10" ID="{91CC68E8-C14E-4B95-9FB0-A45F35F711EC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -8,7 +8,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI jumpKey;
     [SerializeField] private TextMeshProUGUI dashKey;
     [SerializeField] private TextMeshProUGUI crouchKey;
-    [SerializeField] private TextMeshProUGUI versionNumber;
 
     [SerializeField] private PlayerActions player;
 
@@ -23,8 +22,6 @@ public class GameUI : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
-
-        versionNumber.text = GameVersion.GetVersionNumber();
 
         winMenu.SetActive(false);
 
@@ -131,14 +128,5 @@ public class GameUI : MonoBehaviour
         pauseMenu.SetActive(false);
 
         player.SetPlayerPause(false);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // Detiene el modo Play en Unity
-#endif
     }
 }

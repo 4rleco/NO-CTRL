@@ -10,6 +10,10 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Administrador_QTE qte;
 
+
+    [SerializeField] private Transform auxParticles;
+    [SerializeField] private Transform particles;
+
     [Header("Jump")]
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float obstacleBounce = -1;
@@ -37,6 +41,10 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private LayerMask dashObstacleLayer; // Capa de los obstáculos que bloquean el Dash
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
     [SerializeField] private bool canDestroyObstacles = false;
+
+    [SerializeField] private AK.Wwise.Event jumpEvent;
+
+
 
     private Coroutine dashCoroutine;
     private Coroutine bounceCoroutine;
@@ -101,6 +109,7 @@ public class PlayerActions : MonoBehaviour
     private float currentKeyTimer = 0.0f;
 
     Vector3 screenRelativePosition;
+    Vector3 particlesStartPositions;
 
     void Start()
     {
@@ -127,12 +136,14 @@ public class PlayerActions : MonoBehaviour
             animator.SetBool("isSliding", false);
             animator.SetBool("isDashing", false);
         }
+        particlesStartPositions = particles.transform.localPosition;
     }
 
     void Update()
     {
         if (animator != null)
         {
+
             animator.SetBool("isSliding", isCrouching);
         }
 
@@ -155,13 +166,8 @@ public class PlayerActions : MonoBehaviour
             }
         }
 
-        if (!isPaused)
+        if (!isPaused && !playerDied)
         {
-            if (playerDied)
-            {
-                OnPlayerDied();
-            }
-
             if (!isBouncing)
             {
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
@@ -188,6 +194,7 @@ public class PlayerActions : MonoBehaviour
                         Slide();
 
                         PlayerEvents.current.OnPlayerSlideTriggerClose(this);
+                        particles.transform.position = auxParticles.transform.position;
                     }
 
                     // --- SALTO (No se permite si está agachado) --
@@ -202,6 +209,7 @@ public class PlayerActions : MonoBehaviour
                         if (animator != null)
                         {
                             animator.SetBool("isGrounded", isGrounded);
+                            AkUnitySoundEngine.PostEvent(jumpEvent.Id, gameObject);
                         }
 
                         PlayerEvents.current.OnPlayerJumpTriggerClose(this);
@@ -231,7 +239,7 @@ public class PlayerActions : MonoBehaviour
                         currentKeyTimer += keyTimer;
                     }
 
-                   
+
 
 #if UNITY_EDITOR
                     if (Input.GetKeyDown(KeyCode.F5))
@@ -247,16 +255,27 @@ public class PlayerActions : MonoBehaviour
                     }
                 }
             }
-        }          
+            else
+            {
+                if (animator != null)
+                {
+                    bool qteActive = qte.GetIsActive();
+
+                    animator.SetBool("isQTE", qteActive);
+                    animator.SetBool("isWalking", !qteActive);
+                    animator.SetBool("isGrounded", isGrounded);
+                }
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (collision.gameObject.CompareTag("MortalObstacle"))
         {
             playerDied = true;
             rb.linearVelocity = Vector2.zero;
-            OnPlayerDied();
         }
         else if (collision.gameObject.CompareTag("Floor"))
         {
@@ -297,7 +316,7 @@ public class PlayerActions : MonoBehaviour
                         if (animator != null) animator.SetBool("isDashing", false);
                     }
 
-                    bounceCoroutine = StartCoroutine(BounceCorutine());
+                    bounceCoroutine = StartCoroutine(BounceCorutine(contactPoint));
                 }
             }
         }
@@ -307,14 +326,16 @@ public class PlayerActions : MonoBehaviour
             playerWin = true;
         }
     }
-    private IEnumerator BounceCorutine()
+    private IEnumerator BounceCorutine(Vector2 contactPoint)
     {
         isBouncing = true;
         isDashing = true;
 
         if (animator != null) animator.SetBool("isBouncing", true);
         float directionX = -Mathf.Sign(currentSpeed);
+        float directionY = -0.2f;
         Vector2 dasDirection = new Vector2(directionX, 0f);
+         
 
         float efectiveDistance = bounceDistance;
 
@@ -326,11 +347,25 @@ public class PlayerActions : MonoBehaviour
 
         while (Mathf.Abs(transform.position.x - startX) < efectiveDistance && currentSpeed > 0 && elapsed < maxTime)
         {
-            transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
+            //if (!isGrounded && contactPoint.y > transform.position.y)
+            //{
+            //    transform.position += new Vector3(0f, directionY * bounceSpeed * Time.deltaTime, 0f);
+            //}
+            //else 
+            if (!isGrounded)
+            {
+                transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, directionY * bounceSpeed * Time.deltaTime, 0f);
+            }
+            else
+            {
+                transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, 0f, 0f);
+            }
             elapsed += Time.deltaTime;
             yield return null;
         }
+
         elapsed = 0;
+
         if (animator != null) animator.SetBool("isBouncing", false);
 
         while (elapsed < bounceWaitTime)
@@ -362,6 +397,7 @@ public class PlayerActions : MonoBehaviour
             if (isCrouching && !IsThereRoofAbove())
             {
                 isCrouching = false;
+                particles.transform.localPosition = particlesStartPositions;
                 wantsToStandUp = false;
 
                 if (boxCollider != null)
@@ -466,6 +502,8 @@ public class PlayerActions : MonoBehaviour
             float reduccion = colliderOriginalSize.y * (1f - heightColliderMultiplier);
             boxCollider.offset = new Vector2(colliderOriginalOffset.x, colliderOriginalOffset.y - (reduccion / 2f));
         }
+
+
     }
 
     private void TryToStandUp()
@@ -473,6 +511,7 @@ public class PlayerActions : MonoBehaviour
         if (!IsThereRoofAbove())
         {
             isCrouching = false;
+            particles.transform.localPosition = particlesStartPositions;
             wantsToStandUp = false;
 
             if (boxCollider != null)
@@ -541,35 +580,6 @@ public class PlayerActions : MonoBehaviour
         if (animator != null) animator.SetBool("isDashing", false);
         canDash = false;
         dashTimer = dashCooldown;
-    }
-
-    private void OnPlayerDied()
-    {
-        if (dashCoroutine != null)
-        {
-            StopCoroutine(dashCoroutine);
-            dashCoroutine = null;
-        }
-
-        isDashing = false;
-
-        if (!playerDied)
-        {
-            rb.gravityScale = defaultGravity;
-            rb.linearVelocity = Vector2.zero;
-
-            currentSpeed = speed;
-
-            transform.position = startPoint.transform.position;
-
-            if (animator != null)
-            {
-                animator.SetBool("isDashing", false);
-                animator.SetBool("isSliding", false);
-            }
-
-            PlayerEvents.current.OnPlayerDeath(this);
-        }
     }
 
     private void PlayerReset()
