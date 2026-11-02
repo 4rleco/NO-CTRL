@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 203763794}
   m_Layer: 0
   m_Name: Wire (2)
-  m_TagString: Obstacle
+  m_TagString: MortalObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8006,7 +8006,7 @@ GameObject:
   - component: {fileID: 733250298}
   m_Layer: 0
   m_Name: Wire (1)
-  m_TagString: Obstacle
+  m_TagString: MortalObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15155,7 +15155,7 @@ GameObject:
   - component: {fileID: 1613492989}
   m_Layer: 0
   m_Name: Wire
-  m_TagString: Obstacle
+  m_TagString: MortalObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
