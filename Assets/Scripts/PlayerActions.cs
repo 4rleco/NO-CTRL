@@ -355,6 +355,7 @@ public class PlayerActions : MonoBehaviour
             if (!isGrounded)
             {
                 transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, directionY * bounceSpeed * Time.deltaTime, 0f);
+                Debug.Log("bounce");
             }
             else
             {
