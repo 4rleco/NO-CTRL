@@ -11,6 +11,8 @@ public class GameUI : MonoBehaviour
 
     [SerializeField] private PlayerActions player;
 
+    [SerializeField] private Canvas options;
+
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject winMenu;
     [SerializeField] private GameObject loseMenu;
@@ -128,5 +130,17 @@ public class GameUI : MonoBehaviour
         pauseMenu.SetActive(false);
 
         player.SetPlayerPause(false);
+    }
+
+    public void OpenOptions()
+    {
+        gameObject.SetActive(false);
+        options.gameObject.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        gameObject.SetActive(true);
+        options.gameObject.SetActive(false);
     }
 }
