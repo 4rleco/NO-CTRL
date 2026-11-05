@@ -4365,7 +4365,7 @@ GameObject:
   - component: {fileID: 4017777879099920113}
   - component: {fileID: 703139623342327210}
   m_Layer: 5
-  m_Name: Crouch Key
+  m_Name: Slide Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4418,7 +4418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Crouch Key:'
+  m_text: 'Slide Key:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1fd73765fb049a34c8c88b5b6d67d596, type: 2}
   m_sharedMaterial: {fileID: 193642397568214471, guid: 1fd73765fb049a34c8c88b5b6d67d596, type: 2}

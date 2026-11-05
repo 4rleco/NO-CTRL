@@ -36,7 +36,7 @@ public class GameUI : MonoBehaviour
 
         dashKey.text = "Dash Key: " + player.GetDashKey();
 
-        crouchKey.text = "Crouch Key: " + player.GetCrouchKey();
+        crouchKey.text = "Slide Key: " + player.GetCrouchKey();
 
         pauseMenu.SetActive(player.GetPlayerPause());
 
