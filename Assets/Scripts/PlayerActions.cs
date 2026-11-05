@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -113,7 +114,7 @@ public class PlayerActions : MonoBehaviour
 
     void Start()
     {
-        transform.position = startPoint.transform.position;
+        transform.position = new Vector3(startPoint.transform.position.x, startPoint.transform.position.y, -1.0f);
 
         rb = GetComponent<Rigidbody2D>();
         defaultGravity = rb.gravityScale;
