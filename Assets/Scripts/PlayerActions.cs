@@ -333,7 +333,7 @@ public class PlayerActions : MonoBehaviour
 
         if (animator != null) animator.SetBool("isBouncing", true);
         float directionX = -Mathf.Sign(currentSpeed);
-        float directionY = -0.2f;
+        float directionY = -0.3f;
         Vector2 dasDirection = new Vector2(directionX, 0f);
          
 
@@ -366,6 +366,15 @@ public class PlayerActions : MonoBehaviour
         }
 
         elapsed = 0;
+
+        float fallTimer = 0f;
+
+        while (!isGrounded && !playerDied && fallTimer < 4f)
+        {
+            transform.position += new Vector3(directionX * bounceSpeed * Time.deltaTime, directionY * bounceSpeed * Time.deltaTime, 0f);
+            fallTimer += Time.deltaTime;
+            yield return null;
+        }
 
         if (animator != null) animator.SetBool("isBouncing", false);
 
@@ -540,7 +549,6 @@ public class PlayerActions : MonoBehaviour
 
     private IEnumerator DashRoutine()
     {
-
         isDashing = true;
 
         if (animator != null) animator.SetBool("isDashing", true);
