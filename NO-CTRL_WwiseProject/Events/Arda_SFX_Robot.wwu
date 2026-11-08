@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{74FD4F89-0834-4314-A11E-5A65523C020E}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Arda_SFX_Robot" ID="{74FD4F89-0834-4314-A11E-5A65523C020E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Arda_SFX_Robot" ID="{74FD4F89-0834-4314-A11E-5A65523C020E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Robot_Step" ID="{D18A29D9-31BF-4A70-8CAF-F56175598AC7}">
+					<ChildrenList>
+						<Action Name="" ID="{F6F99434-B5B8-4161-B692-9C1584D8A734}" ShortID="478961273">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Step" ID="{8171696F-6875-40E4-B7C5-AA2A49F08B87}" WorkUnitID="{1747D31B-13B3-493A-82E9-09816228417D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Robot_Jump" ID="{41D9FE69-7818-4A2A-B372-F5B0C4BB1BE1}">
+					<ChildrenList>
+						<Action Name="" ID="{8AA26199-2605-4DE6-BE7D-41E2DFFF0FF7}" ShortID="202734319">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Jump" ID="{B509A009-28CA-4941-AC33-B3AAECB0D034}" WorkUnitID="{1747D31B-13B3-493A-82E9-09816228417D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Robot_Dash" ID="{9AF85C63-7B25-43AD-B04B-39576F168456}">
+					<ChildrenList>
+						<Action Name="" ID="{7823566A-A86D-4510-8AD9-D4177D4AA004}" ShortID="13429456">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Dash" ID="{8E5D040E-8F75-4B95-BE53-70A6D0363D02}" WorkUnitID="{1747D31B-13B3-493A-82E9-09816228417D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Robot_Double_Jump" ID="{60728CDE-B140-4714-B81B-369B71B95517}">
+					<ChildrenList>
+						<Action Name="" ID="{7638763F-25E5-424F-86CD-121B1B0CF933}" ShortID="1061373787">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Double_Jump" ID="{2138B4ED-DA97-48C3-88A7-310480E15741}" WorkUnitID="{1747D31B-13B3-493A-82E9-09816228417D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Robot_Sparks" ID="{EA547718-1210-4BF3-89DE-4F0B893BE641}">
+					<ChildrenList>
+						<Action Name="" ID="{7C043817-0309-4F89-8D21-7F808A322791}" ShortID="429307491">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Sparks" ID="{A1307D60-78F5-4744-8ADE-8AB07736C544}" WorkUnitID="{1747D31B-13B3-493A-82E9-09816228417D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

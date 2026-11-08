@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Arda_UI" ID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Arda_UI" ID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="UI_ControlsChange" ID="{E6F7E8A0-30E4-4588-A273-E79E54847E39}" ShortID="237943340">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{DA44A641-5E73-41DF-AD7B-0EC9564D3836}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_ControlsChange" ID="{3B0EC0ED-25EF-4377-8EAF-D66803FC71F8}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.11868"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.45385"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>UI_ControlsChange.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="954656251"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_ControlsChange" ID="{3B0EC0ED-25EF-4377-8EAF-D66803FC71F8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>
