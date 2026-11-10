@@ -146,6 +146,7 @@ public class PlayerActions : MonoBehaviour
         {
 
             animator.SetBool("isSliding", isCrouching);
+           
         }
 
         if (currentSpeed < speed)
@@ -159,11 +160,13 @@ public class PlayerActions : MonoBehaviour
             {
                 isPaused = true;
                 Time.timeScale = 0.0f;
+                
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 isPaused = false;
                 Time.timeScale = 1.0f;
+
             }
         }
 
@@ -172,6 +175,7 @@ public class PlayerActions : MonoBehaviour
             if (!isBouncing)
             {
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
+
             }
 
             if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("ThirdLevel"))
@@ -179,11 +183,13 @@ public class PlayerActions : MonoBehaviour
                 if (Input.GetKeyUp(crouchKey) && isCrouching)
                 {
                     wantsToStandUp = true;
+
                 }
 
                 if (wantsToStandUp && isCrouching)
                 {
                     TryToStandUp();
+
                 }
 
                 if (!qte.GetIsActive())
@@ -246,6 +252,7 @@ public class PlayerActions : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.F5))
                     {
                         PlayerReset();
+
                     }
 #endif
                     currentKeyTimer -= Time.deltaTime;
@@ -255,6 +262,7 @@ public class PlayerActions : MonoBehaviour
                         animator.SetBool("isGrounded", isGrounded);
                     }
                 }
+
             }
             else
             {
@@ -266,8 +274,11 @@ public class PlayerActions : MonoBehaviour
                     animator.SetBool("isWalking", !qteActive);
                     animator.SetBool("isGrounded", isGrounded);
                 }
+
             }
+
         }
+        if (isGrounded==false) Debug.Log(isGrounded);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -402,7 +413,7 @@ public class PlayerActions : MonoBehaviour
 
         if (leftFloor || leftObstacleTop)
         {
-            isGrounded = false;
+           // isGrounded = false;
             standingOnObstacle = false;
 
             if (isCrouching && !IsThereRoofAbove())
@@ -595,6 +606,8 @@ public class PlayerActions : MonoBehaviour
     private void PlayerReset()
     {
         transform.position = startPoint.transform.position;
+        rb.linearVelocity = Vector2.zero;
+        isGrounded = true;
         Time.timeScale = 1;
     }
 
