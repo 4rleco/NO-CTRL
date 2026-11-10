@@ -11,9 +11,16 @@ public class GameUI : MonoBehaviour
 
     [SerializeField] private PlayerActions player;
 
+    [SerializeField] private Canvas options;
+
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject winMenu;
     [SerializeField] private GameObject loseMenu;
+
+    [Header("Death animation")]
+    [SerializeField] private GameObject deathStatic;
+    [SerializeField] private float deathAnimDuration = 1.5f;
+    private bool deathSequenceStarted = false;
 
     private KeyCode lastJump;
     private KeyCode lastDash;
@@ -26,6 +33,8 @@ public class GameUI : MonoBehaviour
         winMenu.SetActive(false);
 
         loseMenu.SetActive(false);
+
+        deathStatic.SetActive(false);
     }
 
     private void Update()
@@ -34,11 +43,15 @@ public class GameUI : MonoBehaviour
 
         dashKey.text = "Dash Key: " + player.GetDashKey();
 
-        crouchKey.text = "Crouch Key: " + player.GetCrouchKey();
+        crouchKey.text = "Slide Key: " + player.GetCrouchKey();
 
         pauseMenu.SetActive(player.GetPlayerPause());
 
-        loseMenu.SetActive(player.GetPlayerDied());
+        if (player.GetPlayerDied() && !deathSequenceStarted)
+        {
+            deathSequenceStarted = true;
+            StartCoroutine(DeathSequence());
+        }
 
         float cooldownRestante = player.GetDashCooldownTimer();
 
@@ -64,7 +77,7 @@ public class GameUI : MonoBehaviour
 
         lastCrouch = player.GetCrouchKey();
 
-        if (loseMenu.activeSelf || pauseMenu.activeSelf)
+        if (loseMenu.activeSelf || pauseMenu.activeSelf || deathSequenceStarted)
             Time.timeScale = 0.0f;
         else
             Time.timeScale = 1.0f;
@@ -89,7 +102,14 @@ public class GameUI : MonoBehaviour
 
         textMesh.color = Color.white;
     }
+    private IEnumerator DeathSequence()
+    {
+        deathStatic.SetActive(true);
 
+        yield return new WaitForSecondsRealtime(deathAnimDuration);
+
+        loseMenu.SetActive(true);
+    }
     private void NextLevel()
     {
         int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
@@ -107,6 +127,7 @@ public class GameUI : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
+        deathStatic.SetActive(false);
     }
 
     public void ResetGame()
@@ -119,6 +140,7 @@ public class GameUI : MonoBehaviour
 
         pauseMenu.SetActive(false);
         loseMenu.SetActive(false);
+        deathStatic.SetActive(false);
 
         SceneManager.LoadScene(curretnScene);
     }
@@ -128,5 +150,17 @@ public class GameUI : MonoBehaviour
         pauseMenu.SetActive(false);
 
         player.SetPlayerPause(false);
+    }
+
+    public void OpenOptions()
+    {
+        gameObject.SetActive(false);
+        options.gameObject.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        gameObject.SetActive(true);
+        options.gameObject.SetActive(false);
     }
 }
