@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.8.0] - 2026-11-10
+
+### New
+
+- Credits scene.
+- Options panel.
+- Player death animation.
+- Campus slogan icon images.
+
+### Changes
+
+- Updated Android build to 12 and iOS build to 11.
+- Second level obstacle sprites updated.
+- Second level obstacle sizes adjusted.
+- Second fence size adjusted in the first level.
+- First level tutorial colliders updated.
+- Player z position adjusted.
+- UI crouch text replaced with slide.
+- Font link added to the credits.
+- UI position fixed.
+- Player animations fixed.
+- QTE animation fixed.
+- Bounce fixed when the player is in the air.
+
+### Known Issues
+
+- A blank square appears when the train is coming.
+
 ## [0.7.0] - 2026-11-02
 
 ### New
