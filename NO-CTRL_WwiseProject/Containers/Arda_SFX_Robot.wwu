@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1747D31B-13B3-493A-82E9-09816228417D}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Arda_SFX_Robot" ID="{1747D31B-13B3-493A-82E9-09816228417D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Robot_Dash" ID="{8E5D040E-8F75-4B95-BE53-70A6D0363D02}" ShortID="116672446">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2809897D-9CAE-42EC-ABC1-1657F52AEFBA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Robot_Dash01" ID="{FAAB6D07-CA43-4503-A994-2592DBA8289B}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0942"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.07439"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Robot_Dash01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="721752056"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Robot_Dash01" ID="{FAAB6D07-CA43-4503-A994-2592DBA8289B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Robot_Double_Jump" ID="{2138B4ED-DA97-48C3-88A7-310480E15741}" ShortID="1039676779">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{66300BAC-2430-431A-8A39-7A6309B678F2}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Robot_Double_Jump_01" ID="{C57E5F03-6B76-4CE3-86D9-B2A2DE8C8A39}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.03965"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.03965"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Robot_Double_Jump_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="198280550"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Robot_Double_Jump_01" ID="{C57E5F03-6B76-4CE3-86D9-B2A2DE8C8A39}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Robot_Jump" ID="{B509A009-28CA-4941-AC33-B3AAECB0D034}" ShortID="896229235">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EC165D37-6F44-4C42-9737-8B3E2B2123B8}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Robot_Jump_01" ID="{0882950C-0E2B-41AF-9BCA-FFA0585423E6}">
+							<Language>SFX</Language>
+							<AudioFile>Robot_Jump_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="93288251"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Robot_Jump_01" ID="{0882950C-0E2B-41AF-9BCA-FFA0585423E6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Robot_Sparks" ID="{A1307D60-78F5-4744-8ADE-8AB07736C544}" ShortID="775156520">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D74662FD-E0D9-4601-A34B-789CCC05C826}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Robot_Sparks" ID="{052E2B49-15B5-4A80-BDF5-B86DB6B44DE1}">
+							<Language>SFX</Language>
+							<AudioFile>Robot_Sparks.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="502511411"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Robot_Sparks" ID="{052E2B49-15B5-4A80-BDF5-B86DB6B44DE1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Robot_Step" ID="{8171696F-6875-40E4-B7C5-AA2A49F08B87}" ShortID="904849017">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{AFF360DC-529D-48F4-9288-6FE2FCEAE783}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Robot_Step01" ID="{1ADC8908-A960-4B92-AA0C-5BF63F643277}" ShortID="610593291">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Step01" ID="{A98BF2C3-C459-43E2-A745-638347579E9A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.04645"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.05065"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.05488"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.38013"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Robot_Step01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="597781918"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Step01" ID="{A98BF2C3-C459-43E2-A745-638347579E9A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Robot_Step02" ID="{C5065023-5393-411A-9EE8-2A83497E5D09}" ShortID="281695469">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Step01" ID="{49907CBC-BFD8-4FB0-A8D3-8B496F202DCB}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.04645"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.05065"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.37571"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.71784"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Robot_Step01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="773821810"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Step01" ID="{49907CBC-BFD8-4FB0-A8D3-8B496F202DCB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Robot_Step03" ID="{1DF579AF-CBC7-45E0-9AA9-2F6A0B447645}" ShortID="473230682">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Step01" ID="{238B2C0D-70EB-4510-9067-8BD9681C32E2}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.04645"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.05065"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.69226"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.06397"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Robot_Step01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1047014527"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Step01" ID="{238B2C0D-70EB-4510-9067-8BD9681C32E2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Robot_Step04" ID="{7E7C05D3-AD1D-418B-9B11-C401A68C0EF4}" ShortID="97790062">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Step01" ID="{D92CE14C-FECE-4999-9A5B-994A6A86E786}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.04645"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.05065"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.0468"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.39321"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Robot_Step01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="571986919"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Step01" ID="{D92CE14C-FECE-4999-9A5B-994A6A86E786}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Robot_Step05" ID="{3ACAF192-8E0B-403F-8850-4B8569E3300A}" ShortID="1016846801">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Step01" ID="{C6B3D831-A295-4859-A6CD-01B79C616ED8}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.05491"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.05065"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.3676"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.70554"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Robot_Step01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="180730598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Step01" ID="{C6B3D831-A295-4859-A6CD-01B79C616ED8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
