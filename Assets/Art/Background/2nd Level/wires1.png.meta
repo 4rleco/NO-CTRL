@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 319ae53b18e995049a692f879e24bd14
+guid: 00b9d90e33929d845b7c90b653d7a997
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7699324927891916171
-    second: lvl2_wire1_0
+      213: -6809707448994683610
+    second: wires1_0
+  - first:
+      213: 8156958722759349856
+    second: wires1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,66 +99,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lvl2_wire1_0
+      name: wires1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 830
+        y: 0
         width: 1920
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57a31b655c0862590800000000000000
-      internalID: -7699324927891916171
+      spriteID: 625275e872f0f71a0800000000000000
+      internalID: -6809707448994683610
       vertices: []
       indices: 
       edges: []
@@ -164,7 +128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 779b7238f498ad94386de6064e17a3d1
     internalID: 0
     vertices: []
     indices: 
@@ -172,9 +136,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      lvl2_wire1_0: -7699324927891916171
+      wires1_0: -6809707448994683610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
