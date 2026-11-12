@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 222759284}
   - component: {fileID: 222759283}
   m_Layer: 0
-  m_Name: debris1_0 (10)
+  m_Name: Barrier
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2791,11 +2791,11 @@ Transform:
   m_GameObject: {fileID: 222759281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64, y: -1.79, z: 0}
+  m_LocalPosition: {x: 64, y: -2.09, z: -1}
   m_LocalScale: {x: 3.2519934, y: 3.2519934, z: 3.2519934}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628280291}
+  m_Father: {fileID: 1536367196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &222759283
 BoxCollider2D:
@@ -2841,7 +2841,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.76, y: 2.21}
+  m_Size: {x: 1.42, y: 2.23}
   m_EdgeRadius: 0
 --- !u!212 &222759284
 SpriteRenderer:
@@ -4628,7 +4628,7 @@ GameObject:
   - component: {fileID: 421193754}
   - component: {fileID: 421193753}
   m_Layer: 0
-  m_Name: debris1_0 (8)
+  m_Name: Barrier
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4643,11 +4643,11 @@ Transform:
   m_GameObject: {fileID: 421193751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -92.2, y: -3.29, z: 0}
+  m_LocalPosition: {x: -92.20001, y: -3.29, z: 0}
   m_LocalScale: {x: 2.1656845, y: 2.1656845, z: 2.1656845}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628280291}
+  m_Father: {fileID: 1536367196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &421193753
 BoxCollider2D:
@@ -6676,7 +6676,7 @@ GameObject:
   - component: {fileID: 628567603}
   - component: {fileID: 628567602}
   m_Layer: 0
-  m_Name: debris1_0 (1)
+  m_Name: Barrier
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6695,7 +6695,7 @@ Transform:
   m_LocalScale: {x: 1.3045199, y: 1.3045199, z: 1.3045199}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628280291}
+  m_Father: {fileID: 1536367196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &628567602
 BoxCollider2D:
@@ -6741,7 +6741,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4, y: 1.95}
+  m_Size: {x: 1.71, y: 1.95}
   m_EdgeRadius: 0
 --- !u!212 &628567603
 SpriteRenderer:
@@ -6814,7 +6814,7 @@ GameObject:
   - component: {fileID: 641863741}
   - component: {fileID: 641863740}
   m_Layer: 0
-  m_Name: debris1_0 (5)
+  m_Name: Barrier
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6829,11 +6829,11 @@ Transform:
   m_GameObject: {fileID: 641863738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -220.25, y: -2.72, z: 0}
+  m_LocalPosition: {x: -220.25, y: -2.72, z: -1}
   m_LocalScale: {x: 3.260607, y: 3.260607, z: 3.260607}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628280291}
+  m_Father: {fileID: 1536367196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &641863740
 BoxCollider2D:
@@ -6869,7 +6869,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6879,7 +6879,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.83, y: 1.63}
+  m_Size: {x: 1.46, y: 1.86}
   m_EdgeRadius: 0
 --- !u!212 &641863741
 SpriteRenderer:
@@ -14124,6 +14124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466918581}
+  - component: {fileID: 1466918582}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Finish
@@ -14140,12 +14141,58 @@ Transform:
   m_GameObject: {fileID: 1466918580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1081.78, y: 0.82, z: 0}
+  m_LocalPosition: {x: 1081.78, y: 6.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1466918582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466918580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 19.89}
+  m_EdgeRadius: 0
 --- !u!1 &1496073523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14629,6 +14676,42 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1536367195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536367196}
+  m_Layer: 0
+  m_Name: Barriers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1536367196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536367195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1937052064}
+  - {fileID: 641863739}
+  - {fileID: 628567601}
+  - {fileID: 421193752}
+  - {fileID: 222759282}
+  m_Father: {fileID: 1975651320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542024934
 GameObject:
   m_ObjectHideFlags: 0
@@ -15811,18 +15894,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676679626}
-  - {fileID: 628567601}
   - {fileID: 327303099}
   - {fileID: 1496073524}
   - {fileID: 2111833221}
-  - {fileID: 641863739}
   - {fileID: 76144058}
   - {fileID: 1251856046}
-  - {fileID: 1937052064}
   - {fileID: 1179419815}
-  - {fileID: 421193752}
   - {fileID: 575893581}
-  - {fileID: 222759282}
   - {fileID: 767448805}
   m_Father: {fileID: 1975651320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16319,7 +16397,7 @@ Transform:
   m_GameObject: {fileID: 1710788149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1038.8, y: 2.7, z: 0}
+  m_LocalPosition: {x: 1066.62, y: 2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17817,7 +17895,7 @@ GameObject:
   - component: {fileID: 1937052066}
   - component: {fileID: 1937052065}
   m_Layer: 0
-  m_Name: debris1_0 (6)
+  m_Name: Barrier
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17832,11 +17910,11 @@ Transform:
   m_GameObject: {fileID: 1937052063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -196.77, y: -3.29, z: 0}
+  m_LocalPosition: {x: -196.77002, y: -3.29, z: 0}
   m_LocalScale: {x: 2.1656845, y: 2.1656845, z: 2.1656845}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628280291}
+  m_Father: {fileID: 1536367196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1937052065
 BoxCollider2D:
@@ -17882,7 +17960,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4, y: 1.95}
+  m_Size: {x: 1.63, y: 1.95}
   m_EdgeRadius: 0
 --- !u!212 &1937052066
 SpriteRenderer:
@@ -18417,6 +18495,7 @@ Transform:
   m_Children:
   - {fileID: 1298872721}
   - {fileID: 1628280291}
+  - {fileID: 1536367196}
   - {fileID: 330320093}
   - {fileID: 1682802922}
   m_Father: {fileID: 0}
