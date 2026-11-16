@@ -43,7 +43,14 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
     [SerializeField] private bool canDestroyObstacles = false;
 
+
+    [Header("Sounds")]
     [SerializeField] private AK.Wwise.Event jumpEvent;
+    [SerializeField] private AK.Wwise.Event dashEvent;
+    [SerializeField] private AK.Wwise.Event slideEvent;
+    [SerializeField] private AK.Wwise.Event runEvent;
+    [SerializeField] private float stepInterval = 0.3f;
+    private float stepTimer = 0f;
 
 
 
@@ -178,6 +185,20 @@ public class PlayerActions : MonoBehaviour
 
             }
 
+            if (isGrounded && !isCrouching && !isDashing && !isBouncing && !qte.GetIsActive())
+            {
+                stepTimer -= Time.deltaTime;
+                if (stepTimer <= 0f)
+                {
+                    AkUnitySoundEngine.PostEvent(runEvent.Id, gameObject);
+                    stepTimer = stepInterval;
+                }
+            }
+            else
+            {
+                stepTimer = 0f;
+            }
+
             if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("ThirdLevel"))
             {
                 if (Input.GetKeyUp(crouchKey) && isCrouching)
@@ -200,6 +221,7 @@ public class PlayerActions : MonoBehaviour
                     {
                         Slide();
 
+                        AkUnitySoundEngine.PostEvent(slideEvent.Id, gameObject);
                         PlayerEvents.current.OnPlayerSlideTriggerClose(this);
                         particles.transform.position = auxParticles.transform.position;
                     }
@@ -226,6 +248,7 @@ public class PlayerActions : MonoBehaviour
                     if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
                     {
                         dashCoroutine = StartCoroutine(DashRoutine());
+                        AkUnitySoundEngine.PostEvent(dashEvent.Id, gameObject);
 
                         PlayerEvents.current.OnPlayerDashTriggerClose(this);
 
@@ -286,6 +309,12 @@ public class PlayerActions : MonoBehaviour
         
         if (collision.gameObject.CompareTag("MortalObstacle"))
         {
+            Train train = collision.collider.GetComponentInParent<Train>();
+            if (train != null && !playerDied) train.PlayHit();
+
+            ElectricFence fence = collision.collider.GetComponentInParent<ElectricFence>();
+            if (fence != null && !playerDied) fence.PlayHit();
+
             playerDied = true;
             rb.linearVelocity = Vector2.zero;
         }
