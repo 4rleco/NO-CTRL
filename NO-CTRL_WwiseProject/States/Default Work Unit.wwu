@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{33263A59-94BF-4D28-A829-4A37559B6E90}" SchemaVersion="133">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{33263A59-94BF-4D28-A829-4A37559B6E90}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{33263A59-94BF-4D28-A829-4A37559B6E90}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameState" ID="{2C1AFDD7-EA42-4721-88F3-8AEDA9848475}">
+					<ChildrenList>
+						<State Name="None" ID="{0F731BB1-95BD-487B-B1CA-134C671984CC}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Level" ID="{D72312C8-9FF6-48F9-9C4D-1DAF4ACDB174}">
+					<ChildrenList>
+						<State Name="None" ID="{EFE8AB30-2D99-4EBB-8E5D-59A401B3F456}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Hack" ID="{4C560C3F-B732-4086-A110-0F3C4AEC8CE3}">
+					<ChildrenList>
+						<State Name="None" ID="{1250BF6F-8D68-4128-8A4E-150FEF996BC8}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

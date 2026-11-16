@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{67BCA045-71F0-410A-BA60-7FD4CAEB8510}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Arda_UI" ID="{67BCA045-71F0-410A-BA60-7FD4CAEB8510}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_UI_ControlsChange" ID="{7B80CBDA-19BC-4E1F-BE5C-C57372A30A08}">
+					<ChildrenList>
+						<Action Name="" ID="{ADFF12B5-1AC4-467F-9075-74F532478B55}" ShortID="258244786">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_ControlsChange" ID="{E6F7E8A0-30E4-4588-A273-E79E54847E39}" WorkUnitID="{041C3A6A-9A92-4B33-89D6-A045BF5809B6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

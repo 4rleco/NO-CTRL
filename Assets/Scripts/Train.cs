@@ -15,6 +15,9 @@ public class Train : MonoBehaviour
     [Header("Alert Icon")]
     [SerializeField] private Image image;
     [SerializeField] private float alertDuration = 2.5f;
+
+    [SerializeField] private AK.Wwise.Event hitEvent;
+
     private float currentAlertDuration = 0.0f;
 
     private Vector3 inittialPos;
@@ -89,5 +92,9 @@ public class Train : MonoBehaviour
         transform.position = inittialPos;
 
         enabled = false;
+    }
+    public void PlayHit() 
+    {
+        AkUnitySoundEngine.PostEvent(hitEvent.Id, gameObject);
     }
 }

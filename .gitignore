@@ -107,6 +107,10 @@ InitTestScene*.unity*
 
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
+.DS_Store
+.vscode/
+.cache/
+*.wsettings
 
 # Wwise
 

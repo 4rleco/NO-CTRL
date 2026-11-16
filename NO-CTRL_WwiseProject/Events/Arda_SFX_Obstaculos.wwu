@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BEBF3DD1-BCF4-4762-AE1E-2BB7F716F316}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Arda_SFX_Obstaculos" ID="{BEBF3DD1-BCF4-4762-AE1E-2BB7F716F316}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_ElectricFence_Hit" ID="{89CD161E-B8BB-471D-AF02-91C496A15C06}">
+					<ChildrenList>
+						<Action Name="" ID="{04917B8A-EF19-4659-A85B-0C3418592843}" ShortID="891099683">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ElectricFence_Hit" ID="{15BDF23E-25D2-4BA3-9EA6-DBCD48FFA758}" WorkUnitID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Box_Break" ID="{9C4AD3F9-A144-4408-BB4E-3063971A5085}">
+					<ChildrenList>
+						<Action Name="" ID="{A8FC927E-D9F3-42ED-9452-2DBDBDAA26EC}" ShortID="207960689">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Box_Break" ID="{24619276-5B33-4B98-900D-1567F0C30A42}" WorkUnitID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Visor_Broken" ID="{E99F7E9C-9385-40AA-8CC5-C449D9CD859D}">
+					<ChildrenList>
+						<Action Name="" ID="{79136205-CF09-4962-8494-1AE22DFF5638}" ShortID="833183483">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Visor_Broken" ID="{89962690-FFB6-4E7A-B7CC-4CDC3E714D27}" WorkUnitID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ElectricFence_Loop" ID="{BBDA2A64-37CD-4078-8EEE-619EBF6B4236}">
+					<ChildrenList>
+						<Action Name="" ID="{5A5FCBA6-0A2F-497D-8715-B57C841F3695}" ShortID="40122572">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ElectricFence_Loop" ID="{FB9AA53D-7E55-46D0-8063-FD23A16AE3E2}" WorkUnitID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Train_Hit" ID="{D0989243-BC33-4CC4-A66B-92833760BC1E}">
+					<ChildrenList>
+						<Action Name="" ID="{C4ACD9B4-4046-4EE2-B270-5739CA9E1905}" ShortID="689839748">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Train_Hit" ID="{72AD184D-E4B3-4BA3-8869-8D270565FB73}" WorkUnitID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

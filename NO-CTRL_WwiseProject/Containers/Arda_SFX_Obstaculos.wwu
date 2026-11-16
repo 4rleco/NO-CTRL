@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Arda_SFX_Obstaculos" ID="{2119E5DF-8FDF-453C-AFEA-67AF71BB724D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Box_Break" ID="{24619276-5B33-4B98-900D-1567F0C30A42}" ShortID="551940700">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Box_Break" ID="{19E9E048-9E32-4D11-89A8-42F19A6004DF}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.06941"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.48594"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Box_Break.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="9869571"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Box_Break" ID="{19E9E048-9E32-4D11-89A8-42F19A6004DF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ElectricFence_Loop" ID="{FB9AA53D-7E55-46D0-8063-FD23A16AE3E2}" ShortID="566416603">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ElectricFence_Loop" ID="{D1E21A1B-1090-408F-91BF-85698594862F}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.10304"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0966"/>
+								<Property Name="LoopEnd" Type="Real64" Value="4.83016"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.47012"/>
+								<Property Name="TrimEnd" Type="Real64" Value="5.01693"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ElectricFence_Loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="574346962"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ElectricFence_Loop" ID="{D1E21A1B-1090-408F-91BF-85698594862F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Train_Hit" ID="{72AD184D-E4B3-4BA3-8869-8D270565FB73}" ShortID="459445181">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Train_Hit" ID="{477BABE5-6FCB-4B9B-9605-95571FA9A51D}">
+							<Language>SFX</Language>
+							<AudioFile>Train_Hit.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="576343284"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Train_Hit" ID="{477BABE5-6FCB-4B9B-9605-95571FA9A51D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Visor_Broken" ID="{89962690-FFB6-4E7A-B7CC-4CDC3E714D27}" ShortID="300043948">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Visor_Broken" ID="{0BC04C0F-C8D3-4B35-9AB8-1A3D60743EED}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.03965"/>
+								<Property Name="LoopBegin" Type="Real64" Value="1.32838"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.31869"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Visor_Broken.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="891906073"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Visor_Broken" ID="{0BC04C0F-C8D3-4B35-9AB8-1A3D60743EED}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ElectricFence_Hit" ID="{15BDF23E-25D2-4BA3-9EA6-DBCD48FFA758}" ShortID="71661687">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ElectricFence_Hit" ID="{F738AD5D-FF75-4078-99A4-E7C46A47D8D0}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.10413"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ElectricFence_Hit.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="117419071"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ElectricFence_Hit" ID="{F738AD5D-FF75-4078-99A4-E7C46A47D8D0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

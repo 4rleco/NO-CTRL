@@ -43,7 +43,14 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float wallOffset = 1f; // Distancia de seguridad para no quedar pegado dentro de la pared
     [SerializeField] private bool canDestroyObstacles = false;
 
+
+    [Header("Sounds")]
     [SerializeField] private AK.Wwise.Event jumpEvent;
+    [SerializeField] private AK.Wwise.Event dashEvent;
+    [SerializeField] private AK.Wwise.Event slideEvent;
+    [SerializeField] private AK.Wwise.Event runEvent;
+    [SerializeField] private float stepInterval = 0.3f;
+    private float stepTimer = 0f;
 
 
 
@@ -146,6 +153,7 @@ public class PlayerActions : MonoBehaviour
         {
 
             animator.SetBool("isSliding", isCrouching);
+           
         }
 
         if (currentSpeed < speed)
@@ -159,11 +167,13 @@ public class PlayerActions : MonoBehaviour
             {
                 isPaused = true;
                 Time.timeScale = 0.0f;
+                
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 isPaused = false;
                 Time.timeScale = 1.0f;
+
             }
         }
 
@@ -172,6 +182,21 @@ public class PlayerActions : MonoBehaviour
             if (!isBouncing)
             {
                 transform.Translate(new Vector3(currentSpeed * Time.deltaTime, 0, 0));
+
+            }
+
+            if (isGrounded && !isCrouching && !isDashing && !isBouncing && !qte.GetIsActive())
+            {
+                stepTimer -= Time.deltaTime;
+                if (stepTimer <= 0f)
+                {
+                    AkUnitySoundEngine.PostEvent(runEvent.Id, gameObject);
+                    stepTimer = stepInterval;
+                }
+            }
+            else
+            {
+                stepTimer = 0f;
             }
 
             if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("ThirdLevel"))
@@ -179,11 +204,13 @@ public class PlayerActions : MonoBehaviour
                 if (Input.GetKeyUp(crouchKey) && isCrouching)
                 {
                     wantsToStandUp = true;
+
                 }
 
                 if (wantsToStandUp && isCrouching)
                 {
                     TryToStandUp();
+
                 }
 
                 if (!qte.GetIsActive())
@@ -194,6 +221,7 @@ public class PlayerActions : MonoBehaviour
                     {
                         Slide();
 
+                        AkUnitySoundEngine.PostEvent(slideEvent.Id, gameObject);
                         PlayerEvents.current.OnPlayerSlideTriggerClose(this);
                         particles.transform.position = auxParticles.transform.position;
                     }
@@ -220,6 +248,7 @@ public class PlayerActions : MonoBehaviour
                     if (Input.GetKeyDown(dashKey) && !isCrouching && canDash && currentSpeed > 0)
                     {
                         dashCoroutine = StartCoroutine(DashRoutine());
+                        AkUnitySoundEngine.PostEvent(dashEvent.Id, gameObject);
 
                         PlayerEvents.current.OnPlayerDashTriggerClose(this);
 
@@ -246,6 +275,7 @@ public class PlayerActions : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.F5))
                     {
                         PlayerReset();
+
                     }
 #endif
                     currentKeyTimer -= Time.deltaTime;
@@ -255,6 +285,7 @@ public class PlayerActions : MonoBehaviour
                         animator.SetBool("isGrounded", isGrounded);
                     }
                 }
+
             }
             else
             {
@@ -266,8 +297,11 @@ public class PlayerActions : MonoBehaviour
                     animator.SetBool("isWalking", !qteActive);
                     animator.SetBool("isGrounded", isGrounded);
                 }
+
             }
+
         }
+        if (isGrounded==false) Debug.Log(isGrounded);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -275,6 +309,12 @@ public class PlayerActions : MonoBehaviour
         
         if (collision.gameObject.CompareTag("MortalObstacle"))
         {
+            Train train = collision.collider.GetComponentInParent<Train>();
+            if (train != null && !playerDied) train.PlayHit();
+
+            ElectricFence fence = collision.collider.GetComponentInParent<ElectricFence>();
+            if (fence != null && !playerDied) fence.PlayHit();
+
             playerDied = true;
             rb.linearVelocity = Vector2.zero;
         }
@@ -402,7 +442,7 @@ public class PlayerActions : MonoBehaviour
 
         if (leftFloor || leftObstacleTop)
         {
-            isGrounded = false;
+           // isGrounded = false;
             standingOnObstacle = false;
 
             if (isCrouching && !IsThereRoofAbove())
@@ -595,6 +635,8 @@ public class PlayerActions : MonoBehaviour
     private void PlayerReset()
     {
         transform.position = startPoint.transform.position;
+        rb.linearVelocity = Vector2.zero;
+        isGrounded = true;
         Time.timeScale = 1;
     }
 
