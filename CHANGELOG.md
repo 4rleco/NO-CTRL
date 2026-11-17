@@ -1,5 +1,46 @@
 # Changelog
 
+## [0.9.1] - 2026-11-16
+
+### Changes
+
+- Updated Android build to 14 and iOS build to 13.
+- Wwise audio implementation fixed.
+- Options sliders now start at value 1.
+- Third level floor sprite added.
+
+### Known Issues
+
+- Sounds are implemented but cannot be heard; this will be solved in the next version.
+
+## [0.9.0] - 2026-11-16
+
+### New
+
+- Image Campus logo added to the splash screen.
+- Props added to the first level.
+- Destroyable obstacle added to the second level.
+- Player and obstacle sounds.
+
+### Changes
+
+- Updated Android build to 13 and iOS build to 12.
+- First level background updated.
+- Second level background, wires and floor sprites updated.
+- Metal door obstacle updated.
+- Second level transition to the third level updated.
+- Death screen and credits polished.
+- Credits title and name spacing adjusted.
+- Sprite layers fixed.
+
+### Known Issues
+
+- Sound option sliders in the main menu do not work yet.
+- Loop fence sound is missing.
+- Box break sound is missing.
+- Visor broken sound is missing.
+- A blank square appears when the train is coming.
+
 ## [0.8.0] - 2026-11-10
 
 ### New
