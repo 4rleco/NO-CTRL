@@ -100,6 +100,7 @@ public class PlayerActions : MonoBehaviour
 
 
     private bool standingOnObstacle = false;
+    private readonly System.Collections.Generic.HashSet<Collider2D> groundColliders = new System.Collections.Generic.HashSet<Collider2D>();
 
     private BoxCollider2D boxCollider;
     private Vector2 colliderOriginalSize;
@@ -301,7 +302,7 @@ public class PlayerActions : MonoBehaviour
             }
 
         }
-        if (isGrounded==false) Debug.Log(isGrounded);
+        if (isGrounded==false) animator.SetBool("isGrounded",isGrounded);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -326,6 +327,7 @@ public class PlayerActions : MonoBehaviour
             {
                 isGrounded = true;
                 jumpsRemaining = maxJumps;
+                groundColliders.Add(collision.collider);
             }
         }
 
@@ -342,6 +344,7 @@ public class PlayerActions : MonoBehaviour
                 isGrounded = true;
                 standingOnObstacle = true;
                 jumpsRemaining = maxJumps;
+                groundColliders.Add(collision.collider);
             }
             else
             {
@@ -435,6 +438,9 @@ public class PlayerActions : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        groundColliders.Remove(collision.collider);
+        groundColliders.RemoveWhere(c => c == null);
+        if (groundColliders.Count == 0) isGrounded = false;
 
         bool leftFloor = collision.gameObject.CompareTag("Floor");
         bool leftObstacleTop = standingOnObstacle &&
