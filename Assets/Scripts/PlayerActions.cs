@@ -331,9 +331,10 @@ public class PlayerActions : MonoBehaviour
             }
         }
 
-        if (isDashing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
+        if (isDashing && !isBouncing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
         {
             Destroy(collision.gameObject);
+            return;
         }
 
         if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
@@ -607,12 +608,16 @@ public class PlayerActions : MonoBehaviour
         Vector2 castOrigin = (Vector2)transform.position + boxCollider.offset;
         Vector2 boxSize = new Vector2(0.05f, boxCollider.size.y * 0.9f);
 
-        RaycastHit2D hit = Physics2D.BoxCast(castOrigin, boxSize, 0f, dasDirection, dashDistance, dashObstacleLayer);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(castOrigin, boxSize, 0f, dasDirection, dashDistance, dashObstacleLayer);
 
-        if (hit.collider != null)
+        foreach (RaycastHit2D hit in hits)
         {
+            if (hit.collider == null) continue;
+            if (canDestroyObstacles && hit.collider.CompareTag("DestroyObstacle")) continue;
+
             efectiveDistance = hit.distance - wallOffset;
             if (efectiveDistance < 0) efectiveDistance = 0;
+            break; 
         }
 
         float startX = transform.position.x;
