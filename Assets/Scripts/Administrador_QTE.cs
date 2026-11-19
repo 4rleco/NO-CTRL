@@ -17,20 +17,20 @@ public class Administrador_QTE : MonoBehaviour
     private KeyCode correctKey;
     private Vector2 savePrevPlayerPosition;
 
-   
+
     private PlayerActions player;
     private Rigidbody2D playerRb;
 
-    
+
     private KeyCode[] arrows = { KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow };
     private string[] arrowsText = { "PRESIONÁ: ↑ (ARRIBA)", "PRESIONÁ: ↓ (ABAJO)", "PRESIONÁ: ← (IZQUIERDA)", "PRESIONÁ: → (DERECHA)" };
 
-    
+
     private string currentArrowBaseText;
 
     void Start()
     {
-      
+
         player = FindFirstObjectByType<PlayerActions>();
         if (player != null)
         {
@@ -51,7 +51,7 @@ public class Administrador_QTE : MonoBehaviour
         }
         else
         {
-            
+
             if (player != null) player.SetCurrentSpeed(0);
             if (playerRb != null) playerRb.linearVelocity = Vector2.zero;
 
@@ -61,8 +61,8 @@ public class Administrador_QTE : MonoBehaviour
 
     void NormalModeHandler()
     {
-        if(!player.GetPlayerPause())
-        delayTimer -= Time.deltaTime;
+        if (!player.GetPlayerPause())
+            delayTimer -= Time.deltaTime;
 
         if (delayTimer <= 0)
             ActivateQTE();
@@ -75,17 +75,17 @@ public class Administrador_QTE : MonoBehaviour
         qteActive = true;
         timeToCompleteTimer = timeToComplete;
 
-       
+
         savePrevPlayerPosition = player.transform.position;
 
-       
+
         int randomIndex = UnityEngine.Random.Range(0, arrows.Length);
         correctKey = arrows[randomIndex];
 
-       
+
         currentArrowBaseText = arrowsText[randomIndex];
 
-       
+
         if (arrowText != null)
         {
             arrowText.color = Color.yellow;
@@ -97,19 +97,19 @@ public class Administrador_QTE : MonoBehaviour
     {
         timeToCompleteTimer -= Time.deltaTime;
 
-       
+
         float segundosRestantes = timeToCompleteTimer;
 
         if (arrowText != null)
         {
-           
+
             if (timeToCompleteTimer <= 3.0f)
             {
                 arrowText.color = Color.red;
             }
             else
             {
-                arrowText.color = Color.yellow; 
+                arrowText.color = Color.yellow;
             }
 
             arrowText.text = $"{currentArrowBaseText} [{segundosRestantes.ToString("F1")}s]";
@@ -118,7 +118,6 @@ public class Administrador_QTE : MonoBehaviour
         if (timeToCompleteTimer <= 0)
         {
             FinishWithFail();
-            return;
         }
 
         if (Input.anyKeyDown)
@@ -126,7 +125,7 @@ public class Administrador_QTE : MonoBehaviour
             if (Input.GetKeyDown(correctKey))
                 CompleteQTESuccessfuly();
             else if (PressIncorrectKey())
-                FinishWithFail();
+                timeToComplete -= 0.5f;
         }
     }
 
@@ -135,7 +134,9 @@ public class Administrador_QTE : MonoBehaviour
         foreach (KeyCode arrow in arrows)
         {
             if (Input.GetKeyDown(arrow) && arrow != correctKey)
+            {
                 return true;
+            }
         }
         return false;
     }
@@ -161,7 +162,7 @@ public class Administrador_QTE : MonoBehaviour
 
         UnityEngine.Debug.Log("¡QTE Fallado! El jugador muere y reinicia en el lugar.");
 
-       
+
         if (player != null)
         {
             player.SetPlayerDied(true);
