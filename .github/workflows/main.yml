@@ -2,11 +2,12 @@ name: Build & Upload Artifact
 
 on:
   push:
-    tags: 
-      - '*.*.*'
+    branches:
+      main
 
 env:
   buildName: NO-CTRL
+  itchio_project: leonardobrizuela/noctrl
 
 jobs:
   buildAndUploadArtifact:
@@ -62,6 +63,12 @@ jobs:
           name: ${{ env.BuildName }}
           path: build/StandaloneWindows64
       
+      - name: Get Previous Tag
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v2"
+        with:
+          fallback: 0.1.0 # Optional fallback tag to use when no tag can be found
+
       # Deploys to Itch.io
       - name: Upload Build to itch.io
         uses: robpc/itchio-upload-action@v1
@@ -69,5 +76,5 @@ jobs:
           path: build/StandaloneWindows64
           project: ${{ secrets.ITCHIO_PROJECT }}
           channel: ${{ env.itchio_channel }}
-          version: ${{ github.ref_name }}
+          version: ${{ steps.previoustag.outputs.tag }}
           api-key: ${{ secrets.ITCHIO_API_KEY }}
