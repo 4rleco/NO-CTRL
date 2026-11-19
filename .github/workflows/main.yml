@@ -40,6 +40,7 @@ jobs:
           buildName: ${{ env.buildName }}
           targetPlatform: StandaloneWindows64
           versioning: None 
+          customParameters: -Development
       
       # Uploads the build output as a GitHub artifact
       - name: Upload Artifact
