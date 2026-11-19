@@ -164,7 +164,8 @@ public static class VersionUpdater
                       $"git push&&" +
                       $"git push --tags&&" + 
                       $"git switch main&&" + 
-                      $"git merge Dev";
+                      $"git merge --no ff Dev -m \"Merge Dev into main\"&&" +
+                      $"git push";
 
 
         ProcessStartInfo processStartInfo = new ProcessStartInfo()
