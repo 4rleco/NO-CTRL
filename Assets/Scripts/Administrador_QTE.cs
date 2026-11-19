@@ -98,7 +98,7 @@ public class Administrador_QTE : MonoBehaviour
         timeToCompleteTimer -= Time.deltaTime;
 
        
-        int segundosRestantes = Mathf.CeilToInt(timeToCompleteTimer);
+        float segundosRestantes = timeToCompleteTimer;
 
         if (arrowText != null)
         {
@@ -112,7 +112,7 @@ public class Administrador_QTE : MonoBehaviour
                 arrowText.color = Color.yellow; 
             }
 
-            arrowText.text = $"{currentArrowBaseText} [{segundosRestantes}s]";
+            arrowText.text = $"{currentArrowBaseText} [{segundosRestantes.ToString("F1")}s]";
         }
 
         if (timeToCompleteTimer <= 0)
