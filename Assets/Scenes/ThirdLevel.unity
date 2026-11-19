@@ -155,6 +155,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044818259435126799, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1574.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044818259435126799, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 151.83
+      objectReference: {fileID: 0}
     - target: {fileID: 3179404789513871568, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -773,6 +781,7 @@ MonoBehaviour:
   timeBetweenQTE: 5
   timeToComplete: 2.5
   arrowText: {fileID: 1612545628}
+  amountOfKeys: 3
 --- !u!4 &526621023
 Transform:
   m_ObjectHideFlags: 0
