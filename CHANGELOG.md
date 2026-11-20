@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.10.0] - 2026-11-20
+
+### New
+
+- Double jump and breakable object tutorials added to the second level.
+- Train lights added.
+- More keys added to the QTE.
+- Game icon added.
+
+### Changes
+
+- Updated Android build to 15 and iOS build to 14.
+- Player random key range shortened.
+- Train assets changed.
+- Second level background fixed.
+- Milliseconds shown in the QTE timer.
+- Screens modified to match the wireframe.
+- Third level background used as the main menu background.
+- Dash bounce on destructible obstacles fixed.
+- Falling animation fixed.
+
 ## [0.9.1] - 2026-11-16
 
 ### Changes
