@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
@@ -36,6 +37,13 @@ public class Tutorial : MonoBehaviour
         PlayerEvents.current.onPlayerJumpTriggerClose += OnJumpClose;
 
         PlayerEvents.current.onPlayerDeath += OnPlayerDeath;
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("SecondLevel"))
+        {
+            owner.UnlockDashKey();
+            owner.UnlockSlideKey();            
+        }
+
     }
 
     private void OnJumpOpen(PlayerActions player)

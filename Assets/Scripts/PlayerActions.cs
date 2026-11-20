@@ -76,19 +76,19 @@ public class PlayerActions : MonoBehaviour
     private readonly KeyCode[] upperLine =
     {
         KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T,
-        KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P
+        //KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P
     };
 
     private readonly KeyCode[] middleLine =
     {
         KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.G,
-        KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L
+        //KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L
     };
 
     private readonly KeyCode[] bottomLine =
     {
         KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V,
-        KeyCode.B, KeyCode.N, KeyCode.M
+        //KeyCode.B, KeyCode.N, KeyCode.M
     };
 
     private bool isCrouching = false;
@@ -100,6 +100,7 @@ public class PlayerActions : MonoBehaviour
 
 
     private bool standingOnObstacle = false;
+    private readonly System.Collections.Generic.HashSet<Collider2D> groundColliders = new System.Collections.Generic.HashSet<Collider2D>();
 
     private BoxCollider2D boxCollider;
     private Vector2 colliderOriginalSize;
@@ -301,7 +302,7 @@ public class PlayerActions : MonoBehaviour
             }
 
         }
-        if (isGrounded==false) Debug.Log(isGrounded);
+        if (isGrounded==false) animator.SetBool("isGrounded",isGrounded);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -326,12 +327,14 @@ public class PlayerActions : MonoBehaviour
             {
                 isGrounded = true;
                 jumpsRemaining = maxJumps;
+                groundColliders.Add(collision.collider);
             }
         }
 
-        if (isDashing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
+        if (isDashing && !isBouncing && canDestroyObstacles && collision.gameObject.CompareTag("DestroyObstacle"))
         {
             Destroy(collision.gameObject);
+            return;
         }
 
         if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("DestroyObstacle"))
@@ -342,6 +345,7 @@ public class PlayerActions : MonoBehaviour
                 isGrounded = true;
                 standingOnObstacle = true;
                 jumpsRemaining = maxJumps;
+                groundColliders.Add(collision.collider);
             }
             else
             {
@@ -435,6 +439,9 @@ public class PlayerActions : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        groundColliders.Remove(collision.collider);
+        groundColliders.RemoveWhere(c => c == null);
+        if (groundColliders.Count == 0) isGrounded = false;
 
         bool leftFloor = collision.gameObject.CompareTag("Floor");
         bool leftObstacleTop = standingOnObstacle &&
@@ -601,12 +608,16 @@ public class PlayerActions : MonoBehaviour
         Vector2 castOrigin = (Vector2)transform.position + boxCollider.offset;
         Vector2 boxSize = new Vector2(0.05f, boxCollider.size.y * 0.9f);
 
-        RaycastHit2D hit = Physics2D.BoxCast(castOrigin, boxSize, 0f, dasDirection, dashDistance, dashObstacleLayer);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(castOrigin, boxSize, 0f, dasDirection, dashDistance, dashObstacleLayer);
 
-        if (hit.collider != null)
+        foreach (RaycastHit2D hit in hits)
         {
+            if (hit.collider == null) continue;
+            if (canDestroyObstacles && hit.collider.CompareTag("DestroyObstacle")) continue;
+
             efectiveDistance = hit.distance - wallOffset;
             if (efectiveDistance < 0) efectiveDistance = 0;
+            break; 
         }
 
         float startX = transform.position.x;

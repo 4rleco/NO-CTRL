@@ -10,27 +10,32 @@ public class Administrador_QTE : MonoBehaviour
     [Header("Referencias UI (TextMeshPro)")]
     [SerializeField] private TextMeshProUGUI arrowText;
 
+    [Header("Cantidad de teclas")]
+    [SerializeField] private int amountOfKeys = 3;
+
     private float delayTimer;
     private float timeToCompleteTimer;
     private bool qteActive = false;
 
-    private KeyCode correctKey;
+    private KeyCode[] correctKey;
+    private int amountOfCorrectKeys;
     private Vector2 savePrevPlayerPosition;
 
-   
+
     private PlayerActions player;
     private Rigidbody2D playerRb;
 
-    
+
     private KeyCode[] arrows = { KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow };
     private string[] arrowsText = { "PRESIONÁ: ↑ (ARRIBA)", "PRESIONÁ: ↓ (ABAJO)", "PRESIONÁ: ← (IZQUIERDA)", "PRESIONÁ: → (DERECHA)" };
 
-    
+
     private string currentArrowBaseText;
 
     void Start()
     {
-      
+        amountOfCorrectKeys = 0;
+
         player = FindFirstObjectByType<PlayerActions>();
         if (player != null)
         {
@@ -51,7 +56,6 @@ public class Administrador_QTE : MonoBehaviour
         }
         else
         {
-            
             if (player != null) player.SetCurrentSpeed(0);
             if (playerRb != null) playerRb.linearVelocity = Vector2.zero;
 
@@ -61,8 +65,8 @@ public class Administrador_QTE : MonoBehaviour
 
     void NormalModeHandler()
     {
-        if(!player.GetPlayerPause())
-        delayTimer -= Time.deltaTime;
+        if (!player.GetPlayerPause())
+            delayTimer -= Time.deltaTime;
 
         if (delayTimer <= 0)
             ActivateQTE();
@@ -75,17 +79,20 @@ public class Administrador_QTE : MonoBehaviour
         qteActive = true;
         timeToCompleteTimer = timeToComplete;
 
-       
         savePrevPlayerPosition = player.transform.position;
 
-       
-        int randomIndex = UnityEngine.Random.Range(0, arrows.Length);
-        correctKey = arrows[randomIndex];
+        correctKey = new KeyCode[amountOfKeys];
 
-       
-        currentArrowBaseText = arrowsText[randomIndex];
+        currentArrowBaseText = " ";
+        amountOfCorrectKeys = 0;
 
-       
+        for (int i = 0; i < amountOfKeys; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, arrows.Length);
+            correctKey[i] = arrows[randomIndex];
+            currentArrowBaseText += arrowsText[randomIndex] + " ";
+        }
+
         if (arrowText != null)
         {
             arrowText.color = Color.yellow;
@@ -97,45 +104,55 @@ public class Administrador_QTE : MonoBehaviour
     {
         timeToCompleteTimer -= Time.deltaTime;
 
-       
-        int segundosRestantes = Mathf.CeilToInt(timeToCompleteTimer);
-
         if (arrowText != null)
         {
-           
             if (timeToCompleteTimer <= 3.0f)
             {
                 arrowText.color = Color.red;
             }
             else
             {
-                arrowText.color = Color.yellow; 
+                arrowText.color = Color.yellow;
             }
 
-            arrowText.text = $"{currentArrowBaseText} [{segundosRestantes}s]";
+            arrowText.text = $"{currentArrowBaseText} [{timeToCompleteTimer.ToString("F1")}s]";
         }
 
         if (timeToCompleteTimer <= 0)
         {
             FinishWithFail();
-            return;
         }
 
         if (Input.anyKeyDown)
         {
-            if (Input.GetKeyDown(correctKey))
-                CompleteQTESuccessfuly();
-            else if (PressIncorrectKey())
-                FinishWithFail();
+            if (Input.GetKeyDown(correctKey[amountOfCorrectKeys]))
+            {
+                amountOfCorrectKeys++;
+
+                if (amountOfCorrectKeys >= amountOfKeys)
+                {
+                    CompleteQTESuccessfuly();
+                    return;
+                }
+            }
+            else if (PressIncorrectKey(correctKey[amountOfCorrectKeys]))
+            {
+                timeToCompleteTimer -= 0.5f;
+                amountOfCorrectKeys = 0;
+            }
         }
+
+        Debug.Log(timeToCompleteTimer);
     }
 
-    bool PressIncorrectKey()
+    bool PressIncorrectKey(KeyCode currentArrow)
     {
         foreach (KeyCode arrow in arrows)
         {
-            if (Input.GetKeyDown(arrow) && arrow != correctKey)
+            if (Input.GetKeyDown(arrow) && arrow != currentArrow)
+            {
                 return true;
+            }
         }
         return false;
     }
@@ -161,7 +178,7 @@ public class Administrador_QTE : MonoBehaviour
 
         UnityEngine.Debug.Log("¡QTE Fallado! El jugador muere y reinicia en el lugar.");
 
-       
+
         if (player != null)
         {
             player.SetPlayerDied(true);
