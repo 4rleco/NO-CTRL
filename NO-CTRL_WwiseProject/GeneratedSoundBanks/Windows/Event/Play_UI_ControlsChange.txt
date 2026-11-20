@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	913931305	Play_UI_ControlsChange			\Arda_UI\Play_UI_ControlsChange	
+

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2794716800",
+    "Type": "Event",
+    "GUID": "{89CD161E-B8BB-471D-AF02-91C496A15C06}",
+    "Language": "SFX",
+    "Hash": "{2BEE2A29-9B51-FB74-8D95-E1E3CFF53E2D}",
+    "ObjectPath": "Play_ElectricFence_Hit",
+    "ShortName": "Play_ElectricFence_Hit",
+    "Path": "Event/Play_ElectricFence_Hit.bnk",
+    "Media": [
+     {
+      "Id": "117419071",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ElectricFence_Hit.wav",
+      "Path": "Media/117419071.wem",
+      "CachePath": "50/{5004CE25-6C8F-2C00-A614-4357483F1DD1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2794716800",
+      "Name": "Play_ElectricFence_Hit",
+      "ObjectPath": "\\Events\\Arda_SFX_Obstaculos\\Play_ElectricFence_Hit",
+      "GUID": "{89CD161E-B8BB-471D-AF02-91C496A15C06}",
+      "DurationType": "OneShot",
+      "DurationMin": "4",
+      "DurationMax": "4",
+      "MediaRefs": [
+       {
+        "Id": "117419071"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{65EC0171-E99C-0CA2-7040-5F34E2CD72A0}"
+ }
+}

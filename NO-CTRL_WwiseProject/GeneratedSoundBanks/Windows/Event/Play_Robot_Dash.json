@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4067620897",
+    "Type": "Event",
+    "GUID": "{9AF85C63-7B25-43AD-B04B-39576F168456}",
+    "Language": "SFX",
+    "Hash": "{B5CC6DF0-B372-A3EA-A620-D69EA60A417B}",
+    "ObjectPath": "Play_Robot_Dash",
+    "ShortName": "Play_Robot_Dash",
+    "Path": "Event/Play_Robot_Dash.bnk",
+    "Media": [
+     {
+      "Id": "721752056",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Robot_Dash01.wav",
+      "Path": "Media/721752056.wem",
+      "CachePath": "9D/{9D778679-04D1-BF9D-748A-B01A76D161E2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4067620897",
+      "Name": "Play_Robot_Dash",
+      "ObjectPath": "\\Events\\Arda_SFX_Robot\\Play_Robot_Dash",
+      "GUID": "{9AF85C63-7B25-43AD-B04B-39576F168456}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.497321",
+      "DurationMax": "4.406348",
+      "MediaRefs": [
+       {
+        "Id": "721752056"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4DDAEF67-D6B3-0B76-FEC6-1F1842EB9D16}"
+ }
+}

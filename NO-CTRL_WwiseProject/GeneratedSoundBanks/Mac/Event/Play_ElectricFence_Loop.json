@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "595894711",
+    "Type": "Event",
+    "GUID": "{BBDA2A64-37CD-4078-8EEE-619EBF6B4236}",
+    "Language": "SFX",
+    "Hash": "{A7DA5893-62DB-E4A6-C049-F8B7C75D6497}",
+    "ObjectPath": "Play_ElectricFence_Loop",
+    "ShortName": "Play_ElectricFence_Loop",
+    "Path": "Event/Play_ElectricFence_Loop.bnk",
+    "Media": [
+     {
+      "Id": "574346962",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ElectricFence_Loop.wav",
+      "Path": "Media/574346962.wem",
+      "CachePath": "B1/{B1F0D340-EEA1-5B94-24BE-F2988F1B00F9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "595894711",
+      "Name": "Play_ElectricFence_Loop",
+      "ObjectPath": "\\Events\\Arda_SFX_Obstaculos\\Play_ElectricFence_Loop",
+      "GUID": "{BBDA2A64-37CD-4078-8EEE-619EBF6B4236}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.54681",
+      "DurationMax": "4.54681",
+      "MediaRefs": [
+       {
+        "Id": "574346962"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B511C43F-F1D9-74AC-C91B-33D5ED0B56B8}"
+ }
+}

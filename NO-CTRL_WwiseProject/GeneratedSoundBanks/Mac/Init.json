@@ -1,0 +1,117 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{65ED44E9-A2E1-7640-F245-826F664CFC0E}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{23C83B37-B094-4799-861F-B6EB9A950D28}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{DB63A1B1-BC26-4F3F-BBA2-8EE51D75A539}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "GUID": "{D89CDEA4-A0A0-4871-AB45-9175BB30E5BD}"
+     },
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
+      "GUID": "{A623CEBD-95DF-4EF5-A2F1-58D651D1168C}"
+     },
+     {
+      "Id": "1551306167",
+      "Name": "UI",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\UI",
+      "GUID": "{DA44A641-5E73-41DF-AD7B-0EC9564D3836}"
+     },
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
+      "GUID": "{FBC22ABC-4BCA-45F0-AC8D-43376D2A6E80}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2782712965",
+      "Name": "Level",
+      "ObjectPath": "\\States\\Default Work Unit\\Level",
+      "GUID": "{D72312C8-9FF6-48F9-9C4D-1DAF4ACDB174}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Level\\None",
+        "GUID": "{EFE8AB30-2D99-4EBB-8E5D-59A401B3F456}"
+       }
+      ]
+     },
+     {
+      "Id": "3885081030",
+      "Name": "Hack",
+      "ObjectPath": "\\States\\Default Work Unit\\Hack",
+      "GUID": "{4C560C3F-B732-4086-A110-0F3C4AEC8CE3}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Hack\\None",
+        "GUID": "{1250BF6F-8D68-4128-8A4E-150FEF996BC8}"
+       }
+      ]
+     },
+     {
+      "Id": "4091656514",
+      "Name": "GameState",
+      "ObjectPath": "\\States\\Default Work Unit\\GameState",
+      "GUID": "{2C1AFDD7-EA42-4721-88F3-8AEDA9848475}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\GameState\\None",
+        "GUID": "{0F731BB1-95BD-487B-B1CA-134C671984CC}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{35A3D5DE-E125-AA12-7586-2FED5FCA051D}"
+ }
+}

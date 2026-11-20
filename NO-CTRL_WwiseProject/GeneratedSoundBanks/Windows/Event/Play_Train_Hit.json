@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "237193498",
+    "Type": "Event",
+    "GUID": "{D0989243-BC33-4CC4-A66B-92833760BC1E}",
+    "Language": "SFX",
+    "Hash": "{F6DF9C1B-1B05-D023-7A9F-56607B7388AC}",
+    "ObjectPath": "Play_Train_Hit",
+    "ShortName": "Play_Train_Hit",
+    "Path": "Event/Play_Train_Hit.bnk",
+    "Media": [
+     {
+      "Id": "576343284",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Train_Hit.wav",
+      "Path": "Media/576343284.wem",
+      "CachePath": "D5/{D53E30E2-D1D0-C8EF-969A-714622146122}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "237193498",
+      "Name": "Play_Train_Hit",
+      "ObjectPath": "\\Events\\Arda_SFX_Obstaculos\\Play_Train_Hit",
+      "GUID": "{D0989243-BC33-4CC4-A66B-92833760BC1E}",
+      "DurationType": "OneShot",
+      "DurationMin": "4",
+      "DurationMax": "4",
+      "MediaRefs": [
+       {
+        "Id": "576343284"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6B9046C4-30FD-3B4D-553D-76850A7DAC74}"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "913931305",
+    "Type": "Event",
+    "GUID": "{7B80CBDA-19BC-4E1F-BE5C-C57372A30A08}",
+    "Language": "SFX",
+    "Hash": "{F2D3F5C2-5F09-36A2-2DFD-DECBDF9FE33E}",
+    "ObjectPath": "Play_UI_ControlsChange",
+    "ShortName": "Play_UI_ControlsChange",
+    "Path": "Event/Play_UI_ControlsChange.bnk",
+    "Media": [
+     {
+      "Id": "954656251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_ControlsChange.wav",
+      "Path": "Media/954656251.wem",
+      "CachePath": "8F/{8F95DAC4-F42E-2818-E0E6-2B944354CBCA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "913931305",
+      "Name": "Play_UI_ControlsChange",
+      "ObjectPath": "\\Events\\Arda_UI\\Play_UI_ControlsChange",
+      "GUID": "{7B80CBDA-19BC-4E1F-BE5C-C57372A30A08}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.45385",
+      "DurationMax": "0.45385",
+      "MediaRefs": [
+       {
+        "Id": "954656251"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CF7713DF-F177-87CF-5C8B-E381A63EB029}"
+ }
+}

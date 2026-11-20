@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3847966365",
+    "Type": "Event",
+    "GUID": "{E99F7E9C-9385-40AA-8CC5-C449D9CD859D}",
+    "Language": "SFX",
+    "Hash": "{92AE5532-D622-1DDF-9E41-47E0B3621E89}",
+    "ObjectPath": "Play_Visor_Broken",
+    "ShortName": "Play_Visor_Broken",
+    "Path": "Event/Play_Visor_Broken.bnk",
+    "Media": [
+     {
+      "Id": "891906073",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Visor_Broken.wav",
+      "Path": "Media/891906073.wem",
+      "CachePath": "D2/{D2479F1D-D59F-9772-BC4C-06959F59565E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3847966365",
+      "Name": "Play_Visor_Broken",
+      "ObjectPath": "\\Events\\Arda_SFX_Obstaculos\\Play_Visor_Broken",
+      "GUID": "{E99F7E9C-9385-40AA-8CC5-C449D9CD859D}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.68131",
+      "DurationMax": "2.68131",
+      "MediaRefs": [
+       {
+        "Id": "891906073"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9B4ABE2D-3CB0-C0C8-8A0E-3F36DFA5E308}"
+ }
+}

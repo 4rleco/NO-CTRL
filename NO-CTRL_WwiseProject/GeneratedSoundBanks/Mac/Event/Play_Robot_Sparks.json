@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "741549631",
+    "Type": "Event",
+    "GUID": "{EA547718-1210-4BF3-89DE-4F0B893BE641}",
+    "Language": "SFX",
+    "Hash": "{6F63B257-2C7B-9516-2315-D98BE981E8D2}",
+    "ObjectPath": "Play_Robot_Sparks",
+    "ShortName": "Play_Robot_Sparks",
+    "Path": "Event/Play_Robot_Sparks.bnk",
+    "Media": [
+     {
+      "Id": "502511411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Robot_Sparks.wav",
+      "Path": "Media/502511411.wem",
+      "CachePath": "07/{07D27513-8ED5-53D2-3B6F-C03C9D8F6081}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "741549631",
+      "Name": "Play_Robot_Sparks",
+      "ObjectPath": "\\Events\\Arda_SFX_Robot\\Play_Robot_Sparks",
+      "GUID": "{EA547718-1210-4BF3-89DE-4F0B893BE641}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.5635948",
+      "DurationMax": "4.489848",
+      "MediaRefs": [
+       {
+        "Id": "502511411"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3E1B6352-5E6B-39A5-36F9-A3103E364514}"
+ }
+}

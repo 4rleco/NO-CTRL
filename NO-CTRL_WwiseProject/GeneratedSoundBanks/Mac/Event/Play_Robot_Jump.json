@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1663612553",
+    "Type": "Event",
+    "GUID": "{41D9FE69-7818-4A2A-B372-F5B0C4BB1BE1}",
+    "Language": "SFX",
+    "Hash": "{8339EBEA-FEAA-BA62-389F-58589DE25AC2}",
+    "ObjectPath": "Play_Robot_Jump",
+    "ShortName": "Play_Robot_Jump",
+    "Path": "Event/Play_Robot_Jump.bnk",
+    "Media": [
+     {
+      "Id": "93288251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Robot_Jump_01.wav",
+      "Path": "Media/93288251.wem",
+      "CachePath": "D2/{D2905C79-918E-2975-3286-E0448FC6D02B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1663612553",
+      "Name": "Play_Robot_Jump",
+      "ObjectPath": "\\Events\\Arda_SFX_Robot\\Play_Robot_Jump",
+      "GUID": "{41D9FE69-7818-4A2A-B372-F5B0C4BB1BE1}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.775497",
+      "DurationMax": "4.2378526",
+      "MediaRefs": [
+       {
+        "Id": "93288251"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4D4CB7BC-CAEF-27F1-11A1-FD30C2FBB145}"
+ }
+}

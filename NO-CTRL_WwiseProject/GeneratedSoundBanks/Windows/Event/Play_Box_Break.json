@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3331416737",
+    "Type": "Event",
+    "GUID": "{9C4AD3F9-A144-4408-BB4E-3063971A5085}",
+    "Language": "SFX",
+    "Hash": "{7A6424AB-48DE-3C88-C0D4-ACA4A3D9E6AD}",
+    "ObjectPath": "Play_Box_Break",
+    "ShortName": "Play_Box_Break",
+    "Path": "Event/Play_Box_Break.bnk",
+    "Media": [
+     {
+      "Id": "9869571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Box_Break.wav",
+      "Path": "Media/9869571.wem",
+      "CachePath": "F0/{F06E628F-1BC8-6A24-FBC2-7208024C821E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3331416737",
+      "Name": "Play_Box_Break",
+      "ObjectPath": "\\Events\\Arda_SFX_Obstaculos\\Play_Box_Break",
+      "GUID": "{9C4AD3F9-A144-4408-BB4E-3063971A5085}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.51406",
+      "DurationMax": "3.51406",
+      "MediaRefs": [
+       {
+        "Id": "9869571"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{27F5A4E1-253A-A95D-CA8D-D8D3989B3EB5}"
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3833651337",
+    "Type": "Event",
+    "GUID": "{5860777D-3239-4E75-9395-8DFE4536D9C4}",
+    "Language": "SFX",
+    "Hash": "{A32891C3-9F79-9216-CC30-505F526C67B8}",
+    "ObjectPath": "Jump",
+    "ShortName": "Jump",
+    "Path": "Event/Jump.bnk",
+    "Events": [
+     {
+      "Id": "3833651337",
+      "Name": "Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Jump",
+      "GUID": "{5860777D-3239-4E75-9395-8DFE4536D9C4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A225F069-C73C-7B2C-A73E-C4010533543B}"
+ }
+}
