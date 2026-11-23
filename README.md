@@ -57,4 +57,4 @@ This game was also possible thanks to the support of:
 
 ## Links
 
-Download it from itch.io: leonardobrizuela.itch.io/noctrl
+Download it from itch.io: <a href="https://leonardobrizuela.itch.io/noctrl">NO[CTRL]</a>
