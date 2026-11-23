@@ -553,7 +553,7 @@ Transform:
   m_GameObject: {fileID: 5867029948867319600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.982697, y: -16.57854, z: 0}
+  m_LocalPosition: {x: 32, y: -18.77, z: 0}
   m_LocalScale: {x: 0.6585999, y: 0.9961324, z: 0.6585999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -673,7 +673,7 @@ MonoBehaviour:
   hitEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ecf68afc6316dbb4d80c0351c595c8dc, type: 2}
 --- !u!1 &6413436620725404020
 GameObject:
   m_ObjectHideFlags: 0
