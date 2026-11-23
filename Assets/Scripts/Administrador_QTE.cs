@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Administrador_QTE : MonoBehaviour
 {
@@ -7,8 +8,12 @@ public class Administrador_QTE : MonoBehaviour
     [SerializeField] private float timeBetweenQTE = 20f;
     [SerializeField] private float timeToComplete = 10.0f;
 
-    [Header("Referencias UI (TextMeshPro)")]
-    [SerializeField] private TextMeshProUGUI arrowText;
+    [Header("Referencias UI")]
+    [SerializeField] private Image[] arrowImages;
+    [SerializeField] private TextMeshProUGUI timer;
+
+    [Header("Sprites de las flechas")]
+    [SerializeField] private Sprite[] arrowsSprites;
 
     [Header("Cantidad de teclas")]
     [SerializeField] private int amountOfKeys = 3;
@@ -27,10 +32,6 @@ public class Administrador_QTE : MonoBehaviour
 
 
     private KeyCode[] arrows = { KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow };
-    private string[] arrowsText = { "PRESIONÁ: ↑ (ARRIBA)", "PRESIONÁ: ↓ (ABAJO)", "PRESIONÁ: ← (IZQUIERDA)", "PRESIONÁ: → (DERECHA)" };
-
-
-    private string currentArrowBaseText;
 
     void Start()
     {
@@ -44,8 +45,7 @@ public class Administrador_QTE : MonoBehaviour
 
         delayTimer = timeBetweenQTE;
 
-        if (arrowText != null)
-            arrowText.gameObject.SetActive(false);
+        HideQTEUI();
     }
 
     void Update()
@@ -83,20 +83,24 @@ public class Administrador_QTE : MonoBehaviour
 
         correctKey = new KeyCode[amountOfKeys];
 
-        currentArrowBaseText = " ";
         amountOfCorrectKeys = 0;
 
         for (int i = 0; i < amountOfKeys; i++)
         {
-            int randomIndex = UnityEngine.Random.Range(0, arrows.Length);
+            int randomIndex = Random.Range(0, arrows.Length);
+
             correctKey[i] = arrows[randomIndex];
-            currentArrowBaseText += arrowsText[randomIndex] + " ";
+
+            arrowImages[i].sprite = arrowsSprites[randomIndex];
+            arrowImages[i].color = Color.white;
+            arrowImages[i].gameObject.SetActive(true);
         }
 
-        if (arrowText != null)
+        if (timer != null)
         {
-            arrowText.color = Color.yellow;
-            arrowText.gameObject.SetActive(true);
+            timer.gameObject.SetActive(true);
+            timer.color = Color.yellow;
+            timer.text = $"{timeToCompleteTimer:F1}s";
         }
     }
 
@@ -104,18 +108,14 @@ public class Administrador_QTE : MonoBehaviour
     {
         timeToCompleteTimer -= Time.deltaTime;
 
-        if (arrowText != null)
+        if (timer != null)
         {
-            if (timeToCompleteTimer <= 3.0f)
-            {
-                arrowText.color = Color.red;
-            }
-            else
-            {
-                arrowText.color = Color.yellow;
-            }
+            timer.text = $"{timeToCompleteTimer:F1}s";
 
-            arrowText.text = $"{currentArrowBaseText} [{timeToCompleteTimer.ToString("F1")}s]";
+            if (timeToCompleteTimer <= 3.0f)
+                timer.color = Color.red;
+            else
+                timer.color = Color.yellow;
         }
 
         if (timeToCompleteTimer <= 0)
@@ -127,6 +127,8 @@ public class Administrador_QTE : MonoBehaviour
         {
             if (Input.GetKeyDown(correctKey[amountOfCorrectKeys]))
             {
+                arrowImages[amountOfCorrectKeys].color = Color.green;
+
                 amountOfCorrectKeys++;
 
                 if (amountOfCorrectKeys >= amountOfKeys)
@@ -139,6 +141,9 @@ public class Administrador_QTE : MonoBehaviour
             {
                 timeToCompleteTimer -= 0.5f;
                 amountOfCorrectKeys = 0;
+
+                foreach (Image img in arrowImages)
+                    img.color = Color.white;
             }
         }
 
@@ -157,13 +162,27 @@ public class Administrador_QTE : MonoBehaviour
         return false;
     }
 
+    void HideQTEUI()
+    {
+        if (arrowImages != null)
+        {
+            foreach (Image img in arrowImages)
+            {
+                if (img != null)
+                    img.gameObject.SetActive(false);
+            }
+        }
+
+        if (timer != null)
+            timer.gameObject.SetActive(false);
+    }
+
     void CompleteQTESuccessfuly()
     {
         qteActive = false;
         delayTimer = timeBetweenQTE;
 
-        if (arrowText != null)
-            arrowText.gameObject.SetActive(false);
+        HideQTEUI();
 
         UnityEngine.Debug.Log("¡QTE Correcto! Continuando juego.");
     }
@@ -173,8 +192,7 @@ public class Administrador_QTE : MonoBehaviour
         qteActive = false;
         delayTimer = timeBetweenQTE;
 
-        if (arrowText != null)
-            arrowText.gameObject.SetActive(false);
+        HideQTEUI();
 
         UnityEngine.Debug.Log("¡QTE Fallado! El jugador muere y reinicia en el lugar.");
 
