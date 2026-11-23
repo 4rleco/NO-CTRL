@@ -4150,22 +4150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Train '
       objectReference: {fileID: 0}
-    - target: {fileID: 2276975644794635942, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276975644794635942, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -18.77
-      objectReference: {fileID: 0}
     - target: {fileID: 3303001317737707181, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: image
       value: 
       objectReference: {fileID: 1655400181}
-    - target: {fileID: 3303001317737707181, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: hitEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: ecf68afc6316dbb4d80c0351c595c8dc, type: 2}
     - target: {fileID: 6877715763817883498, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 379
