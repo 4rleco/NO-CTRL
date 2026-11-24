@@ -11,12 +11,17 @@ public class Administrador_QTE : MonoBehaviour
     [Header("Referencias UI")]
     [SerializeField] private Image[] arrowImages;
     [SerializeField] private TextMeshProUGUI timer;
+    [SerializeField] private GameObject timerFrame;
 
     [Header("Sprites de las flechas")]
     [SerializeField] private Sprite[] arrowsSprites;
 
     [Header("Cantidad de teclas")]
     [SerializeField] private int amountOfKeys = 3;
+
+    [Header("Sonidos")]
+    [SerializeField] private AK.Wwise.Event successEvent;
+    [SerializeField] private AK.Wwise.Event correctKeyEvent;
 
     private float delayTimer;
     private float timeToCompleteTimer;
@@ -96,6 +101,9 @@ public class Administrador_QTE : MonoBehaviour
             arrowImages[i].gameObject.SetActive(true);
         }
 
+        if (timerFrame != null)
+            timerFrame.SetActive(true);
+
         if (timer != null)
         {
             timer.gameObject.SetActive(true);
@@ -128,6 +136,9 @@ public class Administrador_QTE : MonoBehaviour
             if (Input.GetKeyDown(correctKey[amountOfCorrectKeys]))
             {
                 arrowImages[amountOfCorrectKeys].color = Color.green;
+
+                if (correctKeyEvent != null && correctKeyEvent.IsValid() && player != null)
+                    AkUnitySoundEngine.PostEvent(correctKeyEvent.Id, player.gameObject);
 
                 amountOfCorrectKeys++;
 
@@ -173,6 +184,9 @@ public class Administrador_QTE : MonoBehaviour
             }
         }
 
+        if (timerFrame != null)
+            timerFrame.SetActive(false);
+
         if (timer != null)
             timer.gameObject.SetActive(false);
     }
@@ -183,6 +197,9 @@ public class Administrador_QTE : MonoBehaviour
         delayTimer = timeBetweenQTE;
 
         HideQTEUI();
+
+        if (successEvent != null && successEvent.IsValid() && player != null)
+            AkUnitySoundEngine.PostEvent(successEvent.Id, player.gameObject);
 
         UnityEngine.Debug.Log("¡QTE Correcto! Continuando juego.");
     }
