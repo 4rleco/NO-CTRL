@@ -47,6 +47,9 @@ public class GameUI : MonoBehaviour
 
         pauseMenu.SetActive(player.GetPlayerPause());
 
+        if(!pauseMenu.activeSelf)
+            options.gameObject.SetActive(false);
+
         if (player.GetPlayerDied() && !deathSequenceStarted)
         {
             deathSequenceStarted = true;
@@ -154,13 +157,13 @@ public class GameUI : MonoBehaviour
 
     public void OpenOptions()
     {
-        gameObject.SetActive(false);
+        pauseMenu.SetActive(false);
         options.gameObject.SetActive(true);
     }
 
     public void CloseOptions()
     {
-        gameObject.SetActive(true);
+        pauseMenu.SetActive(true);
         options.gameObject.SetActive(false);
     }
 }
