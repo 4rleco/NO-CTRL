@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.10.1] - 2026-11-24
+
+### New
+
+- QTE UI added.
+- Arrow sprites added.
+- UI button sprites added.
+- Death sound added for mortal obstacles.
+- Train warning images added.
+- Logo added to the credits scene.
+
+### Changes
+
+- Updated Android build to 16 and iOS build to 15.
+- QTE now uses images instead of text.
+- Arrow positions adjusted.
+- Main menu background updated with new artwork.
+- Third level visuals modified.
+
+### Bug Fixes
+
+- NCTRL-34 [PC] - FE - Options Screen - Options screen remains open while gameplay resumes behind it after pressing “ESC” key.
+- NCTRL-36 [PC] - Level Design - Extra Collision - The player bounces back from the third obstacle in Level 2 when attempting to jump over it.
+- NCTRL-39 [PC] - Gameplay - Train - Sliding continuously after the last obstacle fails to trigger the train on Level 2.
+
+### Known Issues
+
+- Player particles are not in the correct position while sliding.
+
 ## [0.10.0] - 2026-11-20
 
 ### New
