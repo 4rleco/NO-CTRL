@@ -49,6 +49,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private AK.Wwise.Event dashEvent;
     [SerializeField] private AK.Wwise.Event slideEvent;
     [SerializeField] private AK.Wwise.Event runEvent;
+    [SerializeField] private AK.Wwise.Event deathHitEvent;
     [SerializeField] private float stepInterval = 0.3f;
     private float stepTimer = 0f;
 
@@ -154,7 +155,7 @@ public class PlayerActions : MonoBehaviour
         {
 
             animator.SetBool("isSliding", isCrouching);
-           
+
         }
 
         if (currentSpeed < speed)
@@ -168,7 +169,7 @@ public class PlayerActions : MonoBehaviour
             {
                 isPaused = true;
                 Time.timeScale = 0.0f;
-                
+
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -302,12 +303,12 @@ public class PlayerActions : MonoBehaviour
             }
 
         }
-        if (isGrounded==false) animator.SetBool("isGrounded",isGrounded);
+        if (isGrounded == false) animator.SetBool("isGrounded", isGrounded);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("MortalObstacle"))
         {
             Train train = collision.collider.GetComponentInParent<Train>();
@@ -315,6 +316,9 @@ public class PlayerActions : MonoBehaviour
 
             ElectricFence fence = collision.collider.GetComponentInParent<ElectricFence>();
             if (fence != null && !playerDied) fence.PlayHit();
+
+
+            if (train == null && fence == null && !playerDied) PlayDeathHit();
 
             playerDied = true;
             rb.linearVelocity = Vector2.zero;
@@ -380,7 +384,7 @@ public class PlayerActions : MonoBehaviour
         float directionX = -Mathf.Sign(currentSpeed);
         float directionY = -0.3f;
         Vector2 dasDirection = new Vector2(directionX, 0f);
-         
+
 
         float efectiveDistance = bounceDistance;
 
@@ -449,7 +453,7 @@ public class PlayerActions : MonoBehaviour
 
         if (leftFloor || leftObstacleTop)
         {
-           // isGrounded = false;
+            // isGrounded = false;
             standingOnObstacle = false;
 
             if (isCrouching && !IsThereRoofAbove())
@@ -617,7 +621,7 @@ public class PlayerActions : MonoBehaviour
 
             efectiveDistance = hit.distance - wallOffset;
             if (efectiveDistance < 0) efectiveDistance = 0;
-            break; 
+            break;
         }
 
         float startX = transform.position.x;
@@ -691,7 +695,16 @@ public class PlayerActions : MonoBehaviour
     }
     public void SetPlayerDied(bool died)
     {
+
+        if (died && !playerDied) PlayDeathHit();
         playerDied = died;
+    }
+
+
+    private void PlayDeathHit()
+    {
+        if (deathHitEvent != null && deathHitEvent.IsValid())
+            AkUnitySoundEngine.PostEvent(deathHitEvent.Id, gameObject);
     }
 
     public void SetPlayerWin(bool win)

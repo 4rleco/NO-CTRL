@@ -10372,7 +10372,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Administrador_QTE
   timeBetweenQTE: 5
   timeToComplete: 2.5
-  arrowText: {fileID: 0}
+  arrowImages: []
+  timer: {fileID: 0}
+  arrowsSprites: []
   amountOfKeys: 3
 --- !u!1 &1089017492
 GameObject:
@@ -13358,6 +13360,10 @@ PrefabInstance:
       propertyPath: qte
       value: 
       objectReference: {fileID: 1085279500}
+    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
+      propertyPath: maxJumps
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: startPoint
       value: 

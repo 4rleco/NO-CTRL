@@ -2105,61 +2105,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1085279500}
     - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: maxJumps
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: isGrounded
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1440326036}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: bounceSpeed
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: bounceDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: bounceWaitTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: runEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 95df011c5c857a7419d3e9ae27e9a488, type: 2}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: dashEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 78569920b14512749ae80ede288cc70a, type: 2}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: jumpEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 11f44af36e0da204e8ee14b3bb459c56, type: 2}
-    - target: {fileID: 4578268789773722691, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: slideEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 626d647135f7e5342a8731cc2c427a18, type: 2}
-    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: m_Size.x
-      value: 5.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: m_Size.y
-      value: 6.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0cb3351a133a10742bdd8f19c39ef1eb, type: 3}
-    - target: {fileID: 5425207762721228292, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5633092292241325573, guid: cc972b67802565c4eb825a4dd088eb1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.82
