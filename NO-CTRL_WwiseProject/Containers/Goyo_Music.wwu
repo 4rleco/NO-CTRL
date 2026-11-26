@@ -942,6 +942,462 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Music_Level3" ID="{633D43AA-BEF0-4D25-B410-9C6B9900B6DB}" ShortID="129684992">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{76AACB84-36FE-44DF-B590-F84D11B5AFF8}" ShortID="317109771">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{C5D2C0C6-E462-478E-9D27-0B33C248AC08}" ShortID="748514066">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Song3" ID="{5802216A-81C8-48F4-B7ED-3EFF09673D2F}" WorkUnitID="{B32D96B0-7D3D-462E-A4B1-0ECEDA71A36F}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{680771D8-4364-4F87-8061-66CD33A803BA}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{2BACCC07-875D-48A2-B8C9-DA125CA578FF}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Song3" ID="{5802216A-81C8-48F4-B7ED-3EFF09673D2F}" ShortID="450942616">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="9157.70052437366"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="114"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED131063-4FDE-4DB3-BD62-679A17052E48}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="NC_T3_ArpA_1" ID="{7ABB8804-C898-4C25-9866-F699062B86B5}" ShortID="304643844">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{37317649-F361-40E6-97CF-D4FA0FEFC7F5}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NC_T3_ArpA_1" ID="{196C33B8-D154-4BA6-9E47-16C7421C8A85}">
+													<Language>SFX</Language>
+													<AudioFile>Tema 3\NC_T3_ArpA_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="90026200"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_ArpA_2" ID="{FE6B6196-8473-4B86-B5BB-930C5C1CADE2}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_ArpA_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="345579940"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_ArpA_3" ID="{71B83ED7-AE16-4B39-BFFE-7F4FE655D2C2}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_ArpA_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="487389573"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{82F0E5DB-F0AF-470C-9380-3D105D1239FA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpA_1" ID="{E656C0B2-6FEB-4B78-B69E-BC998B7F1C5F}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpA_1" ID="{196C33B8-D154-4BA6-9E47-16C7421C8A85}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{4DF27566-4113-488B-8068-8752C6FE251B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpA_2" ID="{2E30E583-6D9D-497E-BC38-ACBB1398A493}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpA_2" ID="{FE6B6196-8473-4B86-B5BB-930C5C1CADE2}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{AE411C9C-4FD2-4E48-B754-6D246322270A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpA_3" ID="{9BC18F2B-2ADD-4755-8837-CD6B4CB937F1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpA_3" ID="{71B83ED7-AE16-4B39-BFFE-7F4FE655D2C2}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="NC_T3_ArpG_1" ID="{C8F63D0C-D218-452A-A145-9BF52DB929BB}" ShortID="765670382">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{73E67399-3CD9-4FB1-9E12-6156D99EEDA3}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NC_T3_ArpG_1" ID="{4AA07E63-4D0B-4057-BAE7-4C3B68E5D6E4}">
+													<Language>SFX</Language>
+													<AudioFile>Tema 3\NC_T3_ArpG_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="756423552"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_ArpG_2" ID="{75C64B00-37D3-4C61-9445-303E4A9AA510}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_ArpG_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1000098960"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_ArpG_3" ID="{1C9496C6-D070-4401-810A-03521392E178}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_ArpG_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="576058022"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{DE79C1D1-3331-4C04-B91A-3BEC2B1F0329}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpG_1" ID="{E10E48DD-E32F-48E2-A1C5-F8B706858F0B}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpG_1" ID="{4AA07E63-4D0B-4057-BAE7-4C3B68E5D6E4}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{F4FBD578-FCEA-4982-98F8-1CDFC0B4ED78}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpG_2" ID="{01F03529-AE2A-4683-A52C-C3A180130AAE}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpG_2" ID="{75C64B00-37D3-4C61-9445-303E4A9AA510}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{F1C1AE56-680F-4EB7-97E1-AF6CB3B442F4}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_ArpG_3" ID="{7248AA4F-0487-467D-AFDB-D03C12F78E19}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_ArpG_3" ID="{1C9496C6-D070-4401-810A-03521392E178}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="NC_T3_Bombo" ID="{44749BEB-41D9-44F5-BA8A-6E676115FBF8}" ShortID="471976733">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{0AD35D9E-A619-4310-96B6-021B774A4392}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NC_T3_Bombo" ID="{683BDB9A-4530-4767-9E8F-C90D1E398A08}">
+													<Language>SFX</Language>
+													<AudioFile>Tema 3\NC_T3_Bombo.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="93034179"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{3D8BB521-D66B-4576-A8D8-38232B0B860C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Bombo" ID="{ADBAA9B2-1088-4E77-A056-5304480DD8B0}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Bombo" ID="{683BDB9A-4530-4767-9E8F-C90D1E398A08}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="NC_T3_Pad_1" ID="{165F3FD2-5195-424A-82FD-411CDF47C27B}" ShortID="574009026">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{1F3EE012-20F1-4B4B-942C-2B3C3143706A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NC_T3_Pad_1" ID="{4BFF8251-FF7C-4284-B9E7-3E0094E805BE}">
+													<Language>SFX</Language>
+													<AudioFile>Tema 3\NC_T3_Pad_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="526248354"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_Pad_2" ID="{5D4E55CF-2C64-4CAF-9070-3A3F7577CCB7}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_Pad_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="200811272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{A284C433-9715-483E-A080-320478E79918}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Pad_1" ID="{097F0C2E-9C78-451F-9DCE-F86893127EA3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Pad_1" ID="{4BFF8251-FF7C-4284-B9E7-3E0094E805BE}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{F7A1AE98-958E-4406-B03B-3BF502468E13}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Pad_2" ID="{71E28346-C104-4569-BA80-EF57D7FE4B27}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Pad_2" ID="{5D4E55CF-2C64-4CAF-9070-3A3F7577CCB7}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{E948B855-75B3-48B5-BC3A-144763EFB1A7}"/>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="NC_T3_Perc_1" ID="{1D685E60-C8A9-4155-B771-70F86E512DC4}" ShortID="529799917">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{33B53E8D-7CC1-4BA1-A2F9-BF2F2B8E2B90}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{B731D2EB-155F-45F7-A0D0-1811D58DA888}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NC_T3_Perc_1" ID="{50B8A971-850D-4D45-96A8-E974ACB4F1DF}">
+													<Language>SFX</Language>
+													<AudioFile>Tema 3\NC_T3_Perc_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="838178472"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_Perc_2" ID="{1DA45BAB-A2D2-4F04-9151-4F8FBF70D197}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_Perc_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="847910912"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="NC_T3_Perc_3" ID="{423F0FF0-8789-41C3-B74E-5562FC573A6C}">
+													<Language>SFX</Language>
+													<AudioFile>NC_T3_Perc_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="248349136"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{6BAD7594-1BF3-48DB-8D00-39DC5DB276E0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Perc_1" ID="{B0E3169B-712E-47C5-9B5C-209C8CC26A17}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Perc_1" ID="{50B8A971-850D-4D45-96A8-E974ACB4F1DF}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{86141E0C-0397-4265-B47D-31BF038267AD}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Perc_2" ID="{D526C06F-3578-4124-86D3-6794BE924DDA}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Perc_2" ID="{1DA45BAB-A2D2-4F04-9151-4F8FBF70D197}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+													<MusicTrackSequence Name="" ID="{1E73E167-0CB0-4F81-89EF-D4051E2708B4}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="NC_T3_Perc_3" ID="{06E0EBF7-3A30-45A7-9DFB-EB0BD1704CD3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="NC_T3_Perc_3" ID="{423F0FF0-8789-41C3-B74E-5562FC573A6C}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{C1DE6B59-263A-48E5-AEFD-151457228674}"/>
+											<MusicCue Name="Exit Cue" ID="{E8CB83E6-D60B-4E96-B7A1-7CE168E8435E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="8421.05263157895"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
@@ -1055,6 +1511,56 @@
 											<ReferenceList>
 												<Reference Name="EntryPathObject">
 													<ObjectRef Name="Nivel2" ID="{C61BA99A-AC69-4458-A8DC-D324CE165341}" WorkUnitID="{33263A59-94BF-4D28-A829-4A37559B6E90}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{5DAB4CF2-C752-49AC-BF85-269B34E3E8F2}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Music_Level3" ID="{633D43AA-BEF0-4D25-B410-9C6B9900B6DB}" WorkUnitID="{B32D96B0-7D3D-462E-A4B1-0ECEDA71A36F}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{4DF9ED3F-061E-465D-8CD8-0CF26C4723FE}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Paused" ID="{34E31EE9-1FCB-4B93-88FF-2A5272C942FF}" WorkUnitID="{33263A59-94BF-4D28-A829-4A37559B6E90}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+										<PluginInnerObject Name="" ID="{7CC157AB-5715-464A-84ED-77EBAB2DFA79}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Nivel3" ID="{5A7E178C-FB84-43ED-AEA6-3AC0D219982C}" WorkUnitID="{33263A59-94BF-4D28-A829-4A37559B6E90}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{D8732E44-AF8F-4C0C-8FC8-471BD84FE6A4}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Music_Level3" ID="{633D43AA-BEF0-4D25-B410-9C6B9900B6DB}" WorkUnitID="{B32D96B0-7D3D-462E-A4B1-0ECEDA71A36F}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{51EBA478-3ABB-462E-AB33-7766326A2D0A}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Gameplay" ID="{31AB4B36-5312-4950-BBAE-F6D3D17AD179}" WorkUnitID="{33263A59-94BF-4D28-A829-4A37559B6E90}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+										<PluginInnerObject Name="" ID="{24DAF62F-C0B1-48C0-ABE2-E7C7202FAF7A}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Nivel3" ID="{5A7E178C-FB84-43ED-AEA6-3AC0D219982C}" WorkUnitID="{33263A59-94BF-4D28-A829-4A37559B6E90}"/>
 												</Reference>
 											</ReferenceList>
 										</PluginInnerObject>
