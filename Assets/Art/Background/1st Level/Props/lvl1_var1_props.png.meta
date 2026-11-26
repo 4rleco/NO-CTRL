@@ -1,10 +1,79 @@
 fileFormatVersion: 2
-guid: 57585f425081d6d41a23f245a5a6e9a5
+guid: ab5a268059a5fdc459d4334e71941d5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1869026755415288185
-    second: lvl1_door_0
+      213: -3209981757237204343
+    second: lvl1_var1_props_0
+  - first:
+      213: -7223607241578164448
+    second: lvl1_var1_props_1
+  - first:
+      213: 6824574297146919198
+    second: lvl1_var1_props_2
+  - first:
+      213: -3683120152621294709
+    second: lvl1_var1_props_3
+  - first:
+      213: -6277686094420229534
+    second: lvl1_var1_props_4
+  - first:
+      213: -6039236856589663989
+    second: lvl1_var1_props_5
+  - first:
+      213: 775318003358264967
+    second: lvl1_var1_props_6
+  - first:
+      213: -528600302457929343
+    second: lvl1_var1_props_7
+  - first:
+      213: -5648972503186048469
+    second: lvl1_var1_props_8
+  - first:
+      213: 9092825642505078338
+    second: lvl1_var1_props_9
+  - first:
+      213: 8888637834884370821
+    second: lvl1_var1_props_10
+  - first:
+      213: -3244391363691827685
+    second: lvl1_var1_props_11
+  - first:
+      213: 6294744865485123714
+    second: lvl1_var1_props_12
+  - first:
+      213: -1332638729160851991
+    second: lvl1_var1_props_13
+  - first:
+      213: -2521269199752279534
+    second: lvl1_var1_props_14
+  - first:
+      213: 6627401627939767042
+    second: lvl1_var1_props_15
+  - first:
+      213: 4034902277089673138
+    second: lvl1_var1_props_16
+  - first:
+      213: 1971590953117114349
+    second: lvl1_var1_props_17
+  - first:
+      213: -5107570234734247865
+    second: lvl1_var1_props_18
+  - first:
+      213: 3520434095853437045
+    second: lvl1_var1_props_19
+  - first:
+      213: 4322811257531649650
+    second: lvl1_var1_props_20
+  - first:
+      213: 2307621499604127581
+    second: lvl1_var1_props_21
+  - first:
+      213: -6700060046795458424
+    second: lvl1_var1_props_22
+  - first:
+      213: 4815084097982111231
+    second: lvl1_var1_props_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +169,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lvl1_door_0
+      name: lvl1_var1_props_0
       rect:
         serializedVersion: 2
-        x: 242
-        y: 107
-        width: 516
-        height: 491
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 979aa387eed10f910800000000000000
-      internalID: 1869026755415288185
+      spriteID: 98a6468599ad373d0800000000000000
+      internalID: -3209981757237204343
       vertices: []
       indices: 
       edges: []
@@ -125,7 +194,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b818fb1e065ddd74996af7d94e3cdb3d
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +202,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      lvl1_door_0: 1869026755415288185
+      lvl1_var1_props_0: -3209981757237204343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
