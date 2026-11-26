@@ -88,7 +88,7 @@ public static class VersionUpdater
 
     private static void TrySetVersion (UpdateType updateType)
     {
-        const string targetBranch = "Dev";
+        const string targetBranch = "main";
 
         try
         {
@@ -162,10 +162,7 @@ public static class VersionUpdater
                       $"git commit -m \"Update version to {newVersion} (Android {androidCode} and iOS {iOSBuildNumber})\"&&" +
                       $"git tag {newVersion}&&" +
                       $"git push&&" +
-                      $"git push --tags"; 
-                      //$"git switch main&&" + 
-                      //$"git merge --no ff Dev -m \"Merge Dev into main\"&&" +
-                      //$"git push";
+                      $"git push --tags";
 
 
         ProcessStartInfo processStartInfo = new ProcessStartInfo()
