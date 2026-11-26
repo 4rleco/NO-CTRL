@@ -10901,18 +10901,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2276975644794635942, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 57.04
+      objectReference: {fileID: 0}
     - target: {fileID: 3303001317737707181, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: image
       value: 
       objectReference: {fileID: 1655400181}
-    - target: {fileID: 3303001317737707181, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: hitEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: ecf68afc6316dbb4d80c0351c595c8dc, type: 2}
-    - target: {fileID: 4505146395817424466, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 120.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6877715763817883498, guid: cca8d9026ff812e4db7dd7b223708c1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 661.5
@@ -11839,6 +11835,10 @@ PrefabInstance:
     - target: {fileID: 6453837276559775283, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181888831952960429, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7727706739266675055, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
       propertyPath: m_AnchorMax.y
