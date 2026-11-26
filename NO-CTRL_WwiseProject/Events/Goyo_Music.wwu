@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{58D67D31-0C87-402B-8931-62F3BD5C3D66}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Goyo_Music" ID="{58D67D31-0C87-402B-8931-62F3BD5C3D66}" PersistMode="Standalone"/>
+		<WorkUnit Name="Goyo_Music" ID="{58D67D31-0C87-402B-8931-62F3BD5C3D66}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Music" ID="{E33E1163-F50C-4658-A355-0E0B6007B000}">
+					<ChildrenList>
+						<Action Name="" ID="{8CED6360-3D91-44CC-A0BC-093B1C65623A}" ShortID="1044562672">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Main" ID="{1BDA96B6-D65B-444E-8A49-B4BFEC0BA79C}" WorkUnitID="{B32D96B0-7D3D-462E-A4B1-0ECEDA71A36F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

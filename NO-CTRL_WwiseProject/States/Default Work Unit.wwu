@@ -6,16 +6,26 @@
 				<StateGroup Name="GameState" ID="{2C1AFDD7-EA42-4721-88F3-8AEDA9848475}">
 					<ChildrenList>
 						<State Name="None" ID="{0F731BB1-95BD-487B-B1CA-134C671984CC}"/>
+						<State Name="Menu" ID="{0F795BC3-FF44-4B60-AE84-FB1946B724DF}"/>
+						<State Name="Paused" ID="{34E31EE9-1FCB-4B93-88FF-2A5272C942FF}"/>
+						<State Name="Gameplay" ID="{31AB4B36-5312-4950-BBAE-F6D3D17AD179}"/>
+						<State Name="GameOver" ID="{85EEE0F8-6779-420B-8980-97AAFCE82456}"/>
+						<State Name="Victory" ID="{721B654C-C414-4EE5-920C-E342A017EF26}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Level" ID="{D72312C8-9FF6-48F9-9C4D-1DAF4ACDB174}">
 					<ChildrenList>
 						<State Name="None" ID="{EFE8AB30-2D99-4EBB-8E5D-59A401B3F456}"/>
+						<State Name="Nivel1" ID="{408E927B-250D-4F24-9089-83E11A7CD894}"/>
+						<State Name="Nivel2" ID="{C61BA99A-AC69-4458-A8DC-D324CE165341}"/>
+						<State Name="Nivel3" ID="{5A7E178C-FB84-43ED-AEA6-3AC0D219982C}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Hack" ID="{4C560C3F-B732-4086-A110-0F3C4AEC8CE3}">
 					<ChildrenList>
 						<State Name="None" ID="{1250BF6F-8D68-4128-8A4E-150FEF996BC8}"/>
+						<State Name="Normal" ID="{666CC492-57F7-4078-92A4-2DB8AE96A429}"/>
+						<State Name="QTE" ID="{7F12AEB1-CBED-4478-BEED-8BECF497EE12}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
