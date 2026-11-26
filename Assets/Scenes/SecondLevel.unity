@@ -6394,7 +6394,7 @@ MonoBehaviour:
   SlideTutorial: {fileID: 0}
   DashTutorial: {fileID: 2041751205}
   dashTrigger: {fileID: 0}
-  SlideCanva: {fileID: 0}
+  SlideCanva: {fileID: 1200919945}
   DashCanva: {fileID: 1280840332}
   JumpCanva: {fileID: 1280840331}
   owner: {fileID: 315590228}
@@ -11227,6 +11227,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1200919945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 34013387292400078, guid: 214f5963290d9154b9bde6b63ae35098, type: 3}
+  m_PrefabInstance: {fileID: 1280840329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1211081652
 GameObject:
   m_ObjectHideFlags: 0
