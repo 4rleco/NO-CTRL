@@ -88,7 +88,7 @@ public static class VersionUpdater
 
     private static void TrySetVersion (UpdateType updateType)
     {
-        const string targetBranch = "main";
+        const string targetBranch = "Dev";
 
         try
         {
