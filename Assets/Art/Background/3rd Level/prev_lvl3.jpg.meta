@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 85e66e399e5fda44c9ff44c59dedca0c
+guid: 5d6a083a8e5a8ec47b9727b96b6c7692
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2565047324615151567
-    second: lvl3_color_0
+      213: -8386451122708942433
+    second: prev_lvl3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,50 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lvl3_color_0
+      name: prev_lvl3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1307f386c0f176cd0800000000000000
-      internalID: -2565047324615151567
+      spriteID: f91f1c023275d9b80800000000000000
+      internalID: -8386451122708942433
       vertices: []
       indices: 
       edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lvl3_color_0: -2565047324615151567
+      prev_lvl3_0: -8386451122708942433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
